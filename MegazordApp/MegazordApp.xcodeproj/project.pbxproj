@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0317DF7F2BAAFF0D00B96552 /* teste.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0317DF7E2BAAFF0D00B96552 /* teste.usdz */; };
+		0317DF8B2BAB07C300B96552 /* teste.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0317DF8A2BAB07C300B96552 /* teste.usdz */; };
 		031883FD2B98B08400701E52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031883FC2B98B08400701E52 /* AppDelegate.swift */; };
 		031884012B98B08600701E52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031884002B98B08600701E52 /* Assets.xcassets */; };
 		031884042B98B08600701E52 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031884032B98B08600701E52 /* Preview Assets.xcassets */; };
@@ -36,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0317DF7E2BAAFF0D00B96552 /* teste.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = teste.usdz; path = ../../../../../teste.usdz; sourceTree = "<group>"; };
+		0317DF8A2BAB07C300B96552 /* teste.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = teste.usdz; path = ../../../../teste.usdz; sourceTree = "<group>"; };
 		031883F92B98B08400701E52 /* PhysicsTestes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhysicsTestes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		031883FC2B98B08400701E52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		031884002B98B08600701E52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		0317DF7D2BAAFEFD00B96552 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0317DF7E2BAAFF0D00B96552 /* teste.usdz */,
+				0317DF8A2BAB07C300B96552 /* teste.usdz */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -245,7 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0317DF7F2BAAFF0D00B96552 /* teste.usdz in Resources */,
+				0317DF8B2BAB07C300B96552 /* teste.usdz in Resources */,
 				031884042B98B08600701E52 /* Preview Assets.xcassets in Resources */,
 				031884012B98B08600701E52 /* Assets.xcassets in Resources */,
 			);
