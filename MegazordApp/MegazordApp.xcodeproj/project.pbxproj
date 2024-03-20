@@ -220,7 +220,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 031883F42B98B08400701E52 /* Build configuration list for PBXProject "PhysicsTestes" */;
+			buildConfigurationList = 031883F42B98B08400701E52 /* Build configuration list for PBXProject "MegazordApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -571,7 +571,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		031883F42B98B08400701E52 /* Build configuration list for PBXProject "PhysicsTestes" */ = {
+		031883F42B98B08400701E52 /* Build configuration list for PBXProject "MegazordApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0318841B2B98B08600701E52 /* Debug */,
