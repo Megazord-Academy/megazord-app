@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/brunodias/Desktop/Megazord/megazord-app/MegazordApp/MegazordApp.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

@@ -7,65 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0317DF8B2BAB07C300B96552 /* teste.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0317DF8A2BAB07C300B96552 /* teste.usdz */; };
-		031883FD2B98B08400701E52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031883FC2B98B08400701E52 /* AppDelegate.swift */; };
-		031884012B98B08600701E52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031884002B98B08600701E52 /* Assets.xcassets */; };
-		031884042B98B08600701E52 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031884032B98B08600701E52 /* Preview Assets.xcassets */; };
-		0318840E2B98B08600701E52 /* PhysicsTestesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0318840D2B98B08600701E52 /* PhysicsTestesTests.swift */; };
-		031884182B98B08600701E52 /* PhysicsTestesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031884172B98B08600701E52 /* PhysicsTestesUITests.swift */; };
-		0318841A2B98B08600701E52 /* PhysicsTestesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031884192B98B08600701E52 /* PhysicsTestesUITestsLaunchTests.swift */; };
-		0318842E2B9A005800701E52 /* classe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0318842D2B9A005800701E52 /* classe.swift */; };
-		031884302B9A00C400701E52 /* Observed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0318842F2B9A00C400701E52 /* Observed.swift */; };
+		03BA98ED2BB1BAC8006AAC93 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 03BA98EC2BB1BAC8006AAC93 /* RealityKitContent */; };
+		03BA98EF2BB1BAC8006AAC93 /* MegazordAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA98EE2BB1BAC8006AAC93 /* MegazordAppApp.swift */; };
+		03BA98F12BB1BAC8006AAC93 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA98F02BB1BAC8006AAC93 /* ContentView.swift */; };
+		03BA98F32BB1BAC8006AAC93 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA98F22BB1BAC8006AAC93 /* ImmersiveView.swift */; };
+		03BA98F52BB1BAC9006AAC93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BA98F42BB1BAC9006AAC93 /* Assets.xcassets */; };
+		03BA98F82BB1BAC9006AAC93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BA98F72BB1BAC9006AAC93 /* Preview Assets.xcassets */; };
+		03BA99032BB1BAC9006AAC93 /* MegazordAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0318840A2B98B08600701E52 /* PBXContainerItemProxy */ = {
+		03BA98FF2BB1BAC9006AAC93 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 031883F12B98B08400701E52 /* Project object */;
+			containerPortal = 03BA98DF2BB1BAC8006AAC93 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 031883F82B98B08400701E52;
-			remoteInfo = PhysicsTestes;
-		};
-		031884142B98B08600701E52 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 031883F12B98B08400701E52 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 031883F82B98B08400701E52;
-			remoteInfo = PhysicsTestes;
+			remoteGlobalIDString = 03BA98E62BB1BAC8006AAC93;
+			remoteInfo = MegazordApp;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0317DF8A2BAB07C300B96552 /* teste.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = teste.usdz; path = ../../../../teste.usdz; sourceTree = "<group>"; };
-		031883F92B98B08400701E52 /* PhysicsTestes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhysicsTestes.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		031883FC2B98B08400701E52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		031884002B98B08600701E52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		031884032B98B08600701E52 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		031884092B98B08600701E52 /* PhysicsTestesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhysicsTestesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0318840D2B98B08600701E52 /* PhysicsTestesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsTestesTests.swift; sourceTree = "<group>"; };
-		031884132B98B08600701E52 /* PhysicsTestesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhysicsTestesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		031884172B98B08600701E52 /* PhysicsTestesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsTestesUITests.swift; sourceTree = "<group>"; };
-		031884192B98B08600701E52 /* PhysicsTestesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsTestesUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		0318842D2B9A005800701E52 /* classe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classe.swift; sourceTree = "<group>"; };
-		0318842F2B9A00C400701E52 /* Observed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observed.swift; sourceTree = "<group>"; };
+		03BA98E72BB1BAC8006AAC93 /* MegazordApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MegazordApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03BA98EB2BB1BAC8006AAC93 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		03BA98EE2BB1BAC8006AAC93 /* MegazordAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegazordAppApp.swift; sourceTree = "<group>"; };
+		03BA98F02BB1BAC8006AAC93 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		03BA98F22BB1BAC8006AAC93 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
+		03BA98F42BB1BAC9006AAC93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		03BA98F72BB1BAC9006AAC93 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		03BA98F92BB1BAC9006AAC93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03BA98FE2BB1BAC9006AAC93 /* MegazordAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MegazordAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegazordAppTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		031883F62B98B08400701E52 /* Frameworks */ = {
+		03BA98E42BB1BAC8006AAC93 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03BA98ED2BB1BAC8006AAC93 /* RealityKitContent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		031884062B98B08600701E52 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		031884102B98B08600701E52 /* Frameworks */ = {
+		03BA98FB2BB1BAC9006AAC93 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -75,152 +58,123 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0317DF7D2BAAFEFD00B96552 /* Models */ = {
+		03BA98DE2BB1BAC8006AAC93 = {
 			isa = PBXGroup;
 			children = (
-				0317DF8A2BAB07C300B96552 /* teste.usdz */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		031883F02B98B08400701E52 = {
-			isa = PBXGroup;
-			children = (
-				0317DF7D2BAAFEFD00B96552 /* Models */,
-				031883FB2B98B08400701E52 /* PhysicsTestes */,
-				0318840C2B98B08600701E52 /* PhysicsTestesTests */,
-				031884162B98B08600701E52 /* PhysicsTestesUITests */,
-				031883FA2B98B08400701E52 /* Products */,
+				03BA98E92BB1BAC8006AAC93 /* MegazordApp */,
+				03BA98EA2BB1BAC8006AAC93 /* Packages */,
+				03BA99012BB1BAC9006AAC93 /* MegazordAppTests */,
+				03BA98E82BB1BAC8006AAC93 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		031883FA2B98B08400701E52 /* Products */ = {
+		03BA98E82BB1BAC8006AAC93 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				031883F92B98B08400701E52 /* PhysicsTestes.app */,
-				031884092B98B08600701E52 /* PhysicsTestesTests.xctest */,
-				031884132B98B08600701E52 /* PhysicsTestesUITests.xctest */,
+				03BA98E72BB1BAC8006AAC93 /* MegazordApp.app */,
+				03BA98FE2BB1BAC9006AAC93 /* MegazordAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		031883FB2B98B08400701E52 /* PhysicsTestes */ = {
+		03BA98E92BB1BAC8006AAC93 /* MegazordApp */ = {
 			isa = PBXGroup;
 			children = (
-				031883FC2B98B08400701E52 /* AppDelegate.swift */,
-				031884002B98B08600701E52 /* Assets.xcassets */,
-				031884022B98B08600701E52 /* Preview Content */,
-				0318842D2B9A005800701E52 /* classe.swift */,
-				0318842F2B9A00C400701E52 /* Observed.swift */,
+				03BA98EE2BB1BAC8006AAC93 /* MegazordAppApp.swift */,
+				03BA98F02BB1BAC8006AAC93 /* ContentView.swift */,
+				03BA98F22BB1BAC8006AAC93 /* ImmersiveView.swift */,
+				03BA98F42BB1BAC9006AAC93 /* Assets.xcassets */,
+				03BA98F92BB1BAC9006AAC93 /* Info.plist */,
+				03BA98F62BB1BAC9006AAC93 /* Preview Content */,
 			);
-			path = PhysicsTestes;
+			path = MegazordApp;
 			sourceTree = "<group>";
 		};
-		031884022B98B08600701E52 /* Preview Content */ = {
+		03BA98EA2BB1BAC8006AAC93 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				031884032B98B08600701E52 /* Preview Assets.xcassets */,
+				03BA98EB2BB1BAC8006AAC93 /* RealityKitContent */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		03BA98F62BB1BAC9006AAC93 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				03BA98F72BB1BAC9006AAC93 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		0318840C2B98B08600701E52 /* PhysicsTestesTests */ = {
+		03BA99012BB1BAC9006AAC93 /* MegazordAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				0318840D2B98B08600701E52 /* PhysicsTestesTests.swift */,
+				03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */,
 			);
-			path = PhysicsTestesTests;
-			sourceTree = "<group>";
-		};
-		031884162B98B08600701E52 /* PhysicsTestesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				031884172B98B08600701E52 /* PhysicsTestesUITests.swift */,
-				031884192B98B08600701E52 /* PhysicsTestesUITestsLaunchTests.swift */,
-			);
-			path = PhysicsTestesUITests;
+			path = MegazordAppTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		031883F82B98B08400701E52 /* PhysicsTestes */ = {
+		03BA98E62BB1BAC8006AAC93 /* MegazordApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0318841D2B98B08600701E52 /* Build configuration list for PBXNativeTarget "PhysicsTestes" */;
+			buildConfigurationList = 03BA99062BB1BAC9006AAC93 /* Build configuration list for PBXNativeTarget "MegazordApp" */;
 			buildPhases = (
-				031883F52B98B08400701E52 /* Sources */,
-				031883F62B98B08400701E52 /* Frameworks */,
-				031883F72B98B08400701E52 /* Resources */,
+				03BA98E32BB1BAC8006AAC93 /* Sources */,
+				03BA98E42BB1BAC8006AAC93 /* Frameworks */,
+				03BA98E52BB1BAC8006AAC93 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = PhysicsTestes;
-			productName = PhysicsTestes;
-			productReference = 031883F92B98B08400701E52 /* PhysicsTestes.app */;
+			name = MegazordApp;
+			packageProductDependencies = (
+				03BA98EC2BB1BAC8006AAC93 /* RealityKitContent */,
+			);
+			productName = MegazordApp;
+			productReference = 03BA98E72BB1BAC8006AAC93 /* MegazordApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		031884082B98B08600701E52 /* PhysicsTestesTests */ = {
+		03BA98FD2BB1BAC9006AAC93 /* MegazordAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 031884202B98B08600701E52 /* Build configuration list for PBXNativeTarget "PhysicsTestesTests" */;
+			buildConfigurationList = 03BA99092BB1BAC9006AAC93 /* Build configuration list for PBXNativeTarget "MegazordAppTests" */;
 			buildPhases = (
-				031884052B98B08600701E52 /* Sources */,
-				031884062B98B08600701E52 /* Frameworks */,
-				031884072B98B08600701E52 /* Resources */,
+				03BA98FA2BB1BAC9006AAC93 /* Sources */,
+				03BA98FB2BB1BAC9006AAC93 /* Frameworks */,
+				03BA98FC2BB1BAC9006AAC93 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0318840B2B98B08600701E52 /* PBXTargetDependency */,
+				03BA99002BB1BAC9006AAC93 /* PBXTargetDependency */,
 			);
-			name = PhysicsTestesTests;
-			productName = PhysicsTestesTests;
-			productReference = 031884092B98B08600701E52 /* PhysicsTestesTests.xctest */;
+			name = MegazordAppTests;
+			productName = MegazordAppTests;
+			productReference = 03BA98FE2BB1BAC9006AAC93 /* MegazordAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		031884122B98B08600701E52 /* PhysicsTestesUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 031884232B98B08600701E52 /* Build configuration list for PBXNativeTarget "PhysicsTestesUITests" */;
-			buildPhases = (
-				0318840F2B98B08600701E52 /* Sources */,
-				031884102B98B08600701E52 /* Frameworks */,
-				031884112B98B08600701E52 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				031884152B98B08600701E52 /* PBXTargetDependency */,
-			);
-			name = PhysicsTestesUITests;
-			productName = PhysicsTestesUITests;
-			productReference = 031884132B98B08600701E52 /* PhysicsTestesUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		031883F12B98B08400701E52 /* Project object */ = {
+		03BA98DF2BB1BAC8006AAC93 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1520;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
-					031883F82B98B08400701E52 = {
-						CreatedOnToolsVersion = 15.2;
+					03BA98E62BB1BAC8006AAC93 = {
+						CreatedOnToolsVersion = 15.3;
 					};
-					031884082B98B08600701E52 = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 031883F82B98B08400701E52;
-					};
-					031884122B98B08600701E52 = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 031883F82B98B08400701E52;
+					03BA98FD2BB1BAC9006AAC93 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 03BA98E62BB1BAC8006AAC93;
 					};
 				};
 			};
-			buildConfigurationList = 031883F42B98B08400701E52 /* Build configuration list for PBXProject "MegazordApp" */;
+			buildConfigurationList = 03BA98E22BB1BAC8006AAC93 /* Build configuration list for PBXProject "MegazordApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -228,37 +182,28 @@
 				en,
 				Base,
 			);
-			mainGroup = 031883F02B98B08400701E52;
-			productRefGroup = 031883FA2B98B08400701E52 /* Products */;
+			mainGroup = 03BA98DE2BB1BAC8006AAC93;
+			productRefGroup = 03BA98E82BB1BAC8006AAC93 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				031883F82B98B08400701E52 /* PhysicsTestes */,
-				031884082B98B08600701E52 /* PhysicsTestesTests */,
-				031884122B98B08600701E52 /* PhysicsTestesUITests */,
+				03BA98E62BB1BAC8006AAC93 /* MegazordApp */,
+				03BA98FD2BB1BAC9006AAC93 /* MegazordAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		031883F72B98B08400701E52 /* Resources */ = {
+		03BA98E52BB1BAC8006AAC93 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0317DF8B2BAB07C300B96552 /* teste.usdz in Resources */,
-				031884042B98B08600701E52 /* Preview Assets.xcassets in Resources */,
-				031884012B98B08600701E52 /* Assets.xcassets in Resources */,
+				03BA98F82BB1BAC9006AAC93 /* Preview Assets.xcassets in Resources */,
+				03BA98F52BB1BAC9006AAC93 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		031884072B98B08600701E52 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		031884112B98B08600701E52 /* Resources */ = {
+		03BA98FC2BB1BAC9006AAC93 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -268,50 +213,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		031883F52B98B08400701E52 /* Sources */ = {
+		03BA98E32BB1BAC8006AAC93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				031884302B9A00C400701E52 /* Observed.swift in Sources */,
-				031883FD2B98B08400701E52 /* AppDelegate.swift in Sources */,
-				0318842E2B9A005800701E52 /* classe.swift in Sources */,
+				03BA98F12BB1BAC8006AAC93 /* ContentView.swift in Sources */,
+				03BA98EF2BB1BAC8006AAC93 /* MegazordAppApp.swift in Sources */,
+				03BA98F32BB1BAC8006AAC93 /* ImmersiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		031884052B98B08600701E52 /* Sources */ = {
+		03BA98FA2BB1BAC9006AAC93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0318840E2B98B08600701E52 /* PhysicsTestesTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0318840F2B98B08600701E52 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0318841A2B98B08600701E52 /* PhysicsTestesUITestsLaunchTests.swift in Sources */,
-				031884182B98B08600701E52 /* PhysicsTestesUITests.swift in Sources */,
+				03BA99032BB1BAC9006AAC93 /* MegazordAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0318840B2B98B08600701E52 /* PBXTargetDependency */ = {
+		03BA99002BB1BAC9006AAC93 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 031883F82B98B08400701E52 /* PhysicsTestes */;
-			targetProxy = 0318840A2B98B08600701E52 /* PBXContainerItemProxy */;
-		};
-		031884152B98B08600701E52 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 031883F82B98B08400701E52 /* PhysicsTestes */;
-			targetProxy = 031884142B98B08600701E52 /* PBXContainerItemProxy */;
+			target = 03BA98E62BB1BAC8006AAC93 /* MegazordApp */;
+			targetProxy = 03BA98FF2BB1BAC9006AAC93 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0318841B2B98B08600701E52 /* Debug */ = {
+		03BA99042BB1BAC9006AAC93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -363,18 +294,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = xros;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.1;
 			};
 			name = Debug;
 		};
-		0318841C2B98B08600701E52 /* Release */ = {
+		03BA99052BB1BAC9006AAC93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -420,79 +351,69 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = xros;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.1;
 			};
 			name = Release;
 		};
-		0318841E2B98B08600701E52 /* Debug */ = {
+		03BA99072BB1BAC9006AAC93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PhysicsTestes/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MegazordApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 74Y2GWFGD7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
-				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.brunohd.PhysicsTestes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brunohd.MegazordApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Debug;
 		};
-		0318841F2B98B08600701E52 /* Release */ = {
+		03BA99082BB1BAC9006AAC93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PhysicsTestes/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MegazordApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 74Y2GWFGD7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
-				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.brunohd.PhysicsTestes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brunohd.MegazordApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Release;
 		};
-		031884212B98B08600701E52 /* Debug */ = {
+		03BA990A2BB1BAC9006AAC93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -501,18 +422,19 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 74Y2GWFGD7;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.brunohd.PhysicsTestesTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brunohd.MegazordAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhysicsTestes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PhysicsTestes";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MegazordApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MegazordApp";
+				XROS_DEPLOYMENT_TARGET = 1.1;
 			};
 			name = Debug;
 		};
-		031884222B98B08600701E52 /* Release */ = {
+		03BA990B2BB1BAC9006AAC93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -521,93 +443,56 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 74Y2GWFGD7;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.brunohd.PhysicsTestesTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brunohd.MegazordAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhysicsTestes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PhysicsTestes";
-			};
-			name = Release;
-		};
-		031884242B98B08600701E52 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 74Y2GWFGD7;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.brunohd.PhysicsTestesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PhysicsTestes;
-			};
-			name = Debug;
-		};
-		031884252B98B08600701E52 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 74Y2GWFGD7;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.brunohd.PhysicsTestesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PhysicsTestes;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MegazordApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MegazordApp";
+				XROS_DEPLOYMENT_TARGET = 1.1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		031883F42B98B08400701E52 /* Build configuration list for PBXProject "MegazordApp" */ = {
+		03BA98E22BB1BAC8006AAC93 /* Build configuration list for PBXProject "MegazordApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0318841B2B98B08600701E52 /* Debug */,
-				0318841C2B98B08600701E52 /* Release */,
+				03BA99042BB1BAC9006AAC93 /* Debug */,
+				03BA99052BB1BAC9006AAC93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0318841D2B98B08600701E52 /* Build configuration list for PBXNativeTarget "PhysicsTestes" */ = {
+		03BA99062BB1BAC9006AAC93 /* Build configuration list for PBXNativeTarget "MegazordApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0318841E2B98B08600701E52 /* Debug */,
-				0318841F2B98B08600701E52 /* Release */,
+				03BA99072BB1BAC9006AAC93 /* Debug */,
+				03BA99082BB1BAC9006AAC93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		031884202B98B08600701E52 /* Build configuration list for PBXNativeTarget "PhysicsTestesTests" */ = {
+		03BA99092BB1BAC9006AAC93 /* Build configuration list for PBXNativeTarget "MegazordAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				031884212B98B08600701E52 /* Debug */,
-				031884222B98B08600701E52 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		031884232B98B08600701E52 /* Build configuration list for PBXNativeTarget "PhysicsTestesUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				031884242B98B08600701E52 /* Debug */,
-				031884252B98B08600701E52 /* Release */,
+				03BA990A2BB1BAC9006AAC93 /* Debug */,
+				03BA990B2BB1BAC9006AAC93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		03BA98EC2BB1BAC8006AAC93 /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 031883F12B98B08400701E52 /* Project object */;
+	rootObject = 03BA98DF2BB1BAC8006AAC93 /* Project object */;
 }
