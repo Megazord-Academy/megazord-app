@@ -9,22 +9,29 @@ import SwiftUI
 
 @main
 struct MegazordAppApp: App {
-    @ObservedObject var helper = Helper()
+    @ObservedObject var robotController = RobotController()
+    @ObservedObject var sceneController = SceneController()
+
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(helper)
+                .environmentObject(robotController)
+                .environmentObject(sceneController)
+
         }
 
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
-                .environmentObject(helper)
+                .environmentObject(robotController)
+                .environmentObject(sceneController)
         }
         
         
         WindowGroup(id: "EditRobot"){
             EditRobot()
+                .environmentObject(robotController)
+
         }
     }
 }

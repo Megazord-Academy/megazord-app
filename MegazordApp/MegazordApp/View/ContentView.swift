@@ -10,7 +10,9 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
-    @EnvironmentObject var helper: Helper
+    @EnvironmentObject var robotController: RobotController
+    @EnvironmentObject var sceneController: SceneController
+
 
     @State private var showImmersiveSpace = false  
     @State private var immersiveSpaceIsShown = false
@@ -28,19 +30,20 @@ struct ContentView: View {
                 .padding(24)
                 .glassBackgroundEffect()
             
-            Button("ChangeScene"){
-                if helper.sceneToLoad == "Immersive"{
-                    helper.sceneToLoad = "Robot"
-                }else{
-                    helper.sceneToLoad = "Immersive"
-                }
+            Button("Edit Robot Scene"){
+                sceneController.actualScene = "EditRobot"
             }.padding()
             
-            Button("ChangeRobot"){
-                
-                helper.BigWheelsCar.toggle()
-                helper.normalCar.toggle()
-                
+            Button("First Lesson Scene"){
+                sceneController.actualScene = "Immsersive"
+            }.padding()
+            
+            Button("Second Lesson Scene"){
+                sceneController.actualScene = "RampLesson"
+            }.padding()
+            
+            Button("Edit Robot"){
+                openWindow(id: "EditRobot")
             }.padding()
             
         }
