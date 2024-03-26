@@ -10,25 +10,39 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
+    @EnvironmentObject var helper: Helper
 
     @State private var showImmersiveSpace = false  
     @State private var immersiveSpaceIsShown = false
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
+    @Environment(\.openWindow) private var openWindow
 
     var body: some View {
         VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
-
-            Text("Hello, world!")
-
+            
             Toggle("Show ImmersiveSpace", isOn: $showImmersiveSpace)
                 .font(.title)
                 .frame(width: 360)
                 .padding(24)
                 .glassBackgroundEffect()
+            
+            Button("ChangeScene"){
+                if helper.sceneToLoad == "Immersive"{
+                    helper.sceneToLoad = "Robot"
+                }else{
+                    helper.sceneToLoad = "Immersive"
+                }
+            }.padding()
+            
+            Button("ChangeRobot"){
+                
+                helper.BigWheelsCar.toggle()
+                helper.normalCar.toggle()
+                
+            }.padding()
+            
         }
         .padding()
         .onChange(of: showImmersiveSpace) { _, newValue in
