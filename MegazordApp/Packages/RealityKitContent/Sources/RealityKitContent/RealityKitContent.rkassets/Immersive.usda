@@ -7,7 +7,7 @@
 
 def Xform "Root"
 {
-    reorder nameChildren = ["Sphere_Left", "Sphere_Right", "GridMaterial"]
+    reorder nameChildren = ["Sphere_Left", "Sphere_Right", "GridMaterial", "planeWorld", "car_normalWheels_motor", "finalLine"]
     def Sphere "Sphere_Right" (
         active = true
         prepend apiSchemas = ["MaterialBindingAPI"]
@@ -40,7 +40,7 @@ def Xform "Root"
 
     def "GridMaterial" (
         active = true
-        prepend references = @Materials/GridMaterial.usda@
+        references = @Materials/GridMaterial.usda@
     )
     {
         float3 xformOp:scale = (1, 1, 1)
@@ -127,36 +127,88 @@ def Xform "Root"
         }
     }
 
-    def Cube "Cube" (
+    def "car_normalWheels_motor" (
         active = true
-        prepend apiSchemas = ["MaterialBindingAPI"]
         customData = {
-            float3 rotationEulerHint = (-9.158169e-9, 2.3623974e-9, 0.08726647)
+            float3 rotationEulerHint = (0, 1.5707963, 0)
         }
+        references = @car-normalWheels-motor.usdz@
     )
     {
-        reorder nameChildren = ["Material_1", "DefaultMaterial"]
-        rel material:binding = </Root/Cube/DefaultMaterial>
+        quatf xformOp:orient = (0.70710677, 0, 0.7071067, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (-0.8551712, -0.073626205, -2.4635558)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.5617676, 0.18271762, 0.647367)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.0031481534, 0.02493427, -0.109896295)
+                }
+            }
+        }
+
+        def RealityKitComponent "RigidBody"
+        {
+            uniform token info:id = "RealityKit.RigidBody"
+
+            def RealityKitStruct "massFrame"
+            {
+                def RealityKitStruct "m_pose"
+                {
+                }
+            }
+
+            def RealityKitStruct "material"
+            {
+                double dynamicFriction = 0.5
+                double staticFriction = 0.5
+            }
+        }
+
+        def RealityKitComponent "MotionState"
+        {
+            uniform token info:id = "RealityKit.MotionState"
+            float3 m_userSetLinearVelocity = (3, 0, 0)
+            uint m_userSetLinearVelocityVersion = 1
+        }
+    }
+
+    def Cube "finalLine" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Root/finalLine/DefaultMaterial>
         double size = 0.2
-        quatf xformOp:orient = (0.99904823, -4.6262216e-9, 9.803319e-10, 0.043619134)
-        float3 xformOp:scale = (3.7995067, 0.9999999, 5)
-        float3 xformOp:translate = (0.16592652, -0.20347466, -2.291196)
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (0.2, 1, 6)
+        float3 xformOp:translate = (1.3892272, -0.063289285, -2.2478378)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Material "DefaultMaterial"
         {
             token outputs:mtlx:surface
             token outputs:realitykit:vertex
-            token outputs:surface.connect = </Root/Cube/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
-            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (0, 109.5)
-            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+            prepend token outputs:surface.connect = </Root/finalLine/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
 
             def Shader "DefaultSurfaceShader"
             {
                 uniform token info:id = "UsdPreviewSurface"
-                color3f inputs:diffuseColor = (1, 0.3497057, 0.25877476) (
-                    colorSpace = "srgb_displayp3"
-                )
+                color3f inputs:diffuseColor = (1, 1, 1)
+                float inputs:opacity = 0
+                float inputs:opacityThreshold = 0
                 float inputs:roughness = 0.75
                 token outputs:surface
             }
@@ -197,29 +249,28 @@ def Xform "Root"
 
             def RealityKitStruct "material"
             {
-                double dynamicFriction = 0.5
             }
         }
     }
 
-    def Cube "Cube_1" (
+    def Cube "planeWorld" (
         active = true
         prepend apiSchemas = ["MaterialBindingAPI"]
     )
     {
         reorder nameChildren = ["Material_1", "DefaultMaterial"]
-        rel material:binding = </Root/Cube_1/DefaultMaterial>
+        rel material:binding = </Root/planeWorld/DefaultMaterial>
         double size = 0.2
         quatf xformOp:orient = (1, 0, 0, 0)
-        float3 xformOp:scale = (15, 0.2, 7)
-        float3 xformOp:translate = (-0.18271536, -0.1615721, -2.2502773)
+        float3 xformOp:scale = (13.2, 0.2, 5.6)
+        float3 xformOp:translate = (0.09113705, -0.16157214, -2.250595)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Material "DefaultMaterial"
         {
-            token outputs:mtlx:surface.connect = </Root/Cube_1/DefaultMaterial/PreviewSurface.outputs:out>
+            token outputs:mtlx:surface.connect = </Root/planeWorld/DefaultMaterial/PreviewSurface.outputs:out>
             token outputs:realitykit:vertex
-            token outputs:surface.connect = </Root/Cube_1/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+            token outputs:surface.connect = </Root/planeWorld/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
             string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:realitykit:vertex"]
             float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (-26.484375, 104.69141)
             float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
@@ -294,136 +345,15 @@ def Xform "Root"
         }
     }
 
-    def Cube "Cube_2" (
+    def "Antique_Car_Horn" (
         active = true
-        prepend apiSchemas = ["MaterialBindingAPI"]
-        customData = {
-            float3 rotationEulerHint = (-9.158114e-9, 2.3623816e-9, 0)
-        }
+        prepend references = @AntiqueCarHorn.usdz@
     )
     {
-        reorder nameChildren = ["Material_1", "DefaultMaterial"]
-        rel material:binding = </Root/Cube_2/DefaultMaterial>
-        double size = 0.2
         quatf xformOp:orient = (1, 0, 0, 0)
-        float3 xformOp:scale = (3.7995067, 0.9999999, 5)
-        float3 xformOp:translate = (0.9134547, -0.17080787, -2.29111)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Material "DefaultMaterial"
-        {
-            token outputs:mtlx:surface
-            token outputs:realitykit:vertex
-            token outputs:surface.connect = </Root/Cube_2/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
-            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (0, 109.5)
-            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
-
-            def Shader "DefaultSurfaceShader"
-            {
-                uniform token info:id = "UsdPreviewSurface"
-                color3f inputs:diffuseColor = (1, 0.3497057, 0.25877476) (
-                    colorSpace = "srgb_displayp3"
-                )
-                float inputs:roughness = 0.75
-                token outputs:surface
-            }
-        }
-
-        def RealityKitComponent "Collider"
-        {
-            uint group = 1
-            uniform token info:id = "RealityKit.Collider"
-            uint mask = 4294967295
-            token type = "Default"
-
-            def RealityKitStruct "Shape"
-            {
-                float3 extent = (0.2, 0.2, 0.2)
-                token shapeType = "Box"
-
-                def RealityKitStruct "pose"
-                {
-                }
-            }
-        }
-
-        def RealityKitComponent "RigidBody"
-        {
-            float angularDamping = 0
-            bool gravityEnabled = 0
-            uniform token info:id = "RealityKit.RigidBody"
-            float linearDamping = 0
-            token motionType = "Static"
-
-            def RealityKitStruct "massFrame"
-            {
-                def RealityKitStruct "m_pose"
-                {
-                }
-            }
-
-            def RealityKitStruct "material"
-            {
-                double dynamicFriction = 0.8
-                double staticFriction = 1
-            }
-        }
-    }
-
-    def "car_normalWheels_motor" (
-        active = true
-        customData = {
-            float3 rotationEulerHint = (0, 1.5707963, 0)
-        }
-        prepend references = @car-normalWheels-motor.usdz@
-    )
-    {
-        quatf xformOp:orient = (0.70710677, 0, 0.7071067, 0)
         float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (-1.17483, 0.4214486, -2.4635558)
+        float3 xformOp:translate = (0, 0, 0)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def RealityKitComponent "Collider"
-        {
-            uint group = 1
-            uniform token info:id = "RealityKit.Collider"
-            uint mask = 4294967295
-            token type = "Default"
-
-            def RealityKitStruct "Shape"
-            {
-                float3 extent = (0.5617676, 0.18271762, 0.647367)
-                token shapeType = "Box"
-
-                def RealityKitStruct "pose"
-                {
-                    float3 position = (0.0031481534, 0.02493427, -0.109896295)
-                }
-            }
-        }
-
-        def RealityKitComponent "RigidBody"
-        {
-            uniform token info:id = "RealityKit.RigidBody"
-
-            def RealityKitStruct "massFrame"
-            {
-                def RealityKitStruct "m_pose"
-                {
-                }
-            }
-
-            def RealityKitStruct "material"
-            {
-            }
-        }
-
-        def RealityKitComponent "MotionState"
-        {
-            uniform token info:id = "RealityKit.MotionState"
-            float3 m_userSetLinearVelocity = (3, 0, 0)
-            uint m_userSetLinearVelocityVersion = 1
-        }
     }
 }
 
