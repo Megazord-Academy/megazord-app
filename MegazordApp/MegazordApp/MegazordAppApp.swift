@@ -17,5 +17,8 @@ struct MegazordAppApp: App {
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
         }
+        ImmersiveSpace(id: "MundoRampa"){
+            MundoRampa()
+        }
     }
 }

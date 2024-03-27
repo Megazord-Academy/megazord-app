@@ -23,6 +23,58 @@
       }
     ]
   },
+  "81A59E49-2A27-4B05-9DA2-D966E8E0D638" : {
+    "objectMetadataList" : [
+      [
+        "81A59E49-2A27-4B05-9DA2-D966E8E0D638",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "397D1B20-8233-40CA-837A-897FFA3E985C" : {
+    "objectMetadataList" : [
+      [
+        "397D1B20-8233-40CA-837A-897FFA3E985C",
+        "Root",
+        "car_normalWheels_motor",
+        "Geom"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "397D1B20-8233-40CA-837A-897FFA3E985C",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "397D1B20-8233-40CA-837A-897FFA3E985C",
+        "Root",
+        "normalRamp"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "397D1B20-8233-40CA-837A-897FFA3E985C",
+        "Root",
+        "car_normalWheels_motor"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
   "66168B71-AB05-424E-8B6C-D33D6E61B08F" : {
     "objectMetadataList" : [
       [

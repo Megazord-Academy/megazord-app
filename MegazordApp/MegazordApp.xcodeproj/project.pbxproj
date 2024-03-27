@@ -14,6 +14,7 @@
 		03BA98F52BB1BAC9006AAC93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BA98F42BB1BAC9006AAC93 /* Assets.xcassets */; };
 		03BA98F82BB1BAC9006AAC93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BA98F72BB1BAC9006AAC93 /* Preview Assets.xcassets */; };
 		03BA99032BB1BAC9006AAC93 /* MegazordAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */; };
+		03C63B622BB2F831008D6AB8 /* MundoRampa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C63B612BB2F831008D6AB8 /* MundoRampa.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		03BA98F92BB1BAC9006AAC93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03BA98FE2BB1BAC9006AAC93 /* MegazordAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MegazordAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegazordAppTests.swift; sourceTree = "<group>"; };
+		03C63B612BB2F831008D6AB8 /* MundoRampa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MundoRampa.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				03BA98EE2BB1BAC8006AAC93 /* MegazordAppApp.swift */,
 				03BA98F02BB1BAC8006AAC93 /* ContentView.swift */,
 				03BA98F22BB1BAC8006AAC93 /* ImmersiveView.swift */,
+				03C63B612BB2F831008D6AB8 /* MundoRampa.swift */,
 				03BA98F42BB1BAC9006AAC93 /* Assets.xcassets */,
 				03BA98F92BB1BAC9006AAC93 /* Info.plist */,
 				03BA98F62BB1BAC9006AAC93 /* Preview Content */,
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03BA98F12BB1BAC8006AAC93 /* ContentView.swift in Sources */,
+				03C63B622BB2F831008D6AB8 /* MundoRampa.swift in Sources */,
 				03BA98EF2BB1BAC8006AAC93 /* MegazordAppApp.swift in Sources */,
 				03BA98F32BB1BAC8006AAC93 /* ImmersiveView.swift in Sources */,
 			);
