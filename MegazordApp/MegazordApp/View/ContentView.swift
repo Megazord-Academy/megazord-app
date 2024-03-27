@@ -34,7 +34,7 @@ struct ContentView: View {
             }.padding()
             
             Button("First Lesson Scene"){
-                sceneController.actualScene = "Immsersive"
+                sceneController.actualScene = "Immersive"
             }.padding()
             
             Button("Second Lesson Scene"){

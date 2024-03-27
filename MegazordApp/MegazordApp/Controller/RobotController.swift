@@ -37,13 +37,13 @@ class RobotController: ObservableObject{
     
     func putMotor(){
         numMotorsSelected = numMotorsSelected + 1
-        if numMotorsSelected > 2{
+        if numMotorsSelected > 2 {
             numMotorsSelected = 0
         }
         decideRobotNewCase()
     }
     
-    func decideRobotNewCase(){
+    func decideRobotNewCase() {
         if defaultWheelSelected && numMotorsSelected == 1{
             robot = Robot.defaultWheelsMotor
         }else if defaultWheelSelected{
@@ -74,67 +74,42 @@ class RobotController: ObservableObject{
     }
     
     func checkDefaultWheelsTwoMotors() -> Bool{
-        if robot == Robot.defaultWheelsTwoMotors{
-            return true
-        }else{
-            return false
-        }
+        robot == Robot.defaultWheelsTwoMotors
     }
     
     func checkDefaultWheelsNoMotor() -> Bool{
-        if robot == Robot.defaultWheelsNoMotor{
-            return true
-        }else{
-            return false
-        }
+        robot == Robot.defaultWheelsNoMotor
+     
     }
     
     func checkBigWheelsMotor() -> Bool{
-        if robot == Robot.bigWheelsMotor{
-            return true
-        }else{
-            return false
-        }
+        robot == Robot.bigWheelsMotor
+       
     }
     
     func checkBigWheelsTwoMotors() -> Bool{
-        if robot == Robot.bigWheelsTwoMotors{
-            return true
-        }else{
-            return false
-        }
+        robot == Robot.bigWheelsTwoMotors
+         
     }
     
     func checkBigWheelsNoMotor() -> Bool{
-        if robot == Robot.bigWheelsNoMotor{
-            return true
-        }else{
-            return false
-        }
+        robot == Robot.bigWheelsNoMotor
+         
     }
     
     func checkMotorOnly() -> Bool{
-        if robot == Robot.motorOnly{
-            return true
-        }else{
-            return false
-        }
+        robot == Robot.motorOnly
+      
     }
     
     func checkTwoMotors() -> Bool{
-        if robot == Robot.twoMotors{
-            return true
-        }else{
-            return false
-        }
+        robot == Robot.twoMotors
+        
     }
     
     func checkChassisOnly() -> Bool{
-        if robot == Robot.chassis{
-            return true
-        }else{
-            return false
-        }
+        robot == Robot.chassis
+        
     }
     
     
