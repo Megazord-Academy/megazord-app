@@ -15,10 +15,10 @@
 		03BA98F82BB1BAC9006AAC93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BA98F72BB1BAC9006AAC93 /* Preview Assets.xcassets */; };
 		03BA99032BB1BAC9006AAC93 /* MegazordAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */; };
 		03C63B622BB2F831008D6AB8 /* MundoRampa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C63B612BB2F831008D6AB8 /* MundoRampa.swift */; };
-		AEC99A052BB44C56005B0773 /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A042BB44C56005B0773 /* LessonView.swift */; };
-		AEC99A072BB44D31005B0773 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A062BB44D31005B0773 /* Extensions.swift */; };
-		AEC99A092BB45D29005B0773 /* LessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A082BB45D29005B0773 /* LessonViewModel.swift */; };
-		AEC99A0B2BB460C0005B0773 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A0A2BB460C0005B0773 /* CardView.swift */; };
+		AEC99A0F2BB46732005B0773 /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A0E2BB46732005B0773 /* LessonView.swift */; };
+		AEC99A112BB46753005B0773 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A102BB46753005B0773 /* CardView.swift */; };
+		AEC99A132BB46763005B0773 /* LessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A122BB46763005B0773 /* LessonViewModel.swift */; };
+		AEC99A152BB46775005B0773 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A142BB46775005B0773 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +43,10 @@
 		03BA98FE2BB1BAC9006AAC93 /* MegazordAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MegazordAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegazordAppTests.swift; sourceTree = "<group>"; };
 		03C63B612BB2F831008D6AB8 /* MundoRampa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MundoRampa.swift; sourceTree = "<group>"; };
-		AEC99A042BB44C56005B0773 /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LessonView.swift; path = "../../../paw-task/PawTask/PawTask/Settings/LessonView.swift"; sourceTree = "<group>"; };
-		AEC99A062BB44D31005B0773 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = "../../../paw-task/PawTask/PawTask/Settings/Extensions.swift"; sourceTree = "<group>"; };
-		AEC99A082BB45D29005B0773 /* LessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LessonViewModel.swift; path = "../../../paw-task/PawTask/PawTask/Settings/LessonViewModel.swift"; sourceTree = "<group>"; };
-		AEC99A0A2BB460C0005B0773 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = "../../../paw-task/PawTask/PawTask/Settings/CardView.swift"; sourceTree = "<group>"; };
+		AEC99A0E2BB46732005B0773 /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
+		AEC99A102BB46753005B0773 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		AEC99A122BB46763005B0773 /* LessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonViewModel.swift; sourceTree = "<group>"; };
+		AEC99A142BB46775005B0773 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,12 +91,12 @@
 			isa = PBXGroup;
 			children = (
 				03BA98F02BB1BAC8006AAC93 /* ContentView.swift */,
-				AEC99A062BB44D31005B0773 /* Extensions.swift */,
+				AEC99A142BB46775005B0773 /* Extensions.swift */,
 				03BA98F22BB1BAC8006AAC93 /* ImmersiveView.swift */,
 				03C63B612BB2F831008D6AB8 /* MundoRampa.swift */,
-				AEC99A042BB44C56005B0773 /* LessonView.swift */,
-				AEC99A0A2BB460C0005B0773 /* CardView.swift */,
-				AEC99A082BB45D29005B0773 /* LessonViewModel.swift */,
+				AEC99A0E2BB46732005B0773 /* LessonView.swift */,
+				AEC99A102BB46753005B0773 /* CardView.swift */,
+				AEC99A122BB46763005B0773 /* LessonViewModel.swift */,
 				03BA98EE2BB1BAC8006AAC93 /* MegazordAppApp.swift */,
 				03BA98F42BB1BAC9006AAC93 /* Assets.xcassets */,
 				03BA98F92BB1BAC9006AAC93 /* Info.plist */,
@@ -232,13 +232,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEC99A0B2BB460C0005B0773 /* CardView.swift in Sources */,
-				AEC99A072BB44D31005B0773 /* Extensions.swift in Sources */,
+				AEC99A152BB46775005B0773 /* Extensions.swift in Sources */,
 				03BA98F12BB1BAC8006AAC93 /* ContentView.swift in Sources */,
 				03C63B622BB2F831008D6AB8 /* MundoRampa.swift in Sources */,
-				AEC99A092BB45D29005B0773 /* LessonViewModel.swift in Sources */,
 				03BA98EF2BB1BAC8006AAC93 /* MegazordAppApp.swift in Sources */,
-				AEC99A052BB44C56005B0773 /* LessonView.swift in Sources */,
+				AEC99A132BB46763005B0773 /* LessonViewModel.swift in Sources */,
+				AEC99A0F2BB46732005B0773 /* LessonView.swift in Sources */,
+				AEC99A112BB46753005B0773 /* CardView.swift in Sources */,
 				03BA98F32BB1BAC8006AAC93 /* ImmersiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
