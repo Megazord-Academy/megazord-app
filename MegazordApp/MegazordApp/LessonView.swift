@@ -9,17 +9,8 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
-enum SimulatorStatus {
-    case closed
-    case open
-    case running
-    case stopped
-}
-
 struct LessonView: View {
-    var lessonName: String = "Tutorial Lesson"
-    var simulatorCardText: String = "You need to launch the simulator in order to test your robot."
-    var simulatorStatus: SimulatorStatus = .open
+    @StateObject private var viewModel = LessonViewModel(lessonName: "Tutorial Lesson", simulatorCardText: "You need to launch the simulator in order to test your robot.")
     
     /// Variable that controls the robot editor sheet visibility on the lesson view.
     @State var showRobotEditorSheet: Bool = false
@@ -27,7 +18,7 @@ struct LessonView: View {
     var body: some View {
         HStack(alignment: .top, spacing: 16) {
             // description card
-            CardView(color: "Green", title: "Description") {
+            CardView(color: "colorGreen", title: "Description") {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 24) {
                         TextSection(sectionTitle: "Introduction") {
@@ -52,7 +43,7 @@ struct LessonView: View {
                                 HStack(alignment: .center, spacing: 24) {
                                     Text("2. Once in the assembly mode, you'll see a new window, with all of the elements you can add to your car. You can select them and see how they affect your creation. Keep in mind that different components affect the car in different ways.")
                                     
-                                    Image("normalWheelsIllustration")
+                                    Image(viewModel.robotImage)
                                         .resizable()
                                         .scaledToFit()
                                         .frame(width: 100)
@@ -82,7 +73,7 @@ struct LessonView: View {
             
             VStack(spacing: 16) {
                 // your robot card
-                CardView(color: "Orange", title: "Your Robot", content: {
+                CardView(color: "colorOrange", title: "Your Robot", content: {
                     VStack(alignment: .leading) {
                         HStack {
                             Spacer()
@@ -95,25 +86,52 @@ struct LessonView: View {
                         Spacer()
                         
                         Button {
-                            // action
+                            viewModel.editRobotButtonTapped()
                         } label: {
                             Label("Edit Robot", systemImage: "wrench.adjustable.fill")
                         }
                         .buttonBorderShape(.roundedRectangle)
+                        .sheet(isPresented: $viewModel.showRobotEditorSheet) {
+                            Text("Robot Editor Sheet")
+                        }
                     }
                     .padding()
                 })
                 
                 HStack {
                     // robot status card
-                    CardView(color: "Purple", title: "Robot Status") {
+                    CardView(color: "colorPurple", title: "Robot Status") {
                         VStack(alignment: .leading) {
                             HStack(alignment: .center) {
-                                Circle()
-                                    .frame(width: 16, height: 16)
-                                    .foregroundStyle(.gray)
-                                
-                                Text("Off")
+                                switch viewModel.robotStatus {
+                                    case .idle:
+                                        Circle()
+                                            .frame(width: 16, height: 16)
+                                            .foregroundStyle(.yellow)
+                                        
+                                        Text("Idle")
+                                        
+                                    case .stuck:
+                                        Circle()
+                                            .frame(width: 16, height: 16)
+                                            .foregroundStyle(.red)
+                                        
+                                        Text("Stuck")
+                                        
+                                    case .moving:
+                                        Circle()
+                                            .frame(width: 16, height: 16)
+                                            .foregroundStyle(.green)
+                                        
+                                        Text("Moving")
+                                        
+                                    case .off:
+                                        Circle()
+                                            .frame(width: 16, height: 16)
+                                            .foregroundStyle(.gray)
+                                        
+                                        Text("Off")
+                                }
                             }
                             
                             Text("You need to launch the simulator to activate your robot.")
@@ -125,14 +143,14 @@ struct LessonView: View {
                     }
                     
                     // simulator card
-                    CardView(color: "Blue", title: "Simulator") {
+                    CardView(color: "colorBlue", title: "Simulator") {
                         VStack(alignment: .leading) {
                             
-                            Text(simulatorCardText)
+                            Text(viewModel.simulatorCardText)
                             
-                            if simulatorStatus == .closed {
+                            if viewModel.simulatorStatus == .closed {
                                 Button {
-                                    // action
+                                    viewModel.launchSimulatorButtonTapped()
                                 } label: {
                                     Label("Launch", systemImage: "bolt.batteryblock.fill")
                                 }
@@ -142,23 +160,31 @@ struct LessonView: View {
                                 HStack {
                                     // play button
                                     Button {
-                                        // action
+                                        if viewModel.simulatorStatus == .open {
+                                            viewModel.playSimulatorButtonTapped()
+                                        } else {
+                                            viewModel.stopSimulatorButtonTapped()
+                                        }
+                                        
                                     } label: {
-                                        Label("Play", systemImage: "play.fill")
+                                        if viewModel.simulatorStatus == .running {
+                                            Label("Stop", systemImage: "stop.fill")
+                                        } else {
+                                            Label("Play", systemImage: "play.fill")
+                                        }
+                                        
                                     }
                                     .buttonBorderShape(.roundedRectangle)
                                     
                                     // close button
                                     Button {
-                                        // action
+                                        viewModel.closeSimulatorButtonTapped()
                                     } label: {
                                         Label("Close", systemImage: "rectangle.slash.fill")
                                     }
                                     .buttonBorderShape(.roundedRectangle)
                                 }
-                                
                             }
-                            
                             
                             Spacer()
                         }
@@ -172,7 +198,7 @@ struct LessonView: View {
         }
         .padding(.horizontal, 24)
         .padding(.bottom, 24)
-        .navigationTitle(lessonName)
+        .navigationTitle(viewModel.lessonName)
         .navigationBarTitleDisplayMode(.inline)
     }
 }
