@@ -56,30 +56,20 @@
       {
         "isExpanded" : true,
         "isLocked" : false
-      }
-    ]
-  },
-  "AF09ED6F-1707-48FD-8720-65B998362C09" : {
-    "objectMetadataList" : [
-      [
-        "AF09ED6F-1707-48FD-8720-65B998362C09",
-        "Root",
-        "car_normalWheels_motor",
-        "Geom"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
       },
       [
-        "AF09ED6F-1707-48FD-8720-65B998362C09",
+        "5263660D-6361-41CF-8264-DFD271DCCB42",
         "Root",
         "car_normalWheels_motor"
       ],
       {
         "isExpanded" : true,
         "isLocked" : false
-      },
+      }
+    ]
+  },
+  "AF09ED6F-1707-48FD-8720-65B998362C09" : {
+    "objectMetadataList" : [
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root",

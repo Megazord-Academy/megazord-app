@@ -56,6 +56,25 @@ struct ImmersiveView: View {
                     print("Didn't find only chassis") //Needed to throw error
                 }
                 
+                if let bigWheelsTwoMotorCar = scene.findEntity(named: "Nome modelo de roda grande e dois motores") {
+                    bigWheelsTwoMotorCar.isEnabled = robotController.checkBigWheelsTwoMotors()
+                }else{
+                    print("Didn't find big wheels two motors") //Needed to throw error
+                }
+                
+                if let defaultWheelsTwoMotorCar = scene.findEntity(named: "Nome modelo de roda normal e dois motores") {
+                    defaultWheelsTwoMotorCar.isEnabled = robotController.checkDefaultWheelsTwoMotors()
+                }else{
+                    print("Didn't find default wheels two motors") //Needed to throw error
+                }
+                
+                if let twoMotors = scene.findEntity(named: "Nome modelo com dois motores") {
+                    twoMotors.isEnabled = robotController.checkTwoMotors()
+                }else{
+                    print("Didn't find two motors car") //Needed to throw error
+                }
+                
+                
                 
                 
                 

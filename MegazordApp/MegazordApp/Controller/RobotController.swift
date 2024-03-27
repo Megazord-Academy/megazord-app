@@ -9,7 +9,7 @@ import Foundation
 
 class RobotController: ObservableObject{
     private var defaultWheelSelected = false
-    private var motorSelected = false
+    private var numMotorsSelected = 0
     private var bigWheelSelected = false
     private var robot = Robot.chassis
     
@@ -36,20 +36,30 @@ class RobotController: ObservableObject{
     }
     
     func putMotor(){
-        motorSelected.toggle()
+        numMotorsSelected = numMotorsSelected + 1
+        if numMotorsSelected > 2{
+            numMotorsSelected = 0
+        }
+        decideRobotNewCase()
     }
     
     func decideRobotNewCase(){
-        if defaultWheelSelected && motorSelected{
+        if defaultWheelSelected && numMotorsSelected == 1{
             robot = Robot.defaultWheelsMotor
         }else if defaultWheelSelected{
             robot = Robot.defaultWheelsNoMotor
-        }else if bigWheelSelected && motorSelected{
+        }else if defaultWheelSelected && numMotorsSelected == 2{
+            robot = Robot.defaultWheelsTwoMotors
+        }else if bigWheelSelected && numMotorsSelected == 1{
             robot = Robot.bigWheelsMotor
+        }else if bigWheelSelected && numMotorsSelected == 2{
+            robot = Robot.bigWheelsTwoMotors
         }else if bigWheelSelected{
             robot = Robot.bigWheelsNoMotor
-        }else if motorSelected{
+        }else if numMotorsSelected == 1{
             robot = Robot.motorOnly
+        }else if numMotorsSelected == 2{
+            robot = Robot.twoMotors
         }else{
             robot = Robot.chassis
         }
@@ -57,6 +67,14 @@ class RobotController: ObservableObject{
     
     func checkDefaultWheelsMotor() -> Bool{
         if robot == Robot.defaultWheelsMotor{
+            return true
+        }else{
+            return false
+        }
+    }
+    
+    func checkDefaultWheelsTwoMotors() -> Bool{
+        if robot == Robot.defaultWheelsTwoMotors{
             return true
         }else{
             return false
@@ -79,6 +97,14 @@ class RobotController: ObservableObject{
         }
     }
     
+    func checkBigWheelsTwoMotors() -> Bool{
+        if robot == Robot.bigWheelsTwoMotors{
+            return true
+        }else{
+            return false
+        }
+    }
+    
     func checkBigWheelsNoMotor() -> Bool{
         if robot == Robot.bigWheelsNoMotor{
             return true
@@ -95,6 +121,14 @@ class RobotController: ObservableObject{
         }
     }
     
+    func checkTwoMotors() -> Bool{
+        if robot == Robot.twoMotors{
+            return true
+        }else{
+            return false
+        }
+    }
+    
     func checkChassisOnly() -> Bool{
         if robot == Robot.chassis{
             return true
@@ -102,6 +136,8 @@ class RobotController: ObservableObject{
             return false
         }
     }
+    
+    
 
 }
 

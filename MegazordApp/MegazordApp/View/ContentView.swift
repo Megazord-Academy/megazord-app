@@ -10,7 +10,6 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
-    @EnvironmentObject var robotController: RobotController
     @EnvironmentObject var sceneController: SceneController
 
 
