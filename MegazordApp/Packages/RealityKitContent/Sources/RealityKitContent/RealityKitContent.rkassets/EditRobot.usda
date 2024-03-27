@@ -10,18 +10,118 @@
 
 def Xform "Root"
 {
-    def "car_normalWheels_motor" (
+    def "car" (
         active = true
         customData = {
             float3 rotationEulerHint = (0, 1.5707963, 0)
         }
-        prepend references = @car-normalWheels-motor.usdz@
+        prepend references = @car.usdz@
     )
     {
         quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
         float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (0.1840811, 0, -2.652965)
+        float3 xformOp:translate = (0.18408, 0, -2.65297)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Materials"
+        {
+            over "Material_002"
+            {
+                token outputs:surface.connect = </Root/car/Materials/Material_002/surfaceShader.outputs:surface>
+            }
+        }
+    }
+
+    def "car_bigWheels_dualMotor" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 1.5707963, 0)
+        }
+        prepend references = @car-bigWheels-dualMotor.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0.18408, 0, -2.65297)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Materials"
+        {
+            over "Material_002"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_dualMotor/Materials/Material_002/surfaceShader.outputs:surface>
+            }
+
+            over "wheelConnector"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_dualMotor/Materials/wheelConnector/surfaceShader.outputs:surface>
+            }
+
+            over "motor"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_dualMotor/Materials/motor/surfaceShader.outputs:surface>
+            }
+
+            over "wheelConnector_002"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_dualMotor/Materials/wheelConnector_002/surfaceShader.outputs:surface>
+            }
+
+            over "wheelConnector_004"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_dualMotor/Materials/wheelConnector_004/surfaceShader.outputs:surface>
+            }
+
+            over "wheelMetal_005"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_dualMotor/Materials/wheelMetal_005/surfaceShader.outputs:surface>
+            }
+
+            over "wheel_005"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_dualMotor/Materials/wheel_005/surfaceShader.outputs:surface>
+            }
+
+            over "wheelConnector_001"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_dualMotor/Materials/wheelConnector_001/surfaceShader.outputs:surface>
+            }
+
+            over "motor_001"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_dualMotor/Materials/motor_001/surfaceShader.outputs:surface>
+            }
+
+            over "wheel_001"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_dualMotor/Materials/wheel_001/surfaceShader.outputs:surface>
+            }
+
+            over "wheelMetal_002"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_dualMotor/Materials/wheelMetal_002/surfaceShader.outputs:surface>
+            }
+
+            over "wheelMetal_007"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_dualMotor/Materials/wheelMetal_007/surfaceShader.outputs:surface>
+            }
+
+            over "wheel_007"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_dualMotor/Materials/wheel_007/surfaceShader.outputs:surface>
+            }
+
+            over "wheel_008"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_dualMotor/Materials/wheel_008/surfaceShader.outputs:surface>
+            }
+
+            over "wheelMetal_008"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_dualMotor/Materials/wheelMetal_008/surfaceShader.outputs:surface>
+            }
+        }
     }
 
     def "car_bigWheels_motor" (
@@ -34,8 +134,290 @@ def Xform "Root"
     {
         quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
         float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (0.18407649, 0, -2.65297)
+        float3 xformOp:translate = (0.18408, 0, -2.65297)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Materials"
+        {
+            over "Material_002"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_motor/Materials/Material_002/surfaceShader.outputs:surface>
+            }
+
+            over "wheelConnector"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_motor/Materials/wheelConnector/surfaceShader.outputs:surface>
+            }
+
+            over "motor"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_motor/Materials/motor/surfaceShader.outputs:surface>
+            }
+
+            over "wheelConnector_002"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_motor/Materials/wheelConnector_002/surfaceShader.outputs:surface>
+            }
+
+            over "wheelConnector_004"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_motor/Materials/wheelConnector_004/surfaceShader.outputs:surface>
+            }
+
+            over "wheelMetal_005"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_motor/Materials/wheelMetal_005/surfaceShader.outputs:surface>
+            }
+
+            over "wheel_005"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_motor/Materials/wheel_005/surfaceShader.outputs:surface>
+            }
+
+            over "wheel_006"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_motor/Materials/wheel_006/surfaceShader.outputs:surface>
+            }
+
+            over "wheelMetal_006"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_motor/Materials/wheelMetal_006/surfaceShader.outputs:surface>
+            }
+
+            over "wheelMetal_007"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_motor/Materials/wheelMetal_007/surfaceShader.outputs:surface>
+            }
+
+            over "wheel_007"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_motor/Materials/wheel_007/surfaceShader.outputs:surface>
+            }
+
+            over "wheel_008"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_motor/Materials/wheel_008/surfaceShader.outputs:surface>
+            }
+
+            over "wheelMetal_008"
+            {
+                token outputs:surface.connect = </Root/car_bigWheels_motor/Materials/wheelMetal_008/surfaceShader.outputs:surface>
+            }
+        }
+    }
+
+    def "car_motor" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 1.5707963, 0)
+        }
+        prepend references = @car-motor.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0.18408, 0, -2.65297)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Materials"
+        {
+            over "Material_002"
+            {
+                token outputs:surface.connect = </Root/car_motor/Materials/Material_002/surfaceShader.outputs:surface>
+            }
+
+            over "wheelConnector"
+            {
+                token outputs:surface.connect = </Root/car_motor/Materials/wheelConnector/surfaceShader.outputs:surface>
+            }
+
+            over "motor"
+            {
+                token outputs:surface.connect = </Root/car_motor/Materials/motor/surfaceShader.outputs:surface>
+            }
+        }
+    }
+
+    def "car_normalWheels_dualMotor" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 1.5707963, 0)
+        }
+        prepend references = @car-normalWheels-dualMotor.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0.18408, 0, -2.65297)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Materials"
+        {
+            over "Material_002"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_dualMotor/Materials/Material_002/surfaceShader.outputs:surface>
+            }
+
+            over "wheelConnector"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_dualMotor/Materials/wheelConnector/surfaceShader.outputs:surface>
+            }
+
+            over "wheelMetal"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_dualMotor/Materials/wheelMetal/surfaceShader.outputs:surface>
+            }
+
+            over "wheel"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_dualMotor/Materials/wheel/surfaceShader.outputs:surface>
+            }
+
+            over "motor"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_dualMotor/Materials/motor/surfaceShader.outputs:surface>
+            }
+
+            over "wheelConnector_002"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_dualMotor/Materials/wheelConnector_002/surfaceShader.outputs:surface>
+            }
+
+            over "wheel_002"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_dualMotor/Materials/wheel_002/surfaceShader.outputs:surface>
+            }
+
+            over "wheelMetal_001"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_dualMotor/Materials/wheelMetal_001/surfaceShader.outputs:surface>
+            }
+
+            over "wheelMetal_003"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_dualMotor/Materials/wheelMetal_003/surfaceShader.outputs:surface>
+            }
+
+            over "wheel_003"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_dualMotor/Materials/wheel_003/surfaceShader.outputs:surface>
+            }
+
+            over "wheelConnector_004"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_dualMotor/Materials/wheelConnector_004/surfaceShader.outputs:surface>
+            }
+
+            over "wheel_006"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_dualMotor/Materials/wheel_006/surfaceShader.outputs:surface>
+            }
+
+            over "wheelMetal_006"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_dualMotor/Materials/wheelMetal_006/surfaceShader.outputs:surface>
+            }
+
+            over "wheelConnector_001"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_dualMotor/Materials/wheelConnector_001/surfaceShader.outputs:surface>
+            }
+
+            over "motor_001"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_dualMotor/Materials/motor_001/surfaceShader.outputs:surface>
+            }
+        }
+    }
+
+    def "car_normalWheels_motor" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 1.5707963, 0)
+        }
+        prepend references = @car-normalWheels-motor.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.70710677, 0, 0.7071067, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0.18408, 0, -2.65297)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Geom"
+        {
+            over "Cylinder_009"
+            {
+                double3 xformOp:translate = (-0.24201059341430664, 0.010070147924125195, 0.08639854192733765)
+            }
+        }
+
+        over "Materials"
+        {
+            over "Material_002"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/Material_002/surfaceShader.outputs:surface>
+            }
+
+            over "wheelConnector"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheelConnector/surfaceShader.outputs:surface>
+            }
+
+            over "wheelMetal"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheelMetal/surfaceShader.outputs:surface>
+            }
+
+            over "wheel"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheel/surfaceShader.outputs:surface>
+            }
+
+            over "motor"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/motor/surfaceShader.outputs:surface>
+            }
+
+            over "wheelConnector_002"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheelConnector_002/surfaceShader.outputs:surface>
+            }
+
+            over "wheel_002"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheel_002/surfaceShader.outputs:surface>
+            }
+
+            over "wheelMetal_001"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheelMetal_001/surfaceShader.outputs:surface>
+            }
+
+            over "wheelMetal_003"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheelMetal_003/surfaceShader.outputs:surface>
+            }
+
+            over "wheel_003"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheel_003/surfaceShader.outputs:surface>
+            }
+
+            over "wheel_004"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheel_004/surfaceShader.outputs:surface>
+            }
+
+            over "wheelConnector_004"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheelConnector_004/surfaceShader.outputs:surface>
+            }
+
+            over "wheelMetal_004"
+            {
+                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheelMetal_004/surfaceShader.outputs:surface>
+            }
+        }
     }
 }
 

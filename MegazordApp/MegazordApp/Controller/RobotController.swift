@@ -46,10 +46,10 @@ class RobotController: ObservableObject{
     func decideRobotNewCase() {
         if defaultWheelSelected && numMotorsSelected == 1{
             robot = Robot.defaultWheelsMotor
-        }else if defaultWheelSelected{
-            robot = Robot.defaultWheelsNoMotor
         }else if defaultWheelSelected && numMotorsSelected == 2{
             robot = Robot.defaultWheelsTwoMotors
+        }else if defaultWheelSelected{
+            robot = Robot.defaultWheelsNoMotor
         }else if bigWheelSelected && numMotorsSelected == 1{
             robot = Robot.bigWheelsMotor
         }else if bigWheelSelected && numMotorsSelected == 2{
@@ -66,15 +66,12 @@ class RobotController: ObservableObject{
     }
     
     func checkDefaultWheelsMotor() -> Bool{
-        if robot == Robot.defaultWheelsMotor{
-            return true
-        }else{
-            return false
-        }
+        robot == Robot.defaultWheelsMotor
     }
     
     func checkDefaultWheelsTwoMotors() -> Bool{
         robot == Robot.defaultWheelsTwoMotors
+     
     }
     
     func checkDefaultWheelsNoMotor() -> Bool{

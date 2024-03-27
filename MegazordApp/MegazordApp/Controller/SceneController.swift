@@ -23,11 +23,11 @@ class SceneController: ObservableObject{
         if let defaultWheelsMotorCar = scene.findEntity(named: "car_normalWheels_motor") {
             defaultWheelsMotorCar.isEnabled = robotController.checkDefaultWheelsMotor()
         }else{
-            print("Didn't find big wheels car") //Needed to throw error
+            print("Didn't find normal wheels car") //Needed to throw error
         }
         
         if let defaultWheelsNoMotorCar = scene.findEntity(named: "Nome modelo com roda normal e sem motor") {
-            defaultWheelsNoMotorCar.isEnabled = robotController.checkBigWheelsNoMotor()
+            defaultWheelsNoMotorCar.isEnabled = robotController.checkDefaultWheelsNoMotor()
         }else{
             print("Didn't find default wheels no motor car") //Needed to throw error
         }
@@ -44,25 +44,25 @@ class SceneController: ObservableObject{
             print("Didn't find big wheels no motor car") //Needed to throw error
         }
         
-        if let onlyMotor = scene.findEntity(named: "Nome modelo apenas chassi e motor") {
+        if let onlyMotor = scene.findEntity(named: "car_motor") {
             onlyMotor.isEnabled = robotController.checkMotorOnly()
         }else{
             print("Didn't find only motor car") //Needed to throw error
         }
         
-        if let chassisOnly = scene.findEntity(named: "Nome modelo apenas chassi") {
+        if let chassisOnly = scene.findEntity(named: "car") {
             chassisOnly.isEnabled = robotController.checkChassisOnly()
         }else{
             print("Didn't find only chassis") //Needed to throw error
         }
         
-        if let bigWheelsTwoMotorCar = scene.findEntity(named: "Nome modelo de roda grande e dois motores") {
+        if let bigWheelsTwoMotorCar = scene.findEntity(named: "car_bigWheels_dualMotor") {
             bigWheelsTwoMotorCar.isEnabled = robotController.checkBigWheelsTwoMotors()
         }else{
             print("Didn't find big wheels two motors") //Needed to throw error
         }
         
-        if let defaultWheelsTwoMotorCar = scene.findEntity(named: "Nome modelo de roda normal e dois motores") {
+        if let defaultWheelsTwoMotorCar = scene.findEntity(named: "car_normalWheels_dualMotor") {
             defaultWheelsTwoMotorCar.isEnabled = robotController.checkDefaultWheelsTwoMotors()
         }else{
             print("Didn't find default wheels two motors") //Needed to throw error

@@ -22,23 +22,23 @@ enum Robot {
     func Model3D() -> String {
         switch self {
         case .defaultWheelsMotor:
-            return "car-normalWheels-motor"
+            return "car_normalWheels_motor"
         case .defaultWheelsTwoMotors:
-            return "Scene"
+            return "car_normalWheels_dualMotor"
         case .defaultWheelsNoMotor:
             return "Scene"
         case .bigWheelsMotor:
-            return "car-bigWheels-motor.usdz"
+            return "car_bigWheels_motor"
         case .bigWheelsNoMotor:
             return "Scene"
         case .bigWheelsTwoMotors:
-            return "Scene"
+            return "car_bigWheels_dualMotor"
         case .motorOnly:
-            return "Scene"
+            return "car_motor"
         case .twoMotors:
             return "Scene"
         case .chassis:
-            return "Scene"
+            return "car"
         }
     }
     
