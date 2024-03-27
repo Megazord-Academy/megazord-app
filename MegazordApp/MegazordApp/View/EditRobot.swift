@@ -11,6 +11,7 @@ import RealityKitContent
 
 struct EditRobot: View {
     @EnvironmentObject var robotController: RobotController
+    @EnvironmentObject var sceneController: SceneController
     
     
     var body: some View {
@@ -23,14 +24,19 @@ struct EditRobot: View {
                 
                 Button("BigWheels"){
                     robotController.putBigWheels()
+                    sceneController.showEditRobotImmersive = false
                 }
                 
                 Button("DefaultWheels"){
                     robotController.putDefaultWheels()
+                    sceneController.showEditRobotImmersive = false
+
                 }
                 
                 Button("Motor"){
                     robotController.putMotor()
+                    sceneController.showEditRobotImmersive = false
+
                 }
                 
                 Spacer()

@@ -1,15 +1,17 @@
 //
-//  ImmersiveView.swift
+//  RampLessonImmersive.swift
 //  MegazordApp
 //
-//  Created by Bruno Dias on 25/03/24.
+//  Created by Caio Gomes Piteli on 27/03/24.
 //
+
+import SwiftUI
 
 import SwiftUI
 import RealityKit
 import RealityKitContent
 
-struct ImmersiveView: View {
+struct RampLessonImmersive: View {
     @EnvironmentObject var robotController: RobotController
     @EnvironmentObject var sceneController: SceneController
     
@@ -17,7 +19,7 @@ struct ImmersiveView: View {
         RealityView { content in
     
             // Loading scene
-            if let scene = try? await Entity(named: "Immersive", in: realityKitContentBundle) {
+            if let scene = try? await Entity(named: "NOME DA CENA DA RAMPA", in: realityKitContentBundle) {
                 
                 sceneController.decideRobot(scene: scene, robotController: robotController)
                 

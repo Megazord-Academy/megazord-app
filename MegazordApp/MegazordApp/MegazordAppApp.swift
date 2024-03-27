@@ -27,11 +27,22 @@ struct MegazordAppApp: App {
                 .environmentObject(sceneController)
         }
         
+        ImmersiveSpace(id: "EditRobotImmersive") {
+            EditRobotImmersive()
+                .environmentObject(robotController)
+                .environmentObject(sceneController)
+        }
+        
+        ImmersiveSpace(id: "RampLesson") {
+            RampLessonImmersive()
+                .environmentObject(robotController)
+                .environmentObject(sceneController)
+        }
         
         WindowGroup(id: "EditRobot"){
             EditRobot()
                 .environmentObject(robotController)
-
+                .environmentObject(sceneController)
         }
     }
 }

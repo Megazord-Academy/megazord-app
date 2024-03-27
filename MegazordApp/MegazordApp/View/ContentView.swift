@@ -11,57 +11,150 @@ import RealityKitContent
 
 struct ContentView: View {
     @EnvironmentObject var sceneController: SceneController
-
-
-    @State private var showImmersiveSpace = false  
-    @State private var immersiveSpaceIsShown = false
+    
+    @State private var tapped = "edit"
+    @State var tapsMade = 0
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
+    
     @Environment(\.openWindow) private var openWindow
 
     var body: some View {
         VStack {
             
-            Toggle("Show ImmersiveSpace", isOn: $showImmersiveSpace)
-                .font(.title)
-                .frame(width: 360)
-                .padding(24)
-                .glassBackgroundEffect()
+            Button("First Lesson Scene"){
+                sceneController.showEditRobotImmersive = false
+                sceneController.showRampLesson = false
+                if tapsMade == 0{
+                    sceneController.showFirstLessonImmersive = true
+                    tapsMade = tapsMade + 1
+                }
+                tapped = "first"
+               
+            }.padding()
             
             Button("Edit Robot Scene"){
-                sceneController.actualScene = "EditRobot"
+                sceneController.showFirstLessonImmersive = false
+                sceneController.showRampLesson = false
+                if tapsMade == 0{
+                    sceneController.showEditRobotImmersive = true
+                    tapsMade = tapsMade + 1
+                }
+                tapped = "edit"
+
             }.padding()
             
-            Button("First Lesson Scene"){
-                sceneController.actualScene = "Immersive"
-            }.padding()
-            
+           
             Button("Second Lesson Scene"){
-                sceneController.actualScene = "RampLesson"
+                sceneController.showFirstLessonImmersive = false
+                sceneController.showEditRobotImmersive = false
+                if tapsMade == 0{
+                    sceneController.showRampLesson = true
+                    tapsMade = tapsMade + 1
+                }
+                tapped = "ramp"
+                
             }.padding()
             
             Button("Edit Robot"){
                 openWindow(id: "EditRobot")
+                sceneController.showFirstLessonImmersive = false
+                sceneController.showRampLesson = false
+                if tapsMade == 0{
+                    sceneController.showEditRobotImmersive = true
+                    tapsMade = tapsMade + 1
+                }
+                tapped = "edit"
             }.padding()
             
         }
         .padding()
-        .onChange(of: showImmersiveSpace) { _, newValue in
+        .onChange(of: sceneController.showFirstLessonImmersive) { _, newValue in
             Task {
                 if newValue {
                     switch await openImmersiveSpace(id: "ImmersiveSpace") {
                     case .opened:
-                        immersiveSpaceIsShown = true
+                        sceneController.firstLessonIsShown = true
                     case .error, .userCancelled:
                         fallthrough
                     @unknown default:
-                        immersiveSpaceIsShown = false
-                        showImmersiveSpace = false
+                        sceneController.firstLessonIsShown = false
+                        sceneController.showFirstLessonImmersive = false
                     }
-                } else if immersiveSpaceIsShown {
+                } else if sceneController.firstLessonIsShown {
                     await dismissImmersiveSpace()
-                    immersiveSpaceIsShown = false
+                    sceneController.firstLessonIsShown = false
+                    
+                    if tapped == "edit"{
+                        if sceneController.firstLessonIsShown == false{
+                            sceneController.showEditRobotImmersive = true
+                        }
+                    }else if tapped == "ramp"{
+                        if sceneController.firstLessonIsShown == false{
+                            sceneController.showRampLesson = true
+                        }
+                    }
+                }
+            }
+        }
+        
+        .onChange(of: sceneController.showEditRobotImmersive) { _, newValue in
+            Task {
+                if newValue {
+                    switch await openImmersiveSpace(id: "EditRobotImmersive") {
+                    case .opened:
+                        sceneController.editRobotImmersiveIsShown = true
+                    case .error, .userCancelled:
+                        fallthrough
+                    @unknown default:
+                        sceneController.editRobotImmersiveIsShown = false
+                        sceneController.showEditRobotImmersive = false
+                    }
+                } else if sceneController.editRobotImmersiveIsShown {
+                    await dismissImmersiveSpace()
+                    sceneController.editRobotImmersiveIsShown = false
+                    
+                    if tapped == "first"{
+                        if sceneController.editRobotImmersiveIsShown == false{
+                            sceneController.showFirstLessonImmersive = true
+                        }
+                    }else if tapped == "ramp"{
+                        if sceneController.editRobotImmersiveIsShown == false{
+                            sceneController.showRampLesson = true
+                        }
+                    }else{
+                        sceneController.showEditRobotImmersive = true
+
+                    }
+                }
+            }
+        }
+        .onChange(of: sceneController.showRampLesson) { _, newValue in
+            Task {
+                if newValue {
+                    switch await openImmersiveSpace(id: "RampLesson") {
+                    case .opened:
+                        sceneController.showRampLesson = true
+                    case .error, .userCancelled:
+                        fallthrough
+                    @unknown default:
+                        sceneController.rampLessonIsShown = false
+                        sceneController.showRampLesson = false
+                    }
+                } else if sceneController.rampLessonIsShown {
+                    await dismissImmersiveSpace()
+                    sceneController.rampLessonIsShown = false
+                    
+                    if tapped == "first"{
+                        if sceneController.rampLessonIsShown == false{
+                            sceneController.showFirstLessonImmersive = true
+                        }
+                    }else if tapped == "edit"{
+                        if sceneController.rampLessonIsShown == false{
+                            sceneController.showEditRobotImmersive = true
+                        }
+                    }
                 }
             }
         }

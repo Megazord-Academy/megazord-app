@@ -14,11 +14,12 @@
 		03BA98F52BB1BAC9006AAC93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BA98F42BB1BAC9006AAC93 /* Assets.xcassets */; };
 		03BA98F82BB1BAC9006AAC93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BA98F72BB1BAC9006AAC93 /* Preview Assets.xcassets */; };
 		03BA99032BB1BAC9006AAC93 /* MegazordAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */; };
+		741B9CD52BB4555D00FBBA7B /* EditRobotImmersive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B9CD42BB4555D00FBBA7B /* EditRobotImmersive.swift */; };
+		741B9CD72BB4557C00FBBA7B /* RampLessonImmersive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B9CD62BB4557C00FBBA7B /* RampLessonImmersive.swift */; };
 		74366C602BB241740050D82C /* EditRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74366C5F2BB241740050D82C /* EditRobot.swift */; };
 		74DDA9BC2BB2F2170058D55A /* RobotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDA9BB2BB2F2170058D55A /* RobotController.swift */; };
 		74EA35B72BB3841200453051 /* RobotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EA35B62BB3841200453051 /* RobotModel.swift */; };
 		74EA35B92BB384AD00453051 /* SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EA35B82BB384AD00453051 /* SceneController.swift */; };
-		74EA35BB2BB3875900453051 /* SceneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EA35BA2BB3875900453051 /* SceneModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +43,12 @@
 		03BA98F92BB1BAC9006AAC93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03BA98FE2BB1BAC9006AAC93 /* MegazordAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MegazordAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegazordAppTests.swift; sourceTree = "<group>"; };
+		741B9CD42BB4555D00FBBA7B /* EditRobotImmersive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRobotImmersive.swift; sourceTree = "<group>"; };
+		741B9CD62BB4557C00FBBA7B /* RampLessonImmersive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RampLessonImmersive.swift; sourceTree = "<group>"; };
 		74366C5F2BB241740050D82C /* EditRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRobot.swift; sourceTree = "<group>"; };
 		74DDA9BB2BB2F2170058D55A /* RobotController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotController.swift; sourceTree = "<group>"; };
 		74EA35B62BB3841200453051 /* RobotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotModel.swift; sourceTree = "<group>"; };
 		74EA35B82BB384AD00453051 /* SceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneController.swift; sourceTree = "<group>"; };
-		74EA35BA2BB3875900453051 /* SceneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,8 @@
 				03BA98F02BB1BAC8006AAC93 /* ContentView.swift */,
 				03BA98F22BB1BAC8006AAC93 /* ImmersiveView.swift */,
 				74366C5F2BB241740050D82C /* EditRobot.swift */,
+				741B9CD42BB4555D00FBBA7B /* EditRobotImmersive.swift */,
+				741B9CD62BB4557C00FBBA7B /* RampLessonImmersive.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -147,7 +151,6 @@
 		74EFB3BE2BB3983A006C5E5E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				74EA35BA2BB3875900453051 /* SceneModel.swift */,
 				74EA35B62BB3841200453051 /* RobotModel.swift */,
 			);
 			path = Models;
@@ -256,9 +259,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				741B9CD72BB4557C00FBBA7B /* RampLessonImmersive.swift in Sources */,
+				741B9CD52BB4555D00FBBA7B /* EditRobotImmersive.swift in Sources */,
 				03BA98F12BB1BAC8006AAC93 /* ContentView.swift in Sources */,
 				74DDA9BC2BB2F2170058D55A /* RobotController.swift in Sources */,
-				74EA35BB2BB3875900453051 /* SceneModel.swift in Sources */,
 				74EA35B72BB3841200453051 /* RobotModel.swift in Sources */,
 				03BA98EF2BB1BAC8006AAC93 /* MegazordAppApp.swift in Sources */,
 				74366C602BB241740050D82C /* EditRobot.swift in Sources */,
