@@ -10,6 +10,7 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
+    
     @EnvironmentObject var sceneController: SceneController
     
     @State private var tapped = "edit"
@@ -17,7 +18,6 @@ struct ContentView: View {
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
-    
     @Environment(\.openWindow) private var openWindow
 
     var body: some View {
@@ -26,10 +26,12 @@ struct ContentView: View {
             Button("First Lesson Scene"){
                 sceneController.showEditRobotImmersive = false
                 sceneController.showRampLesson = false
+                
                 if tapsMade == 0{
                     sceneController.showFirstLessonImmersive = true
                     tapsMade = tapsMade + 1
                 }
+                
                 tapped = "first"
                
             }.padding()
@@ -37,10 +39,12 @@ struct ContentView: View {
             Button("Edit Robot Scene"){
                 sceneController.showFirstLessonImmersive = false
                 sceneController.showRampLesson = false
+                
                 if tapsMade == 0{
                     sceneController.showEditRobotImmersive = true
                     tapsMade = tapsMade + 1
                 }
+                
                 tapped = "edit"
 
             }.padding()
@@ -49,27 +53,32 @@ struct ContentView: View {
             Button("Second Lesson Scene"){
                 sceneController.showFirstLessonImmersive = false
                 sceneController.showEditRobotImmersive = false
+                
                 if tapsMade == 0{
                     sceneController.showRampLesson = true
                     tapsMade = tapsMade + 1
                 }
+                
                 tapped = "ramp"
                 
             }.padding()
             
             Button("Edit Robot"){
                 openWindow(id: "EditRobot")
+                
                 sceneController.showFirstLessonImmersive = false
                 sceneController.showRampLesson = false
+                
                 if tapsMade == 0{
                     sceneController.showEditRobotImmersive = true
                     tapsMade = tapsMade + 1
                 }
+                
                 tapped = "edit"
+                
             }.padding()
             
         }
-        .padding()
         .onChange(of: sceneController.showFirstLessonImmersive) { _, newValue in
             Task {
                 if newValue {
@@ -84,6 +93,7 @@ struct ContentView: View {
                     }
                 } else if sceneController.firstLessonIsShown {
                     await dismissImmersiveSpace()
+                    
                     sceneController.firstLessonIsShown = false
                     
                     if tapped == "edit"{
@@ -113,6 +123,7 @@ struct ContentView: View {
                     }
                 } else if sceneController.editRobotImmersiveIsShown {
                     await dismissImmersiveSpace()
+                    
                     sceneController.editRobotImmersiveIsShown = false
                     
                     if tapped == "first"{
@@ -125,7 +136,6 @@ struct ContentView: View {
                         }
                     }else{
                         sceneController.showEditRobotImmersive = true
-
                     }
                 }
             }
@@ -144,6 +154,7 @@ struct ContentView: View {
                     }
                 } else if sceneController.rampLessonIsShown {
                     await dismissImmersiveSpace()
+                    
                     sceneController.rampLessonIsShown = false
                     
                     if tapped == "first"{

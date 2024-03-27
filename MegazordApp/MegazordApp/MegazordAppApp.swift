@@ -18,7 +18,6 @@ struct MegazordAppApp: App {
             ContentView()
                 .environmentObject(robotController)
                 .environmentObject(sceneController)
-
         }
 
         ImmersiveSpace(id: "ImmersiveSpace") {
