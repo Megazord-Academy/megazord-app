@@ -162,9 +162,18 @@ def Xform "Root"
         def RealityKitComponent "RigidBody"
         {
             uniform token info:id = "RealityKit.RigidBody"
+            bool isCCDEnabled = 0
+            float linearDamping = -1
+            bool lockRotationY = 0
+            bool lockTranslationY = 0
+            bool lockTranslationZ = 0
+            token motionType = "Dynamic"
 
             def RealityKitStruct "massFrame"
             {
+                float3 m_inertia = (0.1, 0.1, 0.1)
+                float m_mass = 1
+
                 def RealityKitStruct "m_pose"
                 {
                 }
@@ -175,13 +184,6 @@ def Xform "Root"
                 double dynamicFriction = 0.5
                 double staticFriction = 0.5
             }
-        }
-
-        def RealityKitComponent "MotionState"
-        {
-            uniform token info:id = "RealityKit.MotionState"
-            float3 m_userSetLinearVelocity = (3, 0, 0)
-            uint m_userSetLinearVelocityVersion = 1
         }
     }
 
