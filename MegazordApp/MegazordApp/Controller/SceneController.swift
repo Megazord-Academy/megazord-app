@@ -9,21 +9,24 @@ import Foundation
 import RealityKit
 
 class SceneController: ObservableObject{
+    
+    //MARK: - These variables are responsible for showing the right scene on the lesson screen
     @Published var showFirstLessonImmersive = false
     @Published var firstLessonIsShown = false
     
     @Published var showEditRobotImmersive = false
     @Published var editRobotImmersiveIsShown = false
     
-    @Published var showRampLesson = false
-    @Published var rampLessonIsShown = false
     
+    /// This function is responsible for searching 3D Robot models on the current scene created on the RealityComposerPro and making only the right robot (created by user) to appear on the scene, by enabling it and disabling others.
+    ///
+    /// This function relates to the decidion made on the team to stack all the robots on the scene and only showing the right one.
     func decideRobot(scene: Entity, robotController: RobotController){
-        //MARK: - Accessing 3D models on the scene and changing
+        
         if let defaultWheelsMotorCar = scene.findEntity(named: Robot.defaultWheelsMotor.Model3D()) {
             defaultWheelsMotorCar.isEnabled = robotController.checkDefaultWheelsMotor()
         }else{
-            print("Didn't find normal wheels car") //Needed to throw error
+            print("Didn't find default wheels car") //Needed to throw error
         }
         
         if let defaultWheelsNoMotorCar = scene.findEntity(named: Robot.defaultWheelsNoMotor.Model3D()) {

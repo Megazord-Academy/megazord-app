@@ -13,8 +13,8 @@ struct ContentView: View {
     
     @EnvironmentObject var sceneController: SceneController
     
-    @State private var tapped = "edit"
-    @State var tapsMade = 0
+    @State private var lastButtonTapped = ButtonTapped.edit
+    @State var firstInteractionOnScreen = true
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
@@ -25,56 +25,27 @@ struct ContentView: View {
             
             Button("First Lesson Scene"){
                 sceneController.showEditRobotImmersive = false
-                sceneController.showRampLesson = false
                 
-                if tapsMade == 0{
+                if firstInteractionOnScreen{
                     sceneController.showFirstLessonImmersive = true
-                    tapsMade = tapsMade + 1
+                    firstInteractionOnScreen = false
                 }
                 
-                tapped = "first"
+                lastButtonTapped = ButtonTapped.lesson
                
             }.padding()
             
-            Button("Edit Robot Scene"){
-                sceneController.showFirstLessonImmersive = false
-                sceneController.showRampLesson = false
-                
-                if tapsMade == 0{
-                    sceneController.showEditRobotImmersive = true
-                    tapsMade = tapsMade + 1
-                }
-                
-                tapped = "edit"
-
-            }.padding()
-            
-           
-            Button("Second Lesson Scene"){
-                sceneController.showFirstLessonImmersive = false
-                sceneController.showEditRobotImmersive = false
-                
-                if tapsMade == 0{
-                    sceneController.showRampLesson = true
-                    tapsMade = tapsMade + 1
-                }
-                
-                tapped = "ramp"
-                
-            }.padding()
-            
             Button("Edit Robot"){
-                openWindow(id: "EditRobot")
+                openWindow(id: "EditRobot") //It will become a sheet
                 
                 sceneController.showFirstLessonImmersive = false
-                sceneController.showRampLesson = false
                 
-                if tapsMade == 0{
+                if firstInteractionOnScreen{
                     sceneController.showEditRobotImmersive = true
-                    tapsMade = tapsMade + 1
+                    firstInteractionOnScreen = false
                 }
                 
-                tapped = "edit"
+                lastButtonTapped = ButtonTapped.edit
                 
             }.padding()
             
@@ -96,13 +67,9 @@ struct ContentView: View {
                     
                     sceneController.firstLessonIsShown = false
                     
-                    if tapped == "edit"{
+                    if lastButtonTapped == ButtonTapped.edit{
                         if sceneController.firstLessonIsShown == false{
                             sceneController.showEditRobotImmersive = true
-                        }
-                    }else if tapped == "ramp"{
-                        if sceneController.firstLessonIsShown == false{
-                            sceneController.showRampLesson = true
                         }
                     }
                 }
@@ -126,45 +93,12 @@ struct ContentView: View {
                     
                     sceneController.editRobotImmersiveIsShown = false
                     
-                    if tapped == "first"{
+                    if lastButtonTapped == ButtonTapped.lesson{
                         if sceneController.editRobotImmersiveIsShown == false{
                             sceneController.showFirstLessonImmersive = true
-                        }
-                    }else if tapped == "ramp"{
-                        if sceneController.editRobotImmersiveIsShown == false{
-                            sceneController.showRampLesson = true
                         }
                     }else{
                         sceneController.showEditRobotImmersive = true
-                    }
-                }
-            }
-        }
-        .onChange(of: sceneController.showRampLesson) { _, newValue in
-            Task {
-                if newValue {
-                    switch await openImmersiveSpace(id: "RampLesson") {
-                    case .opened:
-                        sceneController.showRampLesson = true
-                    case .error, .userCancelled:
-                        fallthrough
-                    @unknown default:
-                        sceneController.rampLessonIsShown = false
-                        sceneController.showRampLesson = false
-                    }
-                } else if sceneController.rampLessonIsShown {
-                    await dismissImmersiveSpace()
-                    
-                    sceneController.rampLessonIsShown = false
-                    
-                    if tapped == "first"{
-                        if sceneController.rampLessonIsShown == false{
-                            sceneController.showFirstLessonImmersive = true
-                        }
-                    }else if tapped == "edit"{
-                        if sceneController.rampLessonIsShown == false{
-                            sceneController.showEditRobotImmersive = true
-                        }
                     }
                 }
             }

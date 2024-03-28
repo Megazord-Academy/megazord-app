@@ -21,7 +21,7 @@ class RobotController: ObservableObject{
             bigWheelSelected.toggle()
         }
         
-        decideRobotNewCase()
+        updateRobotState()
     }
     
     func putDefaultWheels(){
@@ -32,18 +32,20 @@ class RobotController: ObservableObject{
             defaultWheelSelected.toggle()
         }
         
-        decideRobotNewCase()
+        updateRobotState()
     }
     
     func putMotor(){
         numMotorsSelected = numMotorsSelected + 1
+        
         if numMotorsSelected > 2 {
             numMotorsSelected = 0
         }
-        decideRobotNewCase()
+        
+        updateRobotState()
     }
     
-    func decideRobotNewCase() {
+    func updateRobotState() {
         if defaultWheelSelected && numMotorsSelected == 1{
             robot = Robot.defaultWheelsMotor
         }else if defaultWheelSelected && numMotorsSelected == 2{
@@ -65,6 +67,8 @@ class RobotController: ObservableObject{
         }
     }
     
+    
+    //MARK: - Functions created to return a bool used for enabling or disabling models on the scene
     func checkDefaultWheelsMotor() -> Bool{
         robot == Robot.defaultWheelsMotor
     }

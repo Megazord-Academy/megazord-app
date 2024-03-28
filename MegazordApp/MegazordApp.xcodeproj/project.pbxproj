@@ -20,6 +20,7 @@
 		74DDA9BC2BB2F2170058D55A /* RobotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDA9BB2BB2F2170058D55A /* RobotController.swift */; };
 		74EA35B72BB3841200453051 /* RobotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EA35B62BB3841200453051 /* RobotModel.swift */; };
 		74EA35B92BB384AD00453051 /* SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EA35B82BB384AD00453051 /* SceneController.swift */; };
+		74F271AB2BB5AB5D001E6EB0 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F271AA2BB5AB5D001E6EB0 /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		74DDA9BB2BB2F2170058D55A /* RobotController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotController.swift; sourceTree = "<group>"; };
 		74EA35B62BB3841200453051 /* RobotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotModel.swift; sourceTree = "<group>"; };
 		74EA35B82BB384AD00453051 /* SceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneController.swift; sourceTree = "<group>"; };
+		74F271AA2BB5AB5D001E6EB0 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				74EA35B62BB3841200453051 /* RobotModel.swift */,
+				74F271AA2BB5AB5D001E6EB0 /* ContentViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				741B9CD52BB4555D00FBBA7B /* EditRobotImmersive.swift in Sources */,
 				03BA98F12BB1BAC8006AAC93 /* ContentView.swift in Sources */,
 				74DDA9BC2BB2F2170058D55A /* RobotController.swift in Sources */,
+				74F271AB2BB5AB5D001E6EB0 /* ContentViewModel.swift in Sources */,
 				74EA35B72BB3841200453051 /* RobotModel.swift in Sources */,
 				03BA98EF2BB1BAC8006AAC93 /* MegazordAppApp.swift in Sources */,
 				74366C602BB241740050D82C /* EditRobot.swift in Sources */,
