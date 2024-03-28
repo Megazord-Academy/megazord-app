@@ -15,9 +15,12 @@
 		03BA98F82BB1BAC9006AAC93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BA98F72BB1BAC9006AAC93 /* Preview Assets.xcassets */; };
 		03BA99032BB1BAC9006AAC93 /* MegazordAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */; };
 		03C63B622BB2F831008D6AB8 /* MundoRampa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C63B612BB2F831008D6AB8 /* MundoRampa.swift */; };
-		AEC99A0F2BB46732005B0773 /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A0E2BB46732005B0773 /* LessonView.swift */; };
+		AE4493702BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE44936F2BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift */; };
+		AE4493742BB4B6DB00B44CD3 /* TextSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4493732BB4B6DB00B44CD3 /* TextSectionView.swift */; };
+		AE4493762BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4493752BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift */; };
+		AEC99A0F2BB46732005B0773 /* TutorialLessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A0E2BB46732005B0773 /* TutorialLessonView.swift */; };
 		AEC99A112BB46753005B0773 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A102BB46753005B0773 /* CardView.swift */; };
-		AEC99A132BB46763005B0773 /* LessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A122BB46763005B0773 /* LessonViewModel.swift */; };
+		AEC99A132BB46763005B0773 /* TutorialLessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A122BB46763005B0773 /* TutorialLessonViewModel.swift */; };
 		AEC99A152BB46775005B0773 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A142BB46775005B0773 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,9 +46,12 @@
 		03BA98FE2BB1BAC9006AAC93 /* MegazordAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MegazordAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegazordAppTests.swift; sourceTree = "<group>"; };
 		03C63B612BB2F831008D6AB8 /* MundoRampa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MundoRampa.swift; sourceTree = "<group>"; };
-		AEC99A0E2BB46732005B0773 /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
+		AE44936F2BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonCompleteSheetView.swift; sourceTree = "<group>"; };
+		AE4493732BB4B6DB00B44CD3 /* TextSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSectionView.swift; sourceTree = "<group>"; };
+		AE4493752BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonFailedSheetView.swift; sourceTree = "<group>"; };
+		AEC99A0E2BB46732005B0773 /* TutorialLessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonView.swift; sourceTree = "<group>"; };
 		AEC99A102BB46753005B0773 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		AEC99A122BB46763005B0773 /* LessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonViewModel.swift; sourceTree = "<group>"; };
+		AEC99A122BB46763005B0773 /* TutorialLessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonViewModel.swift; sourceTree = "<group>"; };
 		AEC99A142BB46775005B0773 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,14 +96,13 @@
 		03BA98E92BB1BAC8006AAC93 /* MegazordApp */ = {
 			isa = PBXGroup;
 			children = (
+				AE4493722BB4B6B700B44CD3 /* Components */,
 				03BA98F02BB1BAC8006AAC93 /* ContentView.swift */,
 				AEC99A142BB46775005B0773 /* Extensions.swift */,
 				03BA98F22BB1BAC8006AAC93 /* ImmersiveView.swift */,
-				03C63B612BB2F831008D6AB8 /* MundoRampa.swift */,
-				AEC99A0E2BB46732005B0773 /* LessonView.swift */,
-				AEC99A102BB46753005B0773 /* CardView.swift */,
-				AEC99A122BB46763005B0773 /* LessonViewModel.swift */,
 				03BA98EE2BB1BAC8006AAC93 /* MegazordAppApp.swift */,
+				03C63B612BB2F831008D6AB8 /* MundoRampa.swift */,
+				AE4493712BB4B69400B44CD3 /* TutorialLesson */,
 				03BA98F42BB1BAC9006AAC93 /* Assets.xcassets */,
 				03BA98F92BB1BAC9006AAC93 /* Info.plist */,
 				03BA98F62BB1BAC9006AAC93 /* Preview Content */,
@@ -127,6 +132,26 @@
 				03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */,
 			);
 			path = MegazordAppTests;
+			sourceTree = "<group>";
+		};
+		AE4493712BB4B69400B44CD3 /* TutorialLesson */ = {
+			isa = PBXGroup;
+			children = (
+				AE44936F2BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift */,
+				AE4493752BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift */,
+				AEC99A0E2BB46732005B0773 /* TutorialLessonView.swift */,
+				AEC99A122BB46763005B0773 /* TutorialLessonViewModel.swift */,
+			);
+			path = TutorialLesson;
+			sourceTree = "<group>";
+		};
+		AE4493722BB4B6B700B44CD3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AEC99A102BB46753005B0773 /* CardView.swift */,
+				AE4493732BB4B6DB00B44CD3 /* TextSectionView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +260,12 @@
 				AEC99A152BB46775005B0773 /* Extensions.swift in Sources */,
 				03BA98F12BB1BAC8006AAC93 /* ContentView.swift in Sources */,
 				03C63B622BB2F831008D6AB8 /* MundoRampa.swift in Sources */,
+				AE4493762BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift in Sources */,
+				AE4493702BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift in Sources */,
 				03BA98EF2BB1BAC8006AAC93 /* MegazordAppApp.swift in Sources */,
-				AEC99A132BB46763005B0773 /* LessonViewModel.swift in Sources */,
-				AEC99A0F2BB46732005B0773 /* LessonView.swift in Sources */,
+				AEC99A132BB46763005B0773 /* TutorialLessonViewModel.swift in Sources */,
+				AEC99A0F2BB46732005B0773 /* TutorialLessonView.swift in Sources */,
+				AE4493742BB4B6DB00B44CD3 /* TextSectionView.swift in Sources */,
 				AEC99A112BB46753005B0773 /* CardView.swift in Sources */,
 				03BA98F32BB1BAC8006AAC93 /* ImmersiveView.swift in Sources */,
 			);
