@@ -10,73 +10,98 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
-
-    @State private var showImmersiveSpace = false 
-    @State private var showImmersiveSpace1 = false
-
-    @State private var immersiveSpaceIsShown = false
-    @State private var immersiveSpaceIsShown1 = false
+    
+    @EnvironmentObject var sceneController: SceneController
+    
+    @State private var lastButtonTapped = ButtonTapped.edit
+    @State var firstInteractionOnScreen = true
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
-    
+    @Environment(\.openWindow) private var openWindow
 
     var body: some View {
         VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
-
-            Text("Hello, world!")
-
-            Toggle("Show ImmersiveSpace", isOn: $showImmersiveSpace)
-                .font(.title)
-                .frame(width: 360)
-                .padding(24)
-                .glassBackgroundEffect()
-            Toggle("Show mundoRampa", isOn: $showImmersiveSpace1)
-                .font(.title)
-                .frame(width: 360)
-                .padding(24)
-                .glassBackgroundEffect()
+            
+            Button("First Lesson Scene"){
+                sceneController.showEditRobotImmersive = false
+                
+                if firstInteractionOnScreen{
+                    sceneController.showFirstLessonImmersive = true
+                    firstInteractionOnScreen = false
+                }
+                
+                lastButtonTapped = ButtonTapped.lesson
+               
+            }.padding()
+            
+            Button("Edit Robot"){
+                openWindow(id: "EditRobot") //It will become a sheet
+                
+                sceneController.showFirstLessonImmersive = false
+                
+                if firstInteractionOnScreen{
+                    sceneController.showEditRobotImmersive = true
+                    firstInteractionOnScreen = false
+                }
+                
+                lastButtonTapped = ButtonTapped.edit
+                
+            }.padding()
+            
         }
-        .padding()
-        .onChange(of: showImmersiveSpace) { _, newValue in
+        .onChange(of: sceneController.showFirstLessonImmersive) { _, newValue in
             Task {
                 if newValue {
                     switch await openImmersiveSpace(id: "ImmersiveSpace") {
                     case .opened:
-                        immersiveSpaceIsShown = true
+                        sceneController.firstLessonIsShown = true
                     case .error, .userCancelled:
                         fallthrough
                     @unknown default:
-                        immersiveSpaceIsShown = false
-                        showImmersiveSpace = false
+                        sceneController.firstLessonIsShown = false
+                        sceneController.showFirstLessonImmersive = false
                     }
-                } else if immersiveSpaceIsShown {
+                } else if sceneController.firstLessonIsShown {
                     await dismissImmersiveSpace()
-                    immersiveSpaceIsShown = false
+                    
+                    sceneController.firstLessonIsShown = false
+                    
+                    if lastButtonTapped == ButtonTapped.edit{
+                        if sceneController.firstLessonIsShown == false{
+                            sceneController.showEditRobotImmersive = true
+                        }
+                    }
                 }
             }
-            
         }
-        .onChange(of: showImmersiveSpace1) { _, newValue in
+        
+        .onChange(of: sceneController.showEditRobotImmersive) { _, newValue in
             Task {
                 if newValue {
-                    switch await openImmersiveSpace(id: "MundoRampa") {
+                    switch await openImmersiveSpace(id: "EditRobotImmersive") {
                     case .opened:
-                        immersiveSpaceIsShown1 = true
+                        sceneController.editRobotImmersiveIsShown = true
                     case .error, .userCancelled:
                         fallthrough
                     @unknown default:
-                        immersiveSpaceIsShown1 = false
-                        showImmersiveSpace1 = false
+                        sceneController.editRobotImmersiveIsShown = false
+                        sceneController.showEditRobotImmersive = false
                     }
-                } else if immersiveSpaceIsShown1 {
+                } else if sceneController.editRobotImmersiveIsShown {
                     await dismissImmersiveSpace()
-                    immersiveSpaceIsShown1 = false
+                    
+                    sceneController.editRobotImmersiveIsShown = false
+                    
+                    if lastButtonTapped == ButtonTapped.lesson{
+                        if sceneController.editRobotImmersiveIsShown == false{
+                            sceneController.showFirstLessonImmersive = true
+                        }
+                    }else{
+                        sceneController.showEditRobotImmersive = true
+                    }
                 }
             }
-            
         }
     }
 }
