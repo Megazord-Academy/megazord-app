@@ -18,6 +18,7 @@
 		AE4493702BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE44936F2BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift */; };
 		AE4493742BB4B6DB00B44CD3 /* TextSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4493732BB4B6DB00B44CD3 /* TextSectionView.swift */; };
 		AE4493762BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4493752BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift */; };
+		AEA99A302BB5A9570095DF59 /* RefView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA99A2F2BB5A9570095DF59 /* RefView.swift */; };
 		AEC99A0F2BB46732005B0773 /* TutorialLessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A0E2BB46732005B0773 /* TutorialLessonView.swift */; };
 		AEC99A112BB46753005B0773 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A102BB46753005B0773 /* CardView.swift */; };
 		AEC99A132BB46763005B0773 /* TutorialLessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A122BB46763005B0773 /* TutorialLessonViewModel.swift */; };
@@ -49,6 +50,7 @@
 		AE44936F2BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonCompleteSheetView.swift; sourceTree = "<group>"; };
 		AE4493732BB4B6DB00B44CD3 /* TextSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSectionView.swift; sourceTree = "<group>"; };
 		AE4493752BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonFailedSheetView.swift; sourceTree = "<group>"; };
+		AEA99A2F2BB5A9570095DF59 /* RefView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefView.swift; sourceTree = "<group>"; };
 		AEC99A0E2BB46732005B0773 /* TutorialLessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonView.swift; sourceTree = "<group>"; };
 		AEC99A102BB46753005B0773 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		AEC99A122BB46763005B0773 /* TutorialLessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonViewModel.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				AE4493722BB4B6B700B44CD3 /* Components */,
 				03BA98F02BB1BAC8006AAC93 /* ContentView.swift */,
+				AEA99A2F2BB5A9570095DF59 /* RefView.swift */,
 				AEC99A142BB46775005B0773 /* Extensions.swift */,
 				03BA98F22BB1BAC8006AAC93 /* ImmersiveView.swift */,
 				03BA98EE2BB1BAC8006AAC93 /* MegazordAppApp.swift */,
@@ -265,6 +268,7 @@
 				03BA98EF2BB1BAC8006AAC93 /* MegazordAppApp.swift in Sources */,
 				AEC99A132BB46763005B0773 /* TutorialLessonViewModel.swift in Sources */,
 				AEC99A0F2BB46732005B0773 /* TutorialLessonView.swift in Sources */,
+				AEA99A302BB5A9570095DF59 /* RefView.swift in Sources */,
 				AE4493742BB4B6DB00B44CD3 /* TextSectionView.swift in Sources */,
 				AEC99A112BB46753005B0773 /* CardView.swift in Sources */,
 				03BA98F32BB1BAC8006AAC93 /* ImmersiveView.swift in Sources */,

@@ -51,6 +51,7 @@ class TutorialLessonViewModel: ObservableObject {
     
     func closeSimulatorButtonTapped() {
         self.simulatorStatus = .closed
+        self.robotStatus = .off
     }
     
     func editRobotButtonTapped() {

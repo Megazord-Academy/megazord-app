@@ -9,11 +9,14 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
-struct LessonView: View {
+struct TutorialLessonView: View {
+    // immersive space variables (for opening and dismissing it)
+    @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
+    @Environment(\.openImmersiveSpace) var openImmersiveSpace
+    
     @StateObject private var viewModel = TutorialLessonViewModel(lessonName: "Tutorial Lesson", simulatorCardText: "You need to launch the simulator in order to test your robot.")
     
-    /// Variable that controls the robot editor sheet visibility on the lesson view.
-    @State var showRobotEditorSheet: Bool = false
+    
     
     var body: some View {
         HStack(alignment: .top, spacing: 16) {
@@ -149,8 +152,15 @@ struct LessonView: View {
                             Text(viewModel.simulatorCardText)
                             
                             if viewModel.simulatorStatus == .closed {
+                                // launch simulator button
                                 Button {
                                     viewModel.launchSimulatorButtonTapped()
+                                    
+                                    // opening lesson world
+                                    Task {
+                                        await openImmersiveSpace(id: "ImmersiveSpace")
+                                    }
+                                    
                                 } label: {
                                     Label("Launch", systemImage: "bolt.batteryblock.fill")
                                 }
@@ -158,7 +168,7 @@ struct LessonView: View {
                                 
                             } else {
                                 HStack {
-                                    // play button
+                                    // play/stop button
                                     Button {
                                         if viewModel.simulatorStatus == .open {
                                             viewModel.playSimulatorButtonTapped()
@@ -179,6 +189,12 @@ struct LessonView: View {
                                     // close button
                                     Button {
                                         viewModel.closeSimulatorButtonTapped()
+                                        
+                                        // opening lesson world
+                                        Task {
+                                            await dismissImmersiveSpace()
+                                        }
+                                        
                                     } label: {
                                         Label("Close", systemImage: "rectangle.slash.fill")
                                     }
@@ -213,6 +229,6 @@ struct LessonView: View {
 
 #Preview(windowStyle: .automatic) {
     NavigationStack {
-        LessonView()
+        TutorialLessonView()
     }
 }
