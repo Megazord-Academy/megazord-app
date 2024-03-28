@@ -191,13 +191,11 @@ struct LessonView: View {
                         .padding()
                         .sheet(isPresented: $viewModel.showLessonFailedSheet, content: {
                             TutorialLessonFailedSheetView(sheetVisibility: $viewModel.showLessonFailedSheet)
-                                .frame(maxWidth: 600)
                         })
                         
                     }
                     .sheet(isPresented: $viewModel.showLessonCompleteSheet) {
                         TutorialLessonCompleteSheetView(sheetVisibility: $viewModel.showLessonCompleteSheet)
-                            .frame(maxWidth: 600)
                     }
                     
                 }

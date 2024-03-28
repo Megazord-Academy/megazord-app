@@ -19,15 +19,19 @@ struct TutorialLessonCompleteSheetView: View {
             
             Text("You've successfully built and tested your own car model. Keep exploring the world of engineering and discovering the endless possibilities it offers.")
                 .multilineTextAlignment(.center)
+                .lineLimit(3...10)
+                .frame(maxWidth: 600)
             
             Text("You can now continue crafting in the next lessons!")
                 .multilineTextAlignment(.center)
+                .lineLimit(3...10)
+                .frame(maxWidth: 600)
             
             VStack(spacing: 16) {
                 Button {
                     
                 } label: {
-                    Text("Go Back to Lessons")
+                    Text("Go Back to Lesson Selection")
                 }
                 .buttonBorderShape(.roundedRectangle)
                 

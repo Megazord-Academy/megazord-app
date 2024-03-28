@@ -18,7 +18,8 @@ struct TutorialLessonFailedSheetView: View {
             
             Text("Looks like there's room for improvement! Don't worry, engineering is all about learning from mistakes. Try adjusting the placement of the components and testing again. You're on the right track!")
                 .multilineTextAlignment(.center)
-                .lineLimit(.max)
+                .lineLimit(3...10)
+                .frame(maxWidth: 600)
             
             VStack(spacing: 16) {
                 Button {
