@@ -18,7 +18,6 @@ enum Robot {
     case twoMotors
     case chassis
     
-    //Function to selcte wich 3D model to load. Will be Used to stop stacking 3D Models on RealityComposer
     func Model3D() -> String {
         switch self {
         case .defaultWheelsMotor:
@@ -26,17 +25,17 @@ enum Robot {
         case .defaultWheelsTwoMotors:
             return "car_normalWheels_dualMotor"
         case .defaultWheelsNoMotor:
-            return "Scene"
+            return "car_normalWheels"
         case .bigWheelsMotor:
             return "car_bigWheels_motor"
         case .bigWheelsNoMotor:
-            return "Scene"
+            return "car_bigWheels"
         case .bigWheelsTwoMotors:
             return "car_bigWheels_dualMotor"
         case .motorOnly:
             return "car_motor"
         case .twoMotors:
-            return "Scene"
+            return "car_dualMotor"
         case .chassis:
             return "car"
         }
