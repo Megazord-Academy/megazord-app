@@ -21,7 +21,7 @@ enum RobotStatus {
     case off
 }
 
-class LessonViewModel: ObservableObject {
+class TutorialLessonViewModel: ObservableObject {
     /// The lesson name, passed onto the navigation title
     let lessonName: String
     
@@ -36,6 +36,10 @@ class LessonViewModel: ObservableObject {
     
     /// Holds the status of the simulator.
     @Published var simulatorStatus: SimulatorStatus = .closed
+    
+    @Published var showLessonCompleteSheet: Bool = false
+    
+    @Published var showLessonFailedSheet: Bool = false
     
     /// Variable that controls the robot editor sheet visibility on the lesson view.
     @Published var showRobotEditorSheet: Bool = false
@@ -60,9 +64,11 @@ class LessonViewModel: ObservableObject {
     
     func playSimulatorButtonTapped() {
         self.simulatorStatus = .running
+        self.showLessonCompleteSheet = true
     }
     
     func stopSimulatorButtonTapped() {
         self.simulatorStatus = .open
+        self.showLessonFailedSheet = true
     }
 }

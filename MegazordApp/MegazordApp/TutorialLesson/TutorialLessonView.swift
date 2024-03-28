@@ -10,7 +10,7 @@ import RealityKit
 import RealityKitContent
 
 struct LessonView: View {
-    @StateObject private var viewModel = LessonViewModel(lessonName: "Tutorial Lesson", simulatorCardText: "You need to launch the simulator in order to test your robot.")
+    @StateObject private var viewModel = TutorialLessonViewModel(lessonName: "Tutorial Lesson", simulatorCardText: "You need to launch the simulator in order to test your robot.")
     
     /// Variable that controls the robot editor sheet visibility on the lesson view.
     @State var showRobotEditorSheet: Bool = false
@@ -21,15 +21,15 @@ struct LessonView: View {
             CardView(color: "colorGreen", title: "Description") {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 24) {
-                        TextSection(sectionTitle: "Introduction") {
+                        TextSectionView(sectionTitle: "Introduction") {
                             Text("Welcome to the Engineering Lab! In this lesson, you'll dive into the world of engineering by building and testing your very own car model. Follow the steps below to assemble your car and watch it come to life in the simulator!")
                         }
                         
-                        TextSection(sectionTitle: "Lesson Goal") {
+                        TextSectionView(sectionTitle: "Lesson Goal") {
                             Text("To understand the basic principles of engineering and mechanics by assembling a simple car model and testing its functionality within a simulator.")
                         }
                         
-                        TextSection(sectionTitle: "Instructions") {
+                        TextSectionView(sectionTitle: "Instructions") {
                             VStack(alignment: .leading, spacing: 16) {
                                 HStack(alignment: .center, spacing: 24) {
                                     Text("1. Start by clicking on Edit Robot to enter the car assembly mode, where you’ll be able to customize your car.")
@@ -189,9 +189,17 @@ struct LessonView: View {
                             Spacer()
                         }
                         .padding()
-                        
+                        .sheet(isPresented: $viewModel.showLessonFailedSheet, content: {
+                            TutorialLessonFailedSheetView(sheetVisibility: $viewModel.showLessonFailedSheet)
+                                .frame(maxWidth: 600)
+                        })
                         
                     }
+                    .sheet(isPresented: $viewModel.showLessonCompleteSheet) {
+                        TutorialLessonCompleteSheetView(sheetVisibility: $viewModel.showLessonCompleteSheet)
+                            .frame(maxWidth: 600)
+                    }
+                    
                 }
                 
             }
@@ -200,28 +208,6 @@ struct LessonView: View {
         .padding(.bottom, 24)
         .navigationTitle(viewModel.lessonName)
         .navigationBarTitleDisplayMode(.inline)
-    }
-}
-
-
-
-struct TextSection<Content: View>: View {
-    var sectionTitle: String
-    
-    @ViewBuilder var content: Content
-    
-    
-    var body: some View {
-        VStack {
-            VStack(alignment: .leading, spacing: 8) {
-                Text(sectionTitle)
-                    .font(.title3)
-                    .fontWeight(.bold)
-                
-                content
-                
-            }
-        }
     }
 }
 
