@@ -8,6 +8,12 @@
 import Foundation
 import RealityKit
 
+enum SimulatorStatus {
+    case closed
+    case open
+    case running
+}
+
 class SceneController: ObservableObject{
     
     //MARK: - These variables are responsible for showing the right scene on the lesson screen
@@ -17,6 +23,11 @@ class SceneController: ObservableObject{
     @Published var showEditRobotImmersive = false
     @Published var editRobotImmersiveIsShown = false
     
+    /// Holds the status of the simulator.
+    @Published var simulatorStatus: SimulatorStatus = .closed
+    
+    @Published var levelCompleted: Bool = false
+
     
     /// This function is responsible for searching 3D Robot models on the current scene created on the RealityComposerPro and making only the right robot (created by user) to appear on the scene, by enabling it and disabling others.
     ///

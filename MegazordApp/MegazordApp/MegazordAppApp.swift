@@ -46,6 +46,9 @@ struct MegazordAppApp: App {
         
         WindowGroup(id: "Lesson"){
             LessonView()
+                .environmentObject(robotController)
+                .environmentObject(sceneController)
+
                
         }
     }

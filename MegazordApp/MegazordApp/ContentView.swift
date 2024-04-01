@@ -49,6 +49,20 @@ struct ContentView: View {
                 
             }.padding()
             
+            Button("Edit"){
+                openWindow(id: "EditRobot") //It will become a sheet
+                
+//                sceneController.showFirstLessonImmersive = false
+//
+//                if firstInteractionOnScreen{
+//                    sceneController.showEditRobotImmersive = true
+//                    firstInteractionOnScreen = false
+//                }
+//
+//                lastButtonTapped = ButtonTapped.edit
+                
+            }.padding()
+            
         }
         .onChange(of: sceneController.showFirstLessonImmersive) { _, newValue in
             Task {

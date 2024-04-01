@@ -7,11 +7,23 @@
 
 import Foundation
 
+enum RobotStatus {
+    case idle
+    case stuck
+    case moving
+    case off
+}
+
 class RobotController: ObservableObject{
     private var defaultWheelSelected = false
     private var numMotorsSelected = 0
     private var bigWheelSelected = false
     private var robot = Robot.chassis
+    private var robotPosition = SIMD3(x: 0, y: 0, z: 0)
+
+    
+    /// Holds the current `RobotStatus`.
+    @Published var robotStatus: RobotStatus = .off
     
     func putBigWheels(){
         if defaultWheelSelected{
@@ -67,7 +79,7 @@ class RobotController: ObservableObject{
         }
     }
     
-    func robotState() -> String{
+    func robotModelName() -> String{
         return robot.Model3D()
     }
     

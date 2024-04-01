@@ -18,6 +18,10 @@ struct LessonView: View {
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
     
+    @EnvironmentObject var robotController: RobotController
+    @EnvironmentObject var sceneController: SceneController
+
+    
     var body: some View {
         HStack(alignment: .top, spacing: 16) {
             // description card
@@ -89,7 +93,9 @@ struct LessonView: View {
                         Spacer()
                         
                         Button {
+                            sceneController.simulatorStatus = .closed
                             viewModel.editRobotButtonTapped()
+                            
                         } label: {
                             Label("Edit Robot", systemImage: "wrench.adjustable.fill")
                         }
@@ -111,24 +117,24 @@ struct LessonView: View {
                     Task {
                         if newValue == true {
                             // closing simulator if it is open
-                            if viewModel.simulatorStatus == .open || viewModel.simulatorStatus == .running {
+                            if sceneController.simulatorStatus == .open || sceneController.simulatorStatus == .running {
                                 await dismissImmersiveSpace()
                             }
                             
                             // opening robot immersive space
                             switch await openImmersiveSpace(id: "EditRobotImmersive") {
                             case .opened:
-                                viewModel.robotStatus = .idle
+                                robotController.robotStatus = .idle
                             case .error, .userCancelled:
                                 fallthrough
                             @unknown default:
                                 viewModel.showRobotEditorSheet = false
-                                viewModel.robotStatus = .off
+                                robotController.robotStatus = .off
                             }
                         } else{
                             await dismissImmersiveSpace()
                             viewModel.showRobotEditorSheet = false
-                            viewModel.robotStatus = .off
+                            robotController.robotStatus = .off
                         }
                     }
                 }
@@ -138,7 +144,7 @@ struct LessonView: View {
                     CardView(color: "colorPurple", title: "Robot Status") {
                         VStack(alignment: .leading) {
                             HStack(alignment: .center) {
-                                switch viewModel.robotStatus {
+                                switch robotController.robotStatus {
                                     case .idle:
                                         Circle()
                                             .frame(width: 16, height: 16)
@@ -183,9 +189,9 @@ struct LessonView: View {
                             
                             Text(viewModel.simulatorCardText)
                             
-                            if viewModel.simulatorStatus == .closed {
+                            if sceneController.simulatorStatus == .closed {
                                 Button {
-                                    viewModel.launchSimulatorButtonTapped()
+                                    sceneController.simulatorStatus = .open
                                 } label: {
                                     Label("Launch", systemImage: "bolt.batteryblock.fill")
                                 }
@@ -193,16 +199,23 @@ struct LessonView: View {
                                 
                             } else {
                                 HStack {
-                                    // play button
+                                    // play/stop button
                                     Button {
-                                        if viewModel.simulatorStatus == .open {
-                                            viewModel.playSimulatorButtonTapped()
+                                        // deu play
+                                        if sceneController.simulatorStatus == .open {
+                                            //viewModel.playSimulatorButtonTapped()
+                                            sceneController.simulatorStatus = .running
+                                            robotController.robotStatus = .moving
+                                            
+                                        // deu stop
                                         } else {
-                                            viewModel.stopSimulatorButtonTapped()
+                                            robotController.robotStatus = .idle
+                                            sceneController.simulatorStatus = .open
+
                                         }
                                         
                                     } label: {
-                                        if viewModel.simulatorStatus == .running {
+                                        if sceneController.simulatorStatus == .running {
                                             Label("Stop", systemImage: "stop.fill")
                                         } else {
                                             Label("Play", systemImage: "play.fill")
@@ -213,7 +226,8 @@ struct LessonView: View {
                                     
                                     // close button
                                     Button {
-                                        viewModel.closeSimulatorButtonTapped()
+                                        sceneController.simulatorStatus = .closed
+                                        
                                     } label: {
                                         Label("Close", systemImage: "rectangle.slash.fill")
                                     }
@@ -229,25 +243,25 @@ struct LessonView: View {
                         })
                         
                     }
-                    .sheet(isPresented: $viewModel.showLessonCompleteSheet) {
-                        TutorialLessonCompleteSheetView(sheetVisibility: $viewModel.showLessonCompleteSheet)
+                    .sheet(isPresented: $sceneController.levelCompleted) {
+                        TutorialLessonCompleteSheetView(sheetVisibility: $sceneController.levelCompleted)
                     }
-                    .onChange(of: viewModel.simulatorStatus) { _, newValue in
+                    .onChange(of: sceneController.simulatorStatus) { _, newValue in
                         Task {
                             if newValue == .open {
                                 switch await openImmersiveSpace(id: "ImmersiveSpace") {
                                 case .opened:
-                                    viewModel.robotStatus = .idle
+                                    robotController.robotStatus = .idle
                                 case .error, .userCancelled:
                                     fallthrough
                                 @unknown default:
-                                    viewModel.simulatorStatus = .closed
-                                    viewModel.robotStatus = .off
+                                    sceneController.simulatorStatus = .closed
+                                    robotController.robotStatus = .off
                                 }
                             } else if newValue == .closed {
                                 await dismissImmersiveSpace()
-                                viewModel.simulatorStatus = .closed
-                                viewModel.robotStatus = .off
+                                sceneController.simulatorStatus = .closed
+                                robotController.robotStatus = .off
                             }
                         }
                     }
