@@ -15,6 +15,9 @@ struct LessonView: View {
     /// Variable that controls the robot editor sheet visibility on the lesson view.
     @State var showRobotEditorSheet: Bool = false
     
+    @Environment(\.openImmersiveSpace) var openImmersiveSpace
+    @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
+    
     var body: some View {
         HStack(alignment: .top, spacing: 16) {
             // description card
@@ -93,10 +96,42 @@ struct LessonView: View {
                         .buttonBorderShape(.roundedRectangle)
                         .sheet(isPresented: $viewModel.showRobotEditorSheet) {
                             Text("Robot Editor Sheet")
+                            
+                            Button {
+                                viewModel.showRobotEditorSheet = false
+                            } label: {
+                                Image(systemName: "xmark")
+                            }
+
                         }
                     }
                     .padding()
                 })
+                .onChange(of: viewModel.showRobotEditorSheet) { _, newValue in
+                    Task {
+                        if newValue == true {
+                            // closing simulator if it is open
+                            if viewModel.simulatorStatus == .open || viewModel.simulatorStatus == .running {
+                                await dismissImmersiveSpace()
+                            }
+                            
+                            // opening robot immersive space
+                            switch await openImmersiveSpace(id: "EditRobotImmersive") {
+                            case .opened:
+                                viewModel.robotStatus = .idle
+                            case .error, .userCancelled:
+                                fallthrough
+                            @unknown default:
+                                viewModel.showRobotEditorSheet = false
+                                viewModel.robotStatus = .off
+                            }
+                        } else{
+                            await dismissImmersiveSpace()
+                            viewModel.showRobotEditorSheet = false
+                            viewModel.robotStatus = .off
+                        }
+                    }
+                }
                 
                 HStack {
                     // robot status card
@@ -196,6 +231,25 @@ struct LessonView: View {
                     }
                     .sheet(isPresented: $viewModel.showLessonCompleteSheet) {
                         TutorialLessonCompleteSheetView(sheetVisibility: $viewModel.showLessonCompleteSheet)
+                    }
+                    .onChange(of: viewModel.simulatorStatus) { _, newValue in
+                        Task {
+                            if newValue == .open {
+                                switch await openImmersiveSpace(id: "ImmersiveSpace") {
+                                case .opened:
+                                    viewModel.robotStatus = .idle
+                                case .error, .userCancelled:
+                                    fallthrough
+                                @unknown default:
+                                    viewModel.simulatorStatus = .closed
+                                    viewModel.robotStatus = .off
+                                }
+                            } else if newValue == .closed {
+                                await dismissImmersiveSpace()
+                                viewModel.simulatorStatus = .closed
+                                viewModel.robotStatus = .off
+                            }
+                        }
                     }
                     
                 }

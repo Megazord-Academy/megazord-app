@@ -23,7 +23,7 @@ struct ImmersiveView: View {
                 self.handleSceneEventsUpdate(event: event)
             }
             
-            if let scene = try? await Entity(named: "mundoRampa", in: realityKitContentBundle) {
+            if let scene = try? await Entity(named: "Immersive", in: realityKitContentBundle) {
                 sceneController.decideRobot(scene: scene, robotController: robotController)
 
                 content.add(scene)

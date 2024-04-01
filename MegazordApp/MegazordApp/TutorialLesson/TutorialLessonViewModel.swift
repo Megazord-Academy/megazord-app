@@ -54,6 +54,7 @@ class TutorialLessonViewModel: ObservableObject {
     }
     
     func editRobotButtonTapped() {
+        self.simulatorStatus = .closed
         self.showRobotEditorSheet = true
     }
     
