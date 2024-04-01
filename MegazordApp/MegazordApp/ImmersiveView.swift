@@ -9,9 +9,9 @@ struct ImmersiveView: View {
     
     func handleSceneEventsUpdate(event: SceneEvents.Update) {
         if let robot = event.scene.findEntity(named: robotController.robotState()) as? HasPhysicsBody, let scene = robot.parent {
-            if robotController.robotApplyForce(){
-                robot.addForce(SIMD3(x: 4, y: 0, z: 0), relativeTo: scene)
-            }
+            let robotPhysics = robotController.applyPhysics()
+            robot.addForce(robotPhysics.force, relativeTo: scene)
+            robot.physicsBody?.massProperties.mass = robotPhysics.mass
         }
     }
     

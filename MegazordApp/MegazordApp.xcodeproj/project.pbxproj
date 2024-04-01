@@ -15,6 +15,7 @@
 		03BA98F82BB1BAC9006AAC93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BA98F72BB1BAC9006AAC93 /* Preview Assets.xcassets */; };
 		03BA99032BB1BAC9006AAC93 /* MegazordAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */; };
 		03C63B622BB2F831008D6AB8 /* MundoRampa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C63B612BB2F831008D6AB8 /* MundoRampa.swift */; };
+		74B70F5F2BBAD81E0036F9B9 /* RobotPhysicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B70F5E2BBAD81E0036F9B9 /* RobotPhysicsModel.swift */; };
 		74D2A4842BB5B64C0085224C /* SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2A4832BB5B64C0085224C /* SceneController.swift */; };
 		74D2A4862BB5B6660085224C /* RobotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2A4852BB5B6660085224C /* RobotController.swift */; };
 		74D2A4892BB5B68C0085224C /* RobotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2A4882BB5B68C0085224C /* RobotModel.swift */; };
@@ -53,6 +54,7 @@
 		03BA98FE2BB1BAC9006AAC93 /* MegazordAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MegazordAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegazordAppTests.swift; sourceTree = "<group>"; };
 		03C63B612BB2F831008D6AB8 /* MundoRampa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MundoRampa.swift; sourceTree = "<group>"; };
+		74B70F5E2BBAD81E0036F9B9 /* RobotPhysicsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotPhysicsModel.swift; sourceTree = "<group>"; };
 		74D2A4832BB5B64C0085224C /* SceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneController.swift; sourceTree = "<group>"; };
 		74D2A4852BB5B6660085224C /* RobotController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotController.swift; sourceTree = "<group>"; };
 		74D2A4882BB5B68C0085224C /* RobotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotModel.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			children = (
 				74D2A4882BB5B68C0085224C /* RobotModel.swift */,
 				74D2A48A2BB5B6BC0085224C /* ContentViewModel.swift */,
+				74B70F5E2BBAD81E0036F9B9 /* RobotPhysicsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				03BA98F32BB1BAC8006AAC93 /* ImmersiveView.swift in Sources */,
 				74D2A4932BB5B8A00085224C /* EditRobot.swift in Sources */,
 				74D2A48B2BB5B6BC0085224C /* ContentViewModel.swift in Sources */,
+				74B70F5F2BBAD81E0036F9B9 /* RobotPhysicsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -71,8 +71,8 @@ class RobotController: ObservableObject{
         return robot.Model3D()
     }
     
-    func robotApplyForce() -> Bool{
-        return robot.ShouldApplyForce()
+    func applyPhysics() -> RobotPhysicsModel{
+        return robot.GetPhysics()
     }
     
     //MARK: - Functions created to return a bool used for enabling or disabling models on the scene

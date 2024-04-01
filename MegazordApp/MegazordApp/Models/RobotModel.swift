@@ -41,26 +41,26 @@ enum Robot {
         }
     }
     
-    func ShouldApplyForce() -> Bool {
+    func GetPhysics() -> RobotPhysicsModel {
         switch self {
         case .defaultWheelsMotor:
-            return true
+            return RobotPhysicsModel(force: SIMD3(x: 3.5, y: 0, z: 0), mass: 1.5)
         case .defaultWheelsNoMotor:
-            return false
+            return RobotPhysicsModel(force: SIMD3(x: 0, y: 0, z: 0), mass: 0.9)
         case .defaultWheelsTwoMotors:
-            return true
+            return RobotPhysicsModel(force: SIMD3(x: 6.5, y: 0, z: 0), mass: 2.1)
         case .bigWheelsMotor:
-            return true
+            return RobotPhysicsModel(force: SIMD3(x: 8.5, y: 0, z: 0), mass: 1.8)
         case .bigWheelsNoMotor:
-            return false
+            return RobotPhysicsModel(force: SIMD3(x: 0, y: 0, z: 0), mass: 1.2)
         case .bigWheelsTwoMotors:
-            return true
+            return RobotPhysicsModel(force: SIMD3(x: 11.5, y: 0, z: 0), mass: 2.4)
         case .motorOnly:
-            return false
+            return RobotPhysicsModel(force: SIMD3(x: 0, y: 0, z: 0), mass: 0.7)
         case .twoMotors:
-            return false
+            return RobotPhysicsModel(force: SIMD3(x: 0, y: 0, z: 0), mass: 1.3)
         case .chassis:
-            return false
+            return RobotPhysicsModel(force: SIMD3(x: 0, y: 0, z: 0), mass: 0.1)
         }
     }
 }
