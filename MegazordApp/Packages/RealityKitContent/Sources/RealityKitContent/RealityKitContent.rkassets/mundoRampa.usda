@@ -20,7 +20,7 @@ def Xform "Root"
         double size = 0.2
         quatf xformOp:orient = (1, 0, 0, 0)
         float3 xformOp:scale = (0.2, 1, 6)
-        float3 xformOp:translate = (1.3590915, 0.103880845, -2.3627243)
+        float3 xformOp:translate = (1.6696166, 0.3300019, -2.3627243)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Material "DefaultMaterial"
@@ -91,7 +91,7 @@ def Xform "Root"
         double size = 0.2
         quatf xformOp:orient = (1, 0, 0, 0)
         float3 xformOp:scale = (5, 0.15, 5.6)
-        float3 xformOp:translate = (0.80258584, 0.04440527, -2.3627243)
+        float3 xformOp:translate = (1.1308404, 0.27, -2.3566544)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Material "DefaultMaterial"
@@ -142,142 +142,14 @@ def Xform "Root"
 
             def RealityKitStruct "material"
             {
-            }
-        }
-
-        def RealityKitComponent "MotionState"
-        {
-            uniform token info:id = "RealityKit.MotionState"
-        }
-    }
-
-    def "car_normalWheels_motor" (
-        active = true
-        customData = {
-            float3 rotationEulerHint = (0, 1.5707963, 0)
-        }
-        references = @car-normalWheels-motor.usdz@
-    )
-    {
-        quatf xformOp:orient = (0.7071068, 0, 0.70710665, 0)
-        float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (-1.0598156, -0.05006907, -2.4009562)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def RealityKitComponent "Collider"
-        {
-            uint group = 1
-            uniform token info:id = "RealityKit.Collider"
-            uint mask = 4294967295
-            token type = "Default"
-
-            def RealityKitStruct "Shape"
-            {
-                float3 extent = (0.5617676, 0.18271762, 0.647367)
-                token shapeType = "Box"
-
-                def RealityKitStruct "pose"
-                {
-                    float3 position = (0.0031481534, 0.02493427, -0.109896295)
-                }
-            }
-        }
-
-        def RealityKitComponent "RigidBody"
-        {
-            uniform token info:id = "RealityKit.RigidBody"
-            bool lockRotationX = 1
-            bool lockRotationY = 1
-            bool lockTranslationY = 0
-            bool lockTranslationZ = 1
-
-            def RealityKitStruct "massFrame"
-            {
-                def RealityKitStruct "m_pose"
-                {
-                }
-            }
-
-            def RealityKitStruct "material"
-            {
                 double dynamicFriction = 0.5
-                double staticFriction = 0.5
+                double staticFriction = 0.6
             }
         }
 
         def RealityKitComponent "MotionState"
         {
             uniform token info:id = "RealityKit.MotionState"
-            float3 m_userSetLinearVelocity = (4, 0, 0)
-            uint m_userSetLinearVelocityVersion = 1
-        }
-
-        over "Materials"
-        {
-            over "Material_002"
-            {
-                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/Material_002/surfaceShader.outputs:surface>
-            }
-
-            over "wheelConnector"
-            {
-                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheelConnector/surfaceShader.outputs:surface>
-            }
-
-            over "wheelMetal"
-            {
-                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheelMetal/surfaceShader.outputs:surface>
-            }
-
-            over "wheel"
-            {
-                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheel/surfaceShader.outputs:surface>
-            }
-
-            over "motor"
-            {
-                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/motor/surfaceShader.outputs:surface>
-            }
-
-            over "wheelConnector_002"
-            {
-                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheelConnector_002/surfaceShader.outputs:surface>
-            }
-
-            over "wheel_002"
-            {
-                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheel_002/surfaceShader.outputs:surface>
-            }
-
-            over "wheelMetal_001"
-            {
-                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheelMetal_001/surfaceShader.outputs:surface>
-            }
-
-            over "wheelMetal_003"
-            {
-                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheelMetal_003/surfaceShader.outputs:surface>
-            }
-
-            over "wheel_003"
-            {
-                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheel_003/surfaceShader.outputs:surface>
-            }
-
-            over "wheel_004"
-            {
-                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheel_004/surfaceShader.outputs:surface>
-            }
-
-            over "wheelConnector_004"
-            {
-                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheelConnector_004/surfaceShader.outputs:surface>
-            }
-
-            over "wheelMetal_004"
-            {
-                token outputs:surface.connect = </Root/car_normalWheels_motor/Materials/wheelMetal_004/surfaceShader.outputs:surface>
-            }
         }
     }
 
@@ -350,7 +222,7 @@ def Xform "Root"
             def RealityKitStruct "material"
             {
                 double dynamicFriction = 0.5
-                double staticFriction = 0.5
+                double staticFriction = 0.6
             }
         }
 
@@ -382,7 +254,7 @@ def Xform "Root"
         double size = 0.2
         quatf xformOp:orient = (1, 0, 0, 0)
         float3 xformOp:scale = (0.4, 0.15, 5.6)
-        float3 xformOp:translate = (0.29016405, 0.044410024, -2.3627243)
+        float3 xformOp:translate = (0.6066458, 0.27000514, -2.3566)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Material "DefaultMaterial"
@@ -410,8 +282,8 @@ def Xform "Root"
         rel material:binding = </Root/normalRamp/DefaultMaterial>
         double size = 0.2
         quatf xformOp:orient = (0.976296, 0, 0, 0.21643959)
-        float3 xformOp:scale = (2.5, 0.15, 5.6)
-        float3 xformOp:translate = (0.03098046, -0.058417775, -2.3627243)
+        float3 xformOp:scale = (6, 0.15, 5.6)
+        float3 xformOp:translate = (0.03098046, 0.01967, -2.3627243)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Material "DefaultMaterial"
@@ -459,6 +331,494 @@ def Xform "Root"
             uniform token info:id = "RealityKit.RigidBody"
             bool isCCDEnabled = 1
             token motionType = "Static"
+
+            def RealityKitStruct "massFrame"
+            {
+                def RealityKitStruct "m_pose"
+                {
+                }
+            }
+
+            def RealityKitStruct "material"
+            {
+                double dynamicFriction = 0.5
+                double staticFriction = 0.6
+            }
+        }
+
+        def RealityKitComponent "MotionState"
+        {
+            uniform token info:id = "RealityKit.MotionState"
+        }
+    }
+
+    def "car_bigWheels_dualMotor" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 1.5707963, 0)
+        }
+        prepend references = @car-bigWheels-dualMotor.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (-0.88122, -0.01476, -2.40096)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.6184861, 0.26183513, 0.6601002)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.0027112067, 0.0066897683, -0.11121172)
+                }
+            }
+        }
+
+        def RealityKitComponent "RigidBody"
+        {
+            uniform token info:id = "RealityKit.RigidBody"
+
+            def RealityKitStruct "massFrame"
+            {
+                def RealityKitStruct "m_pose"
+                {
+                }
+            }
+
+            def RealityKitStruct "material"
+            {
+            }
+        }
+
+        def RealityKitComponent "MotionState"
+        {
+            uniform token info:id = "RealityKit.MotionState"
+        }
+    }
+
+    def "car_bigWheels_motor" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 1.5707963, 0)
+        }
+        prepend references = @car-bigWheels-motor.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (-0.88122, -0.01476, -2.40096)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.6099894, 0.26183513, 0.6596035)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.0008803457, 0.0066897683, -0.11096145)
+                }
+            }
+        }
+
+        def RealityKitComponent "RigidBody"
+        {
+            uniform token info:id = "RealityKit.RigidBody"
+
+            def RealityKitStruct "massFrame"
+            {
+                def RealityKitStruct "m_pose"
+                {
+                }
+            }
+
+            def RealityKitStruct "material"
+            {
+            }
+        }
+
+        def RealityKitComponent "MotionState"
+        {
+            uniform token info:id = "RealityKit.MotionState"
+        }
+    }
+
+    def "car_bigWheels" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 1.5707963, 0)
+        }
+        prepend references = @car-bigWheels.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (-0.88122, -0.01476, -2.40096)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.6099894, 0.26183513, 0.6596035)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.0008803457, 0.0066897683, -0.11096145)
+                }
+            }
+        }
+
+        def RealityKitComponent "RigidBody"
+        {
+            uniform token info:id = "RealityKit.RigidBody"
+
+            def RealityKitStruct "massFrame"
+            {
+                def RealityKitStruct "m_pose"
+                {
+                }
+            }
+
+            def RealityKitStruct "material"
+            {
+            }
+        }
+
+        def RealityKitComponent "MotionState"
+        {
+            uniform token info:id = "RealityKit.MotionState"
+        }
+    }
+
+    def "car_dualMotor" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 1.5707963, 0)
+        }
+        prepend references = @car-dualMotor.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (-0.88122, -0.01476, -2.40096)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.39234364, 0.15526588, 0.647367)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.0009651929, 0.03866014, -0.109896295)
+                }
+            }
+        }
+
+        def RealityKitComponent "RigidBody"
+        {
+            uniform token info:id = "RealityKit.RigidBody"
+
+            def RealityKitStruct "massFrame"
+            {
+                def RealityKitStruct "m_pose"
+                {
+                }
+            }
+
+            def RealityKitStruct "material"
+            {
+            }
+        }
+
+        def RealityKitComponent "MotionState"
+        {
+            uniform token info:id = "RealityKit.MotionState"
+        }
+    }
+
+    def "car_motor" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 1.5707963, 0)
+        }
+        prepend references = @car-motor.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (-0.88122, -0.01476, -2.40096)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.39234364, 0.15526588, 0.647367)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.0009651929, 0.03866014, -0.109896295)
+                }
+            }
+        }
+
+        def RealityKitComponent "RigidBody"
+        {
+            uniform token info:id = "RealityKit.RigidBody"
+
+            def RealityKitStruct "massFrame"
+            {
+                def RealityKitStruct "m_pose"
+                {
+                }
+            }
+
+            def RealityKitStruct "material"
+            {
+            }
+        }
+
+        def RealityKitComponent "MotionState"
+        {
+            uniform token info:id = "RealityKit.MotionState"
+        }
+    }
+
+    def "car_normalWheels_dualMotor" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 1.5707963, 0)
+        }
+        prepend references = @car-normalWheels-dualMotor.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (-0.88122, -0.01476, -2.40096)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.5617676, 0.18271762, 0.647367)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.0031481534, 0.02493427, -0.109896295)
+                }
+            }
+        }
+
+        def RealityKitComponent "RigidBody"
+        {
+            uniform token info:id = "RealityKit.RigidBody"
+
+            def RealityKitStruct "massFrame"
+            {
+                def RealityKitStruct "m_pose"
+                {
+                }
+            }
+
+            def RealityKitStruct "material"
+            {
+            }
+        }
+
+        def RealityKitComponent "MotionState"
+        {
+            uniform token info:id = "RealityKit.MotionState"
+        }
+    }
+
+    def "car_normalWheels_motor" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 1.5707963, 0)
+        }
+        prepend references = @car-normalWheels-motor.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (-0.881223, -0.014764875, -2.40096)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.5617676, 0.18271762, 0.647367)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.0031481534, 0.02493427, -0.109896295)
+                }
+            }
+        }
+
+        def RealityKitComponent "RigidBody"
+        {
+            uniform token info:id = "RealityKit.RigidBody"
+
+            def RealityKitStruct "massFrame"
+            {
+                def RealityKitStruct "m_pose"
+                {
+                }
+            }
+
+            def RealityKitStruct "material"
+            {
+            }
+        }
+
+        def RealityKitComponent "MotionState"
+        {
+            uniform token info:id = "RealityKit.MotionState"
+        }
+    }
+
+    def "car" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 1.5707963, 0)
+        }
+        prepend references = @car.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (-0.881223, -0.014764875, -2.40096)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.39234364, 0.09808591, 0.647367)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.0009651929, 0.010070149, -0.109896295)
+                }
+            }
+        }
+
+        def RealityKitComponent "RigidBody"
+        {
+            uniform token info:id = "RealityKit.RigidBody"
+
+            def RealityKitStruct "massFrame"
+            {
+                def RealityKitStruct "m_pose"
+                {
+                }
+            }
+
+            def RealityKitStruct "material"
+            {
+            }
+        }
+
+        def RealityKitComponent "MotionState"
+        {
+            uniform token info:id = "RealityKit.MotionState"
+        }
+    }
+
+    def "car_normalWheels" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 1.5707963, 0)
+        }
+        prepend references = @car-normalWheels.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (-0.881223, -0.014764875, -2.40096)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.5617676, 0.15298937, 0.647367)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.0031481534, 0.010070145, -0.109896295)
+                }
+            }
+        }
+
+        def RealityKitComponent "RigidBody"
+        {
+            uniform token info:id = "RealityKit.RigidBody"
 
             def RealityKitStruct "massFrame"
             {

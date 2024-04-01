@@ -15,6 +15,14 @@
 		03BA98F82BB1BAC9006AAC93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BA98F72BB1BAC9006AAC93 /* Preview Assets.xcassets */; };
 		03BA99032BB1BAC9006AAC93 /* MegazordAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */; };
 		03C63B622BB2F831008D6AB8 /* MundoRampa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C63B612BB2F831008D6AB8 /* MundoRampa.swift */; };
+		74B70F5F2BBAD81E0036F9B9 /* RobotPhysicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B70F5E2BBAD81E0036F9B9 /* RobotPhysicsModel.swift */; };
+		74D2A4842BB5B64C0085224C /* SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2A4832BB5B64C0085224C /* SceneController.swift */; };
+		74D2A4862BB5B6660085224C /* RobotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2A4852BB5B6660085224C /* RobotController.swift */; };
+		74D2A4892BB5B68C0085224C /* RobotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2A4882BB5B68C0085224C /* RobotModel.swift */; };
+		74D2A48B2BB5B6BC0085224C /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2A48A2BB5B6BC0085224C /* ContentViewModel.swift */; };
+		74D2A48F2BB5B7660085224C /* EditRobotImmsersive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2A48E2BB5B7660085224C /* EditRobotImmsersive.swift */; };
+		74D2A4912BB5B7770085224C /* RampLessonImmersive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2A4902BB5B7770085224C /* RampLessonImmersive.swift */; };
+		74D2A4932BB5B8A00085224C /* EditRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2A4922BB5B8A00085224C /* EditRobot.swift */; };
 		AE4493702BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE44936F2BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift */; };
 		AE4493742BB4B6DB00B44CD3 /* TextSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4493732BB4B6DB00B44CD3 /* TextSectionView.swift */; };
 		AE4493762BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4493752BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift */; };
@@ -46,6 +54,14 @@
 		03BA98FE2BB1BAC9006AAC93 /* MegazordAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MegazordAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegazordAppTests.swift; sourceTree = "<group>"; };
 		03C63B612BB2F831008D6AB8 /* MundoRampa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MundoRampa.swift; sourceTree = "<group>"; };
+		74B70F5E2BBAD81E0036F9B9 /* RobotPhysicsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotPhysicsModel.swift; sourceTree = "<group>"; };
+		74D2A4832BB5B64C0085224C /* SceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneController.swift; sourceTree = "<group>"; };
+		74D2A4852BB5B6660085224C /* RobotController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotController.swift; sourceTree = "<group>"; };
+		74D2A4882BB5B68C0085224C /* RobotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotModel.swift; sourceTree = "<group>"; };
+		74D2A48A2BB5B6BC0085224C /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		74D2A48E2BB5B7660085224C /* EditRobotImmsersive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRobotImmsersive.swift; sourceTree = "<group>"; };
+		74D2A4902BB5B7770085224C /* RampLessonImmersive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RampLessonImmersive.swift; sourceTree = "<group>"; };
+		74D2A4922BB5B8A00085224C /* EditRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRobot.swift; sourceTree = "<group>"; };
 		AE44936F2BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonCompleteSheetView.swift; sourceTree = "<group>"; };
 		AE4493732BB4B6DB00B44CD3 /* TextSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSectionView.swift; sourceTree = "<group>"; };
 		AE4493752BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonFailedSheetView.swift; sourceTree = "<group>"; };
@@ -96,10 +112,15 @@
 		03BA98E92BB1BAC8006AAC93 /* MegazordApp */ = {
 			isa = PBXGroup;
 			children = (
+				74D2A4872BB5B67D0085224C /* Models */,
+				74D2A4822BB5B63C0085224C /* Controller */,
 				AE4493722BB4B6B700B44CD3 /* Components */,
 				03BA98F02BB1BAC8006AAC93 /* ContentView.swift */,
 				AEC99A142BB46775005B0773 /* Extensions.swift */,
 				03BA98F22BB1BAC8006AAC93 /* ImmersiveView.swift */,
+				74D2A48E2BB5B7660085224C /* EditRobotImmsersive.swift */,
+				74D2A4922BB5B8A00085224C /* EditRobot.swift */,
+				74D2A4902BB5B7770085224C /* RampLessonImmersive.swift */,
 				03BA98EE2BB1BAC8006AAC93 /* MegazordAppApp.swift */,
 				03C63B612BB2F831008D6AB8 /* MundoRampa.swift */,
 				AE4493712BB4B69400B44CD3 /* TutorialLesson */,
@@ -132,6 +153,25 @@
 				03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */,
 			);
 			path = MegazordAppTests;
+			sourceTree = "<group>";
+		};
+		74D2A4822BB5B63C0085224C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				74D2A4832BB5B64C0085224C /* SceneController.swift */,
+				74D2A4852BB5B6660085224C /* RobotController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		74D2A4872BB5B67D0085224C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				74D2A4882BB5B68C0085224C /* RobotModel.swift */,
+				74D2A48A2BB5B6BC0085224C /* ContentViewModel.swift */,
+				74B70F5E2BBAD81E0036F9B9 /* RobotPhysicsModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		AE4493712BB4B69400B44CD3 /* TutorialLesson */ = {
@@ -257,8 +297,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74D2A4892BB5B68C0085224C /* RobotModel.swift in Sources */,
 				AEC99A152BB46775005B0773 /* Extensions.swift in Sources */,
 				03BA98F12BB1BAC8006AAC93 /* ContentView.swift in Sources */,
+				74D2A4842BB5B64C0085224C /* SceneController.swift in Sources */,
+				74D2A4912BB5B7770085224C /* RampLessonImmersive.swift in Sources */,
+				74D2A48F2BB5B7660085224C /* EditRobotImmsersive.swift in Sources */,
 				03C63B622BB2F831008D6AB8 /* MundoRampa.swift in Sources */,
 				AE4493762BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift in Sources */,
 				AE4493702BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift in Sources */,
@@ -266,8 +310,12 @@
 				AEC99A132BB46763005B0773 /* TutorialLessonViewModel.swift in Sources */,
 				AEC99A0F2BB46732005B0773 /* TutorialLessonView.swift in Sources */,
 				AE4493742BB4B6DB00B44CD3 /* TextSectionView.swift in Sources */,
+				74D2A4862BB5B6660085224C /* RobotController.swift in Sources */,
 				AEC99A112BB46753005B0773 /* CardView.swift in Sources */,
 				03BA98F32BB1BAC8006AAC93 /* ImmersiveView.swift in Sources */,
+				74D2A4932BB5B8A00085224C /* EditRobot.swift in Sources */,
+				74D2A48B2BB5B6BC0085224C /* ContentViewModel.swift in Sources */,
+				74B70F5F2BBAD81E0036F9B9 /* RobotPhysicsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

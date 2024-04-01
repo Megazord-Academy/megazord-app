@@ -35,39 +35,23 @@
       }
     ]
   },
-  "397D1B20-8233-40CA-837A-897FFA3E985C" : {
+  "96C87571-9E08-42C1-97D6-F0635531F425" : {
     "objectMetadataList" : [
       [
-        "397D1B20-8233-40CA-837A-897FFA3E985C",
-        "Root",
-        "car_normalWheels_motor",
-        "Geom"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "397D1B20-8233-40CA-837A-897FFA3E985C",
+        "96C87571-9E08-42C1-97D6-F0635531F425",
         "Root"
       ],
       {
         "isExpanded" : true,
         "isLocked" : false
-      },
+      }
+    ]
+  },
+  "397D1B20-8233-40CA-837A-897FFA3E985C" : {
+    "objectMetadataList" : [
       [
         "397D1B20-8233-40CA-837A-897FFA3E985C",
-        "Root",
-        "normalRamp"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "397D1B20-8233-40CA-837A-897FFA3E985C",
-        "Root",
-        "car_normalWheels_motor"
+        "Root"
       ],
       {
         "isExpanded" : true,
@@ -89,24 +73,6 @@
   },
   "AF09ED6F-1707-48FD-8720-65B998362C09" : {
     "objectMetadataList" : [
-      [
-        "AF09ED6F-1707-48FD-8720-65B998362C09",
-        "Root",
-        "Sphere_Right"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "AF09ED6F-1707-48FD-8720-65B998362C09",
-        "Root",
-        "car_normalWheels_motor"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root"
@@ -132,6 +98,15 @@
       {
         "isExpanded" : true,
         "isLocked" : false
+      },
+      [
+        "AF09ED6F-1707-48FD-8720-65B998362C09",
+        "Root",
+        "Sphere_Right"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
       }
     ]
   },
@@ -139,7 +114,8 @@
     "objectMetadataList" : [
       [
         "CB766F92-EE55-4A63-9401-E7B8C009764D",
-        "Root"
+        "Root",
+        "GridMaterial"
       ],
       {
         "isExpanded" : true,
@@ -147,8 +123,7 @@
       },
       [
         "CB766F92-EE55-4A63-9401-E7B8C009764D",
-        "Root",
-        "GridMaterial"
+        "Root"
       ],
       {
         "isExpanded" : true,
