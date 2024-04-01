@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03245F3E2BB58AD300FBCD6A /* LessonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03245F3D2BB58AD300FBCD6A /* LessonCard.swift */; };
 		03BA98ED2BB1BAC8006AAC93 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 03BA98EC2BB1BAC8006AAC93 /* RealityKitContent */; };
 		03BA98EF2BB1BAC8006AAC93 /* MegazordAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA98EE2BB1BAC8006AAC93 /* MegazordAppApp.swift */; };
 		03BA98F12BB1BAC8006AAC93 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA98F02BB1BAC8006AAC93 /* ContentView.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03245F3D2BB58AD300FBCD6A /* LessonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCard.swift; sourceTree = "<group>"; };
 		03BA98E72BB1BAC8006AAC93 /* MegazordApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MegazordApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03BA98EB2BB1BAC8006AAC93 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		03BA98EE2BB1BAC8006AAC93 /* MegazordAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegazordAppApp.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				03BA98F42BB1BAC9006AAC93 /* Assets.xcassets */,
 				03BA98F92BB1BAC9006AAC93 /* Info.plist */,
 				03BA98F62BB1BAC9006AAC93 /* Preview Content */,
+				03245F3D2BB58AD300FBCD6A /* LessonCard.swift */,
 			);
 			path = MegazordApp;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				03BA98F12BB1BAC8006AAC93 /* ContentView.swift in Sources */,
 				74DDA9BC2BB2F2170058D55A /* RobotController.swift in Sources */,
 				74EA35B72BB3841200453051 /* RobotModel.swift in Sources */,
+				03245F3E2BB58AD300FBCD6A /* LessonCard.swift in Sources */,
 				03BA98EF2BB1BAC8006AAC93 /* MegazordAppApp.swift in Sources */,
 				74366C602BB241740050D82C /* EditRobot.swift in Sources */,
 				03BA98F32BB1BAC8006AAC93 /* ImmersiveView.swift in Sources */,
