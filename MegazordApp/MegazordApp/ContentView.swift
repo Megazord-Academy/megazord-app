@@ -35,17 +35,31 @@ struct ContentView: View {
                
             }.padding()
             
-            Button("Edit Robot"){
+            Button("Lesson"){
+                openWindow(id: "Lesson") //It will become a sheet
+                
+//                sceneController.showFirstLessonImmersive = false
+//                
+//                if firstInteractionOnScreen{
+//                    sceneController.showEditRobotImmersive = true
+//                    firstInteractionOnScreen = false
+//                }
+//                
+//                lastButtonTapped = ButtonTapped.edit
+                
+            }.padding()
+            
+            Button("Edit"){
                 openWindow(id: "EditRobot") //It will become a sheet
                 
-                sceneController.showFirstLessonImmersive = false
-                
-                if firstInteractionOnScreen{
-                    sceneController.showEditRobotImmersive = true
-                    firstInteractionOnScreen = false
-                }
-                
-                lastButtonTapped = ButtonTapped.edit
+//                sceneController.showFirstLessonImmersive = false
+//
+//                if firstInteractionOnScreen{
+//                    sceneController.showEditRobotImmersive = true
+//                    firstInteractionOnScreen = false
+//                }
+//
+//                lastButtonTapped = ButtonTapped.edit
                 
             }.padding()
             
