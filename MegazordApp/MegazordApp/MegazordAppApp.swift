@@ -42,7 +42,8 @@ struct MegazordAppApp: App {
             EditRobot()
                 .environmentObject(robotController)
                 .environmentObject(sceneController)
-        }
+                
+        }.defaultSize(width: 880, height: 900/*, depth: 3, in:.meters*/)
     }
 }
 

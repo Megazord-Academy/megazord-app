@@ -8,59 +8,34 @@
 import Foundation
 
 class RobotController: ObservableObject{
-    private var defaultWheelSelected = false
-    private var numMotorsSelected = 0
-    private var bigWheelSelected = false
     private var robot = Robot.chassis
+    @Published var selectedWheelID = 0
+    @Published var selectedMotorID = 0
     
-    func putBigWheels(){
-        if defaultWheelSelected{
-            defaultWheelSelected = false
-            bigWheelSelected.toggle()
-        }else{
-            bigWheelSelected.toggle()
-        }
-        
-        decideRobotNewCase()
-    }
-    
-    func putDefaultWheels(){
-        if bigWheelSelected{
-            bigWheelSelected = false
-            defaultWheelSelected.toggle()
-        }else{
-            defaultWheelSelected.toggle()
-        }
-        
-        decideRobotNewCase()
-    }
-    
-    func putMotor(){
-        numMotorsSelected = numMotorsSelected + 1
-        if numMotorsSelected > 2 {
-            numMotorsSelected = 0
-        }
-        decideRobotNewCase()
-    }
     
     func decideRobotNewCase() {
-        if defaultWheelSelected && numMotorsSelected == 1{
-            robot = Robot.defaultWheelsMotor
-        }else if defaultWheelSelected && numMotorsSelected == 2{
-            robot = Robot.defaultWheelsTwoMotors
-        }else if defaultWheelSelected{
-            robot = Robot.defaultWheelsNoMotor
-        }else if bigWheelSelected && numMotorsSelected == 1{
-            robot = Robot.bigWheelsMotor
-        }else if bigWheelSelected && numMotorsSelected == 2{
-            robot = Robot.bigWheelsTwoMotors
-        }else if bigWheelSelected{
-            robot = Robot.bigWheelsNoMotor
-        }else if numMotorsSelected == 1{
+        
+        
+        switch (selectedWheelID, selectedMotorID) {
+        case(0,0):
+            robot = Robot.chassis
+        case(0,1):
             robot = Robot.motorOnly
-        }else if numMotorsSelected == 2{
+        case(0,2):
             robot = Robot.twoMotors
-        }else{
+        case(1,0):
+            robot = Robot.defaultWheelsNoMotor
+        case(1,1):
+            robot = Robot.defaultWheelsMotor
+        case(1,2):
+            robot = Robot.defaultWheelsTwoMotors
+        case(2,0):
+            robot = Robot.bigWheelsNoMotor
+        case(2,1):
+            robot = Robot.bigWheelsMotor
+        case(2,2):
+            robot = Robot.bigWheelsTwoMotors
+        case (_,_):
             robot = Robot.chassis
         }
     }
