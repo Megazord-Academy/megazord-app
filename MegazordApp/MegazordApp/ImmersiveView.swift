@@ -15,6 +15,16 @@ struct ImmersiveView: View {
                 robot.addForce(robotPhysics.force, relativeTo: scene)
             }
             
+            if let initialPosition = robotController.initialPosition{
+                if !robotController.isRobotInInitialPosition && robotController.robotStatus == .idle {
+                    robot.clearForcesAndTorques()
+                    robot.physicsBody?.isTranslationLocked = (x: true, y: false, z: true)
+                    robot.position = initialPosition
+                    robotController.isRobotInInitialPosition = true
+                } else if robotController.robotStatus == .moving {
+                    robot.physicsBody?.isTranslationLocked = (x: false, y: false, z: true)
+                }
+            }
         }
         
     }
@@ -46,6 +56,9 @@ struct ImmersiveView: View {
                     let robotPhysics = robotController.applyPhysics()
                     robot.physicsBody?.massProperties.mass = robotPhysics.mass
                     robot.physicsBody?.linearDamping = 2
+                    if robotController.initialPosition == nil{
+                        robotController.initialPosition = robot.position
+                    }
                 }
                 
                 content.add(scene)

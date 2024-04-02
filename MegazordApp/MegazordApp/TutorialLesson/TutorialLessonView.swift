@@ -207,10 +207,34 @@ struct LessonView: View {
                                             sceneController.simulatorStatus = .running
                                             robotController.robotStatus = .moving
                                             
+                                            Task {
+                                                do {
+                                                    // waiting 5 seconds
+                                                    try await Task.sleep(nanoseconds: 5000000000)
+                                                    
+                                                    if !sceneController.levelCompleted && sceneController.simulatorStatus == .running {
+                                                        // showing sheet
+                                                        viewModel.showLessonFailedSheet = true
+                                                        
+                                                        // stopping simulation
+                                                        robotController.robotStatus = .idle
+                                                        sceneController.simulatorStatus = .open
+                                                        robotController.isRobotInInitialPosition = false
+                                                    }
+                                                    
+                                                    
+                                                } catch {
+                                                    
+                                                }
+                                                
+                                                
+                                            }
+                                            
                                         // deu stop
                                         } else {
                                             robotController.robotStatus = .idle
                                             sceneController.simulatorStatus = .open
+                                            robotController.isRobotInInitialPosition = false
 
                                         }
                                         
@@ -246,9 +270,9 @@ struct LessonView: View {
                     .sheet(isPresented: $sceneController.levelCompleted) {
                         TutorialLessonCompleteSheetView(sheetVisibility: $sceneController.levelCompleted)
                     }
-                    .onChange(of: sceneController.simulatorStatus) { _, newValue in
+                    .onChange(of: sceneController.simulatorStatus) { oldValue, newValue in
                         Task {
-                            if newValue == .open {
+                            if newValue == .open && oldValue != .running {
                                 switch await openImmersiveSpace(id: "ImmersiveSpace") {
                                 case .opened:
                                     robotController.robotStatus = .idle

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TutorialLessonCompleteSheetView: View {
+    @EnvironmentObject var robotController: RobotController
+    @EnvironmentObject var sceneController: SceneController
     
     @Binding var sheetVisibility: Bool
     
@@ -37,6 +39,10 @@ struct TutorialLessonCompleteSheetView: View {
                 
                 Button {
                     sheetVisibility = false
+                    robotController.robotStatus = .idle
+                    sceneController.simulatorStatus = .open
+                    robotController.isRobotInInitialPosition = false
+                    
                 } label: {
                     Text("Keep Exploring")
                 }

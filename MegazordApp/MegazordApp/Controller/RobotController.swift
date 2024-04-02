@@ -19,7 +19,8 @@ class RobotController: ObservableObject{
     private var numMotorsSelected = 0
     private var bigWheelSelected = false
     private var robot = Robot.chassis
-    private var robotPosition = SIMD3(x: 0, y: 0, z: 0)
+    @Published var initialPosition: SIMD3<Float>?
+    @Published var isRobotInInitialPosition = true
 
     
     /// Holds the current `RobotStatus`.
