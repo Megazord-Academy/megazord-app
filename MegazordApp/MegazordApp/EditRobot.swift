@@ -32,7 +32,7 @@ struct EditRobot: View {
     
     var body: some View {
         VStack{
-            CardView(color: "colorOrange", icon: "gearshape.fill", title: "Wheels") {
+            CardView(color: "colorOrange", icon: "circle.dotted.circle", title: "Wheels") {
                 VStack(alignment: .leading) {
                     
                     
@@ -88,7 +88,7 @@ struct EditRobot: View {
                 .padding()
                 
             }
-            CardView(color: "colorOrange", icon: "gearshape.fill", title: "Motors") {
+            CardView(color: "colorOrange", icon: "engine.combustion", title: "Motors") {
                 VStack(alignment: .leading) {
                     HStack{
                         ScrollView(.horizontal){

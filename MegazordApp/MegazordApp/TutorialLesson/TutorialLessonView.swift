@@ -27,7 +27,7 @@ struct LessonView: View {
     var body: some View {
         HStack(alignment: .top, spacing: 16) {
             // description card
-            CardView(color: "colorGreen", icon: "bookmark.fill", title: "Description") {
+            CardView(color: "colorGreen", icon: "bookmark", title: "Description") {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 24) {
                         TextSectionView(sectionTitle: "Introduction") {
@@ -82,7 +82,7 @@ struct LessonView: View {
             
             VStack(spacing: 16) {
                 // your robot card
-                CardView(color: "colorOrange", icon: "wrench.adjustable.fill", title: "Your Robot", content: {
+                CardView(color: "colorOrange", icon: "wrench.adjustable", title: "Your Robot", content: {
                     VStack(alignment: .leading) {
                         HStack {
                             Spacer()
@@ -159,9 +159,9 @@ struct LessonView: View {
                     }
                 }
                 
-                HStack {
+                HStack(spacing: 16) {
                     // robot status card
-                    CardView(color: "colorPurple", icon: "record.circle.fill", title: "Robot Status") {
+                    CardView(color: "colorPurple", icon: "chart.bar", title: "Robot Status") {
                         VStack(alignment: .leading) {
                             HStack(alignment: .center) {
                                 switch robotController.robotStatus {
@@ -204,7 +204,7 @@ struct LessonView: View {
                     }
                     
                     // simulator card
-                    CardView(color: "colorBlue", icon: "bolt.batteryblock", title: "Simulator") {
+                    CardView(color: "colorBlue", icon: "play", title: "Simulator") {
                         VStack(alignment: .leading) {
                             
                             Text(viewModel.simulatorCardText)
