@@ -22,14 +22,25 @@ struct ContentView: View {
 
     var body: some View {
         NavigationStack(path: $router.path) {
-            VStack {
+            VStack(spacing: 64) {
+                Spacer()
+                
+                HStack(spacing: 16) {
+                    Image("prototypeIcon")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 54)
+                    
+                    Text("Hoove")
+                        .font(.extraLargeTitle)
+                        .fontWeight(.bold)
+                }
+                
                 NavigationLink(value: "TutorialLesson") {
                     Text("Tutorial Lesson")
                 }
                 
-                Button("First Lesson"){
-                    openWindow(id: "Lesson") //It will become a sheet
-                }.padding()
+                Spacer()
                 
             }
             .navigationDestination(for: String.self) { value in
@@ -40,59 +51,6 @@ struct ContentView: View {
                         
                     default:
                         Text("Oh no! 404")
-                }
-            }
-            .onChange(of: sceneController.showFirstLessonImmersive) { _, newValue in
-                Task {
-                    if newValue {
-                        switch await openImmersiveSpace(id: "ImmersiveSpace") {
-                            case .opened:
-                                sceneController.firstLessonIsShown = true
-                            case .error, .userCancelled:
-                                fallthrough
-                            @unknown default:
-                                sceneController.firstLessonIsShown = false
-                                sceneController.showFirstLessonImmersive = false
-                        }
-                    } else if sceneController.firstLessonIsShown {
-                        await dismissImmersiveSpace()
-                        
-                        sceneController.firstLessonIsShown = false
-                        
-                        if lastButtonTapped == ButtonTapped.edit{
-                            if sceneController.firstLessonIsShown == false{
-                                sceneController.showEditRobotImmersive = true
-                            }
-                        }
-                    }
-                }
-            }
-            
-            .onChange(of: sceneController.showEditRobotImmersive) { _, newValue in
-                Task {
-                    if newValue {
-                        switch await openImmersiveSpace(id: "EditRobotImmersive") {
-                            case .opened:
-                                sceneController.editRobotImmersiveIsShown = true
-                            case .error, .userCancelled:
-                                fallthrough
-                            @unknown default:
-                                sceneController.editRobotImmersiveIsShown = false
-                                sceneController.showEditRobotImmersive = false
-                        }
-                    } else if sceneController.editRobotImmersiveIsShown {
-                        await dismissImmersiveSpace()
-                        
-                        sceneController.editRobotImmersiveIsShown = false
-                        
-                        if lastButtonTapped == ButtonTapped.lesson{
-                            if sceneController.editRobotImmersiveIsShown == false{
-                                sceneController.showFirstLessonImmersive = true
-                            }
-                        }else{
-                            sceneController.showEditRobotImmersive = true
-                        }
-                    }
                 }
             }
         }

@@ -33,26 +33,25 @@ struct CardView<Content: View>: View {
             HStack(alignment: .center) {
                 Image(systemName: icon)
                     .resizable()
-                    .font(.title3)
+                    .font(.headline)
                     .fontWeight(.bold)
                     .scaledToFit()
-                    .frame(width: 20, height: 20)
+                    .frame(width: 18, height: 18)
                     .foregroundStyle(.white)
                     .padding(8)
                     .background {
-                        RoundedRectangle(cornerRadius: 8)
+                        RoundedRectangle(cornerRadius: 10)
                             .fill(Color(color))
                     }
                 
                 Text(title)
-                    .font(.title)
+                    .font(.title2)
                     .fontWeight(.bold)
                 
                 Spacer()
             }
-            .padding(20)
-            
-            Divider()
+            .padding(.horizontal, 20)
+            .padding(.top, 20)
             
             // card content
             content
