@@ -12,6 +12,7 @@ import RealityKitContent
 struct EditRobot: View {
     @EnvironmentObject var robotController: RobotController
     @EnvironmentObject var sceneController: SceneController
+    @EnvironmentObject var viewModel: TutorialLessonViewModel
     
     
     
@@ -42,11 +43,9 @@ struct EditRobot: View {
                                     ForEach(wheelList, id: \.id) { wheel in
                                         
                                         Button {
-                                            print("Botão clicado!")
                                             robotController.selectedWheelID = wheel.id
-                                            print(robotController.selectedWheelID)
                                             robotController.decideRobotNewCase()
-                                            sceneController.showEditRobotImmersive = false
+                                            viewModel.showRobotImmersive = false
 
                                         } label: {
                                             VStack(spacing:8){
@@ -99,11 +98,10 @@ struct EditRobot: View {
                                         ForEach(motorList, id: \.id) { motor in
                                             
                                             Button {
-                                                        print("Botão clicado!")
+                                                
                                                 robotController.selectedMotorID = motor.id
-                                                print(robotController.selectedMotorID)
                                                 robotController.decideRobotNewCase()
-                                                sceneController.showEditRobotImmersive = false
+                                                viewModel.showRobotImmersive = false
 
 
                                                     } label: {
