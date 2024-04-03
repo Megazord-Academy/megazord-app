@@ -12,20 +12,22 @@ import RealityKitContent
 struct LessonView: View {
     @EnvironmentObject var viewModel: TutorialLessonViewModel/*(lessonName: "Tutorial Lesson", simulatorCardText: "You need to launch the simulator in order to test your robot.")*/
     
+    @State var showLevelCompleteSheet: Bool = false
+    
     /// Variable that controls the robot editor sheet visibility on the lesson view.
     @State var showRobotEditorSheet: Bool = false
     
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
-    
     @EnvironmentObject var robotController: RobotController
+    @EnvironmentObject var router: Router
     @EnvironmentObject var sceneController: SceneController
 
     
     var body: some View {
         HStack(alignment: .top, spacing: 16) {
             // description card
-            CardView(color: "colorGreen", title: "Description") {
+            CardView(color: "colorGreen", icon: "bookmark.fill", title: "Description") {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 24) {
                         TextSectionView(sectionTitle: "Introduction") {
@@ -80,7 +82,7 @@ struct LessonView: View {
             
             VStack(spacing: 16) {
                 // your robot card
-                CardView(color: "colorOrange", title: "Your Robot", content: {
+                CardView(color: "colorOrange", icon: "wrench.adjustable.fill", title: "Your Robot", content: {
                     VStack(alignment: .leading) {
                         HStack {
                             Spacer()
@@ -102,16 +104,29 @@ struct LessonView: View {
                         }
                         .buttonBorderShape(.roundedRectangle)
                         .sheet(isPresented: $viewModel.showRobotEditorSheet) {
-                            EditRobot()
-                            
-                            Button {
-                                viewModel.showRobotEditorSheet = false
-                                viewModel.showRobotImmersive = false
-                                
-                            } label: {
-                                Image(systemName: "xmark")
-                            }
+                            VStack {
+                                // header
+                                HStack {
+                                    Text("Robot Editor")
+                                        .font(.title)
+                                    
+                                    Spacer()
+                                    
+                                    Button {
+                                        viewModel.showRobotEditorSheet = false
+                                        viewModel.showRobotImmersive = false
+                                    } label: {
+                                        Image(systemName: "xmark")
+                                    }
+                                    .buttonBorderShape(.circle)
+                                }
+                                .padding(.horizontal, 24)
+                                .padding(.top, 24)
+                                .padding(.bottom, 16)
 
+                                // view
+                                EditRobot()
+                            }
                         }
                     }
                     .padding()
@@ -134,7 +149,7 @@ struct LessonView: View {
                                 viewModel.showRobotImmersive = false
                                 robotController.robotStatus = .off
                             }
-                        } else{
+                        } else {
                             await dismissImmersiveSpace()
                             if viewModel.showRobotEditorSheet{
                                 viewModel.showRobotImmersive = true
@@ -146,7 +161,7 @@ struct LessonView: View {
                 
                 HStack {
                     // robot status card
-                    CardView(color: "colorPurple", title: "Robot Status") {
+                    CardView(color: "colorPurple", icon: "record.circle.fill", title: "Robot Status") {
                         VStack(alignment: .leading) {
                             HStack(alignment: .center) {
                                 switch robotController.robotStatus {
@@ -189,7 +204,7 @@ struct LessonView: View {
                     }
                     
                     // simulator card
-                    CardView(color: "colorBlue", title: "Simulator") {
+                    CardView(color: "colorBlue", icon: "bolt.batteryblock", title: "Simulator") {
                         VStack(alignment: .leading) {
                             
                             Text(viewModel.simulatorCardText)
@@ -273,9 +288,15 @@ struct LessonView: View {
                         })
                         
                     }
-                    .sheet(isPresented: $sceneController.levelCompleted) {
-                        TutorialLessonCompleteSheetView(sheetVisibility: $sceneController.levelCompleted)
+                    .sheet(isPresented: $showLevelCompleteSheet) {
+                        TutorialLessonCompleteSheetView(sheetVisibility: $showLevelCompleteSheet)
                     }
+                    .onChange(of: sceneController.levelCompleted, { oldValue, newValue in
+                        // level was just completed
+                        if oldValue == false && newValue == true {
+                            showLevelCompleteSheet = true
+                        }
+                    })
                     .onChange(of: sceneController.simulatorStatus) { oldValue, newValue in
                         Task {
                             if newValue == .open && oldValue != .running {
@@ -309,8 +330,8 @@ struct LessonView: View {
 
 
 
-#Preview(windowStyle: .automatic) {
-    NavigationStack {
-        LessonView()
-    }
-}
+//#Preview(windowStyle: .automatic) {
+//    NavigationStack {
+//        LessonView()
+//    }
+//}

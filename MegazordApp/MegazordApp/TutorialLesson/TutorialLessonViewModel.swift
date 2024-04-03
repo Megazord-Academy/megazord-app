@@ -37,24 +37,10 @@ class TutorialLessonViewModel: ObservableObject {
         self.simulatorCardText = simulatorCardText
     }
     
-//    func closeSimulatorButtonTapped() {
-//        self.simulatorStatus = .closed
-//    }
+
     
     func editRobotButtonTapped() {
         self.showRobotEditorSheet = true
     }
-//    
-//    func launchSimulatorButtonTapped() {
-//        self.simulatorStatus = .open
-//    }
-//    
-//    func playSimulatorButtonTapped() {
-//        self.simulatorStatus = .running
-//    }
-//    
-//    func stopSimulatorButtonTapped() {
-//        self.simulatorStatus = .open
-//        self.showLessonFailedSheet = true
-//    }
+
 }

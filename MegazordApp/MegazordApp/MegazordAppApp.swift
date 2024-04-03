@@ -10,16 +10,17 @@ import SwiftUI
 @main
 struct MegazordAppApp: App {
     @ObservedObject var robotController = RobotController()
+    @StateObject var router = Router()
     @ObservedObject var sceneController = SceneController()
     @ObservedObject var viewModel = TutorialLessonViewModel(lessonName: "Tutorial Lesson", simulatorCardText: "You need to launch the simulator in order to test your robot.")
 
-
-    
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(robotController)
+                .environmentObject(router)
                 .environmentObject(sceneController)
+                
         }
 
         ImmersiveSpace(id: "ImmersiveSpace") {
@@ -38,23 +39,6 @@ struct MegazordAppApp: App {
             RampLessonImmersive()
                 .environmentObject(robotController)
                 .environmentObject(sceneController)
-        }
-        
-        WindowGroup(id: "EditRobot"){
-            EditRobot()
-                .environmentObject(robotController)
-                .environmentObject(sceneController)
-                .environmentObject(viewModel)
-        }.defaultSize(width: 880, height: 900)
-        
-        WindowGroup(id: "Lesson"){
-            LessonView()
-                .environmentObject(robotController)
-                .environmentObject(sceneController)
-                .environmentObject(viewModel)
-
-
-               
         }
     }
 }

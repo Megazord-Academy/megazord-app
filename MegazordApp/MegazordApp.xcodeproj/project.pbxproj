@@ -23,6 +23,7 @@
 		74D2A48F2BB5B7660085224C /* EditRobotImmsersive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2A48E2BB5B7660085224C /* EditRobotImmsersive.swift */; };
 		74D2A4912BB5B7770085224C /* RampLessonImmersive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2A4902BB5B7770085224C /* RampLessonImmersive.swift */; };
 		74D2A4932BB5B8A00085224C /* EditRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2A4922BB5B8A00085224C /* EditRobot.swift */; };
+		AE332A9F2BBD902700EC6151 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE332A9E2BBD902700EC6151 /* Router.swift */; };
 		AE4493702BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE44936F2BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift */; };
 		AE4493742BB4B6DB00B44CD3 /* TextSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4493732BB4B6DB00B44CD3 /* TextSectionView.swift */; };
 		AE4493762BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4493752BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift */; };
@@ -62,6 +63,7 @@
 		74D2A48E2BB5B7660085224C /* EditRobotImmsersive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRobotImmsersive.swift; sourceTree = "<group>"; };
 		74D2A4902BB5B7770085224C /* RampLessonImmersive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RampLessonImmersive.swift; sourceTree = "<group>"; };
 		74D2A4922BB5B8A00085224C /* EditRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRobot.swift; sourceTree = "<group>"; };
+		AE332A9E2BBD902700EC6151 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		AE44936F2BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonCompleteSheetView.swift; sourceTree = "<group>"; };
 		AE4493732BB4B6DB00B44CD3 /* TextSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSectionView.swift; sourceTree = "<group>"; };
 		AE4493752BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonFailedSheetView.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			children = (
 				74D2A4832BB5B64C0085224C /* SceneController.swift */,
 				74D2A4852BB5B6660085224C /* RobotController.swift */,
+				AE332A9E2BBD902700EC6151 /* Router.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				03BA98EF2BB1BAC8006AAC93 /* MegazordAppApp.swift in Sources */,
 				AEC99A132BB46763005B0773 /* TutorialLessonViewModel.swift in Sources */,
 				AEC99A0F2BB46732005B0773 /* TutorialLessonView.swift in Sources */,
+				AE332A9F2BBD902700EC6151 /* Router.swift in Sources */,
 				AE4493742BB4B6DB00B44CD3 /* TextSectionView.swift in Sources */,
 				74D2A4862BB5B6660085224C /* RobotController.swift in Sources */,
 				AEC99A112BB46753005B0773 /* CardView.swift in Sources */,
