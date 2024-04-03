@@ -11,6 +11,8 @@ import SwiftUI
 struct MegazordAppApp: App {
     @ObservedObject var robotController = RobotController()
     @ObservedObject var sceneController = SceneController()
+    @ObservedObject var viewModel = TutorialLessonViewModel(lessonName: "Tutorial Lesson", simulatorCardText: "You need to launch the simulator in order to test your robot.")
+
 
     
     var body: some Scene {
@@ -42,12 +44,15 @@ struct MegazordAppApp: App {
             EditRobot()
                 .environmentObject(robotController)
                 .environmentObject(sceneController)
-        }
+                .environmentObject(viewModel)
+        }.defaultSize(width: 880, height: 900)
         
         WindowGroup(id: "Lesson"){
             LessonView()
                 .environmentObject(robotController)
                 .environmentObject(sceneController)
+                .environmentObject(viewModel)
+
 
                
         }

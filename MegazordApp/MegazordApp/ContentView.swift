@@ -23,44 +23,13 @@ struct ContentView: View {
     var body: some View {
         VStack {
             
-            Button("First Lesson Scene"){
-                sceneController.showEditRobotImmersive = false
-                
-                if firstInteractionOnScreen{
-                    sceneController.showFirstLessonImmersive = true
-                    firstInteractionOnScreen = false
-                }
-                
-                lastButtonTapped = ButtonTapped.lesson
-               
-            }.padding()
             
-            Button("Lesson"){
+            Button("Tutorial Lesson"){
                 openWindow(id: "Lesson") //It will become a sheet
-                
-//                sceneController.showFirstLessonImmersive = false
-//                
-//                if firstInteractionOnScreen{
-//                    sceneController.showEditRobotImmersive = true
-//                    firstInteractionOnScreen = false
-//                }
-//                
-//                lastButtonTapped = ButtonTapped.edit
-                
             }.padding()
             
-            Button("Edit"){
-                openWindow(id: "EditRobot") //It will become a sheet
-                
-//                sceneController.showFirstLessonImmersive = false
-//
-//                if firstInteractionOnScreen{
-//                    sceneController.showEditRobotImmersive = true
-//                    firstInteractionOnScreen = false
-//                }
-//
-//                lastButtonTapped = ButtonTapped.edit
-                
+            Button("First Lesson"){
+                openWindow(id: "Lesson") //It will become a sheet
             }.padding()
             
         }

@@ -10,7 +10,7 @@ import RealityKit
 import RealityKitContent
 
 struct LessonView: View {
-    @StateObject private var viewModel = TutorialLessonViewModel(lessonName: "Tutorial Lesson", simulatorCardText: "You need to launch the simulator in order to test your robot.")
+    @EnvironmentObject var viewModel: TutorialLessonViewModel/*(lessonName: "Tutorial Lesson", simulatorCardText: "You need to launch the simulator in order to test your robot.")*/
     
     /// Variable that controls the robot editor sheet visibility on the lesson view.
     @State var showRobotEditorSheet: Bool = false
@@ -95,16 +95,19 @@ struct LessonView: View {
                         Button {
                             sceneController.simulatorStatus = .closed
                             viewModel.editRobotButtonTapped()
+                            viewModel.showRobotImmersive = true
                             
                         } label: {
                             Label("Edit Robot", systemImage: "wrench.adjustable.fill")
                         }
                         .buttonBorderShape(.roundedRectangle)
                         .sheet(isPresented: $viewModel.showRobotEditorSheet) {
-                            Text("Robot Editor Sheet")
+                            EditRobot()
                             
                             Button {
                                 viewModel.showRobotEditorSheet = false
+                                viewModel.showRobotImmersive = false
+                                
                             } label: {
                                 Image(systemName: "xmark")
                             }
@@ -113,7 +116,7 @@ struct LessonView: View {
                     }
                     .padding()
                 })
-                .onChange(of: viewModel.showRobotEditorSheet) { _, newValue in
+                .onChange(of: viewModel.showRobotImmersive) { _, newValue in
                     Task {
                         if newValue == true {
                             // closing simulator if it is open
@@ -128,12 +131,14 @@ struct LessonView: View {
                             case .error, .userCancelled:
                                 fallthrough
                             @unknown default:
-                                viewModel.showRobotEditorSheet = false
+                                viewModel.showRobotImmersive = false
                                 robotController.robotStatus = .off
                             }
                         } else{
                             await dismissImmersiveSpace()
-                            viewModel.showRobotEditorSheet = false
+                            if viewModel.showRobotEditorSheet{
+                                viewModel.showRobotImmersive = true
+                            }
                             robotController.robotStatus = .off
                         }
                     }

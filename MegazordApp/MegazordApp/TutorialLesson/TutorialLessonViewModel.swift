@@ -28,6 +28,8 @@ class TutorialLessonViewModel: ObservableObject {
     /// Variable that controls the robot editor sheet visibility on the lesson view.
     @Published var showRobotEditorSheet: Bool = false
     
+    @Published var showRobotImmersive: Bool = false
+    
     init(lessonName: String, simulatorCardText: String) {
         self.lessonName = lessonName
         self.simulatorCardText = simulatorCardText
