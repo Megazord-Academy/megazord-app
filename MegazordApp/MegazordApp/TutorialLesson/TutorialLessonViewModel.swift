@@ -17,6 +17,8 @@ class TutorialLessonViewModel: ObservableObject {
     /// The lesson name, passed onto the navigation title
     let lessonName: String
     
+    @Published var simulationCount = 0
+    
     /// String with the image name for the current robot that will be shown on the "My Robot" card in the lesson view
     @Published var robotImage: String = "normalWheelsIllustration"
     

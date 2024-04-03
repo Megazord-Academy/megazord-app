@@ -211,13 +211,15 @@ struct LessonView: View {
                                             //viewModel.playSimulatorButtonTapped()
                                             sceneController.simulatorStatus = .running
                                             robotController.robotStatus = .moving
+                                            viewModel.simulationCount += 1
                                             
                                             Task {
                                                 do {
-                                                    // waiting 5 seconds
+                                                    let currentSimulation = viewModel.simulationCount
+                                                    
                                                     try await Task.sleep(nanoseconds: 5000000000)
                                                     
-                                                    if !sceneController.levelCompleted && sceneController.simulatorStatus == .running {
+                                                    if !sceneController.levelCompleted && sceneController.simulatorStatus == .running && currentSimulation == viewModel.simulationCount {
                                                         // showing sheet
                                                         viewModel.showLessonFailedSheet = true
                                                         
@@ -240,7 +242,6 @@ struct LessonView: View {
                                             robotController.robotStatus = .idle
                                             sceneController.simulatorStatus = .open
                                             robotController.isRobotInInitialPosition = false
-
                                         }
                                         
                                     } label: {
