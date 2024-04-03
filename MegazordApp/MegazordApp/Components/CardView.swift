@@ -22,14 +22,28 @@ import SwiftUI
 ///
 struct CardView<Content: View>: View {
     let color: String
+    let icon: String
     let title: String
     
     @ViewBuilder var content: Content
     
     var body: some View {
         VStack(spacing: 0) {
-            // card title
-            HStack {
+            // card title and icon
+            HStack(alignment: .center) {
+                Image(systemName: icon)
+                    .resizable()
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .scaledToFit()
+                    .frame(width: 20, height: 20)
+                    .foregroundStyle(.white)
+                    .padding(8)
+                    .background {
+                        RoundedRectangle(cornerRadius: 8)
+                            .fill(Color(color))
+                    }
+                
                 Text(title)
                     .font(.title)
                     .fontWeight(.bold)
@@ -37,7 +51,8 @@ struct CardView<Content: View>: View {
                 Spacer()
             }
             .padding(20)
-            .background(Color(color)) // title background color
+            
+            Divider()
             
             // card content
             content

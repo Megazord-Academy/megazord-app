@@ -10,7 +10,7 @@ import SwiftUI
 struct TutorialLessonCompleteSheetView: View {
     @EnvironmentObject var robotController: RobotController
     @EnvironmentObject var sceneController: SceneController
-    
+    @EnvironmentObject var router: Router
     @Binding var sheetVisibility: Bool
     
     var body: some View {
@@ -31,7 +31,8 @@ struct TutorialLessonCompleteSheetView: View {
             
             VStack(spacing: 16) {
                 Button {
-                    
+                    sheetVisibility = false
+                    router.resetPath()
                 } label: {
                     Text("Go Back to Lesson Selection")
                 }
