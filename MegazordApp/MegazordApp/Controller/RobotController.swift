@@ -21,7 +21,7 @@ class RobotController: ObservableObject{
     @Published var isRobotInInitialPosition = true
     
     /// String with the image name for the current robot that will be shown on the "My Robot" card in the lesson view
-    @Published var robotImage: String = "normalWheelsIllustration"
+    @Published var robotImage: String = "car"
     
     /// Holds the current `RobotStatus`.
     @Published var robotStatus: RobotStatus = .off
@@ -52,6 +52,8 @@ class RobotController: ObservableObject{
             case (_,_):
                 robot = Robot.chassis
             }
+            
+            robotImage = self.robot.Model3D()
         }
     
     func robotModelName() -> String{
