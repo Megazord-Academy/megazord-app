@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TutorialLessonFailedSheetView: View {
     @Binding var sheetVisibility: Bool
+    @EnvironmentObject var sceneController: SceneController
+    @EnvironmentObject var router: Router
     
     var body: some View {
         VStack(spacing: 24) {
@@ -24,12 +26,16 @@ struct TutorialLessonFailedSheetView: View {
             VStack(spacing: 16) {
                 Button {
                     sheetVisibility = false
+                    
                 } label: {
                     Text("Let's try again")
                 }
                 .buttonBorderShape(.roundedRectangle)
                 
                 Button {
+                    sheetVisibility = false
+                    sceneController.levelCompleted = false
+                    router.resetPath()
                     
                 } label: {
                     Text("Back to Lesson Selection")

@@ -91,7 +91,7 @@ def Xform "Root"
         double size = 0.2
         quatf xformOp:orient = (1, 0, 0, 0)
         float3 xformOp:scale = (5, 0.15, 5.6)
-        float3 xformOp:translate = (1.1308404, 0.27, -2.3566544)
+        float3 xformOp:translate = (1.1308404, 0.27, -2.36)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Material "DefaultMaterial"
@@ -163,7 +163,7 @@ def Xform "Root"
         double size = 0.2
         quatf xformOp:orient = (1, 0, 0, 0)
         float3 xformOp:scale = (13.2, 0.2, 5.6)
-        float3 xformOp:translate = (0.06100142, -0.16157213, -2.3627243)
+        float3 xformOp:translate = (0.06100142, -0.16157213, -2.36)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Material "DefaultMaterial"
@@ -254,7 +254,7 @@ def Xform "Root"
         double size = 0.2
         quatf xformOp:orient = (1, 0, 0, 0)
         float3 xformOp:scale = (0.4, 0.15, 5.6)
-        float3 xformOp:translate = (0.6066458, 0.27000514, -2.3566)
+        float3 xformOp:translate = (0.6066458, 0.27000514, -2.36)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Material "DefaultMaterial"
@@ -282,8 +282,8 @@ def Xform "Root"
         rel material:binding = </Root/normalRamp/DefaultMaterial>
         double size = 0.2
         quatf xformOp:orient = (0.976296, 0, 0, 0.21643959)
-        float3 xformOp:scale = (6, 0.15, 5.6)
-        float3 xformOp:translate = (0.03098046, 0.01967, -2.3627243)
+        float3 xformOp:scale = (5.15, 0.15, 5.6)
+        float3 xformOp:translate = (0.10748729, 0.054122552, -2.362042)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Material "DefaultMaterial"
@@ -295,7 +295,7 @@ def Xform "Root"
             def Shader "DefaultSurfaceShader"
             {
                 uniform token info:id = "UsdPreviewSurface"
-                color3f inputs:diffuseColor = (0.97273964, 1, 0.7782835) (
+                color3f inputs:diffuseColor = (0.9760887, 0.9713733, 0.98080415) (
                     colorSpace = "srgb_displayp3"
                 )
                 color3f inputs:emissiveColor = (0.14293788, 0.14859533, 0.06348553) (
@@ -387,6 +387,9 @@ def Xform "Root"
         def RealityKitComponent "RigidBody"
         {
             uniform token info:id = "RealityKit.RigidBody"
+            bool lockRotationX = 1
+            bool lockRotationY = 1
+            bool lockTranslationZ = 1
 
             def RealityKitStruct "massFrame"
             {
@@ -441,6 +444,9 @@ def Xform "Root"
         def RealityKitComponent "RigidBody"
         {
             uniform token info:id = "RealityKit.RigidBody"
+            bool lockRotationX = 1
+            bool lockRotationY = 1
+            bool lockTranslationZ = 1
 
             def RealityKitStruct "massFrame"
             {
@@ -495,6 +501,9 @@ def Xform "Root"
         def RealityKitComponent "RigidBody"
         {
             uniform token info:id = "RealityKit.RigidBody"
+            bool lockRotationX = 1
+            bool lockRotationY = 1
+            bool lockTranslationZ = 1
 
             def RealityKitStruct "massFrame"
             {
@@ -549,6 +558,9 @@ def Xform "Root"
         def RealityKitComponent "RigidBody"
         {
             uniform token info:id = "RealityKit.RigidBody"
+            bool lockRotationX = 1
+            bool lockRotationY = 1
+            bool lockTranslationZ = 1
 
             def RealityKitStruct "massFrame"
             {
@@ -603,6 +615,9 @@ def Xform "Root"
         def RealityKitComponent "RigidBody"
         {
             uniform token info:id = "RealityKit.RigidBody"
+            bool lockRotationX = 1
+            bool lockRotationY = 1
+            bool lockTranslationZ = 1
 
             def RealityKitStruct "massFrame"
             {
@@ -657,6 +672,9 @@ def Xform "Root"
         def RealityKitComponent "RigidBody"
         {
             uniform token info:id = "RealityKit.RigidBody"
+            bool lockRotationX = 1
+            bool lockRotationY = 1
+            bool lockTranslationZ = 1
 
             def RealityKitStruct "massFrame"
             {

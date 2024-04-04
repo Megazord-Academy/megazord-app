@@ -389,6 +389,9 @@ def Xform "Root"
         def RealityKitComponent "RigidBody"
         {
             uniform token info:id = "RealityKit.RigidBody"
+            bool lockRotationX = 1
+            bool lockRotationY = 1
+            bool lockTranslationZ = 1
 
             def RealityKitStruct "massFrame"
             {
@@ -443,6 +446,9 @@ def Xform "Root"
         def RealityKitComponent "RigidBody"
         {
             uniform token info:id = "RealityKit.RigidBody"
+            bool lockRotationX = 1
+            bool lockRotationY = 1
+            bool lockTranslationZ = 1
 
             def RealityKitStruct "massFrame"
             {
@@ -497,6 +503,9 @@ def Xform "Root"
         def RealityKitComponent "RigidBody"
         {
             uniform token info:id = "RealityKit.RigidBody"
+            bool lockRotationX = 1
+            bool lockRotationY = 1
+            bool lockTranslationZ = 1
 
             def RealityKitStruct "massFrame"
             {
@@ -551,6 +560,9 @@ def Xform "Root"
         def RealityKitComponent "RigidBody"
         {
             uniform token info:id = "RealityKit.RigidBody"
+            bool lockRotationX = 1
+            bool lockRotationY = 1
+            bool lockTranslationZ = 1
 
             def RealityKitStruct "massFrame"
             {
@@ -605,6 +617,9 @@ def Xform "Root"
         def RealityKitComponent "RigidBody"
         {
             uniform token info:id = "RealityKit.RigidBody"
+            bool lockRotationX = 1
+            bool lockRotationY = 1
+            bool lockTranslationZ = 1
 
             def RealityKitStruct "massFrame"
             {
@@ -659,6 +674,9 @@ def Xform "Root"
         def RealityKitComponent "RigidBody"
         {
             uniform token info:id = "RealityKit.RigidBody"
+            bool lockRotationX = 1
+            bool lockRotationY = 1
+            bool lockTranslationZ = 1
 
             def RealityKitStruct "massFrame"
             {
@@ -713,6 +731,10 @@ def Xform "Root"
         def RealityKitComponent "RigidBody"
         {
             uniform token info:id = "RealityKit.RigidBody"
+            bool lockRotationX = 1
+            bool lockRotationY = 1
+            bool lockTranslationY = 0
+            bool lockTranslationZ = 1
 
             def RealityKitStruct "massFrame"
             {
@@ -767,6 +789,9 @@ def Xform "Root"
         def RealityKitComponent "RigidBody"
         {
             uniform token info:id = "RealityKit.RigidBody"
+            bool lockRotationX = 1
+            bool lockRotationY = 1
+            bool lockTranslationZ = 1
 
             def RealityKitStruct "massFrame"
             {
