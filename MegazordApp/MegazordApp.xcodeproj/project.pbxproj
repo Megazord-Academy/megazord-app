@@ -10,7 +10,7 @@
 		03BA98ED2BB1BAC8006AAC93 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 03BA98EC2BB1BAC8006AAC93 /* RealityKitContent */; };
 		03BA98EF2BB1BAC8006AAC93 /* MegazordAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA98EE2BB1BAC8006AAC93 /* MegazordAppApp.swift */; };
 		03BA98F12BB1BAC8006AAC93 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA98F02BB1BAC8006AAC93 /* ContentView.swift */; };
-		03BA98F32BB1BAC8006AAC93 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA98F22BB1BAC8006AAC93 /* ImmersiveView.swift */; };
+		03BA98F32BB1BAC8006AAC93 /* TutorialLessonImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA98F22BB1BAC8006AAC93 /* TutorialLessonImmersiveView.swift */; };
 		03BA98F52BB1BAC9006AAC93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BA98F42BB1BAC9006AAC93 /* Assets.xcassets */; };
 		03BA98F82BB1BAC9006AAC93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BA98F72BB1BAC9006AAC93 /* Preview Assets.xcassets */; };
 		03BA99032BB1BAC9006AAC93 /* MegazordAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */; };
@@ -24,12 +24,12 @@
 		74D2A4912BB5B7770085224C /* RampLessonImmersive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2A4902BB5B7770085224C /* RampLessonImmersive.swift */; };
 		74D2A4932BB5B8A00085224C /* EditRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2A4922BB5B8A00085224C /* EditRobot.swift */; };
 		AE332A9F2BBD902700EC6151 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE332A9E2BBD902700EC6151 /* Router.swift */; };
+		AE332AA42BBEC3D800EC6151 /* RampLessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE332AA32BBEC3D800EC6151 /* RampLessonView.swift */; };
 		AE4493702BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE44936F2BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift */; };
 		AE4493742BB4B6DB00B44CD3 /* TextSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4493732BB4B6DB00B44CD3 /* TextSectionView.swift */; };
 		AE4493762BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4493752BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift */; };
 		AEC99A0F2BB46732005B0773 /* TutorialLessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A0E2BB46732005B0773 /* TutorialLessonView.swift */; };
 		AEC99A112BB46753005B0773 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A102BB46753005B0773 /* CardView.swift */; };
-		AEC99A132BB46763005B0773 /* TutorialLessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A122BB46763005B0773 /* TutorialLessonViewModel.swift */; };
 		AEC99A152BB46775005B0773 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A142BB46775005B0773 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +48,7 @@
 		03BA98EB2BB1BAC8006AAC93 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		03BA98EE2BB1BAC8006AAC93 /* MegazordAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegazordAppApp.swift; sourceTree = "<group>"; };
 		03BA98F02BB1BAC8006AAC93 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		03BA98F22BB1BAC8006AAC93 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
+		03BA98F22BB1BAC8006AAC93 /* TutorialLessonImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonImmersiveView.swift; sourceTree = "<group>"; };
 		03BA98F42BB1BAC9006AAC93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03BA98F72BB1BAC9006AAC93 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		03BA98F92BB1BAC9006AAC93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,12 +64,12 @@
 		74D2A4902BB5B7770085224C /* RampLessonImmersive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RampLessonImmersive.swift; sourceTree = "<group>"; };
 		74D2A4922BB5B8A00085224C /* EditRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRobot.swift; sourceTree = "<group>"; };
 		AE332A9E2BBD902700EC6151 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		AE332AA32BBEC3D800EC6151 /* RampLessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RampLessonView.swift; sourceTree = "<group>"; };
 		AE44936F2BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonCompleteSheetView.swift; sourceTree = "<group>"; };
 		AE4493732BB4B6DB00B44CD3 /* TextSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSectionView.swift; sourceTree = "<group>"; };
 		AE4493752BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonFailedSheetView.swift; sourceTree = "<group>"; };
 		AEC99A0E2BB46732005B0773 /* TutorialLessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonView.swift; sourceTree = "<group>"; };
 		AEC99A102BB46753005B0773 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		AEC99A122BB46763005B0773 /* TutorialLessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonViewModel.swift; sourceTree = "<group>"; };
 		AEC99A142BB46775005B0773 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,13 +118,11 @@
 				74D2A4822BB5B63C0085224C /* Controller */,
 				AE4493722BB4B6B700B44CD3 /* Components */,
 				03BA98F02BB1BAC8006AAC93 /* ContentView.swift */,
-				AEC99A142BB46775005B0773 /* Extensions.swift */,
-				03BA98F22BB1BAC8006AAC93 /* ImmersiveView.swift */,
-				74D2A48E2BB5B7660085224C /* EditRobotImmsersive.swift */,
 				74D2A4922BB5B8A00085224C /* EditRobot.swift */,
-				74D2A4902BB5B7770085224C /* RampLessonImmersive.swift */,
+				74D2A48E2BB5B7660085224C /* EditRobotImmsersive.swift */,
+				AEC99A142BB46775005B0773 /* Extensions.swift */,
 				03BA98EE2BB1BAC8006AAC93 /* MegazordAppApp.swift */,
-				03C63B612BB2F831008D6AB8 /* MundoRampa.swift */,
+				AE332AA22BBEC3BD00EC6151 /* RampLesson */,
 				AE4493712BB4B69400B44CD3 /* TutorialLesson */,
 				03BA98F42BB1BAC9006AAC93 /* Assets.xcassets */,
 				03BA98F92BB1BAC9006AAC93 /* Info.plist */,
@@ -177,13 +175,23 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		AE332AA22BBEC3BD00EC6151 /* RampLesson */ = {
+			isa = PBXGroup;
+			children = (
+				03C63B612BB2F831008D6AB8 /* MundoRampa.swift */,
+				74D2A4902BB5B7770085224C /* RampLessonImmersive.swift */,
+				AE332AA32BBEC3D800EC6151 /* RampLessonView.swift */,
+			);
+			path = RampLesson;
+			sourceTree = "<group>";
+		};
 		AE4493712BB4B69400B44CD3 /* TutorialLesson */ = {
 			isa = PBXGroup;
 			children = (
 				AE44936F2BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift */,
 				AE4493752BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift */,
+				03BA98F22BB1BAC8006AAC93 /* TutorialLessonImmersiveView.swift */,
 				AEC99A0E2BB46732005B0773 /* TutorialLessonView.swift */,
-				AEC99A122BB46763005B0773 /* TutorialLessonViewModel.swift */,
 			);
 			path = TutorialLesson;
 			sourceTree = "<group>";
@@ -302,6 +310,7 @@
 			files = (
 				74D2A4892BB5B68C0085224C /* RobotModel.swift in Sources */,
 				AEC99A152BB46775005B0773 /* Extensions.swift in Sources */,
+				AE332AA42BBEC3D800EC6151 /* RampLessonView.swift in Sources */,
 				03BA98F12BB1BAC8006AAC93 /* ContentView.swift in Sources */,
 				74D2A4842BB5B64C0085224C /* SceneController.swift in Sources */,
 				74D2A4912BB5B7770085224C /* RampLessonImmersive.swift in Sources */,
@@ -310,13 +319,12 @@
 				AE4493762BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift in Sources */,
 				AE4493702BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift in Sources */,
 				03BA98EF2BB1BAC8006AAC93 /* MegazordAppApp.swift in Sources */,
-				AEC99A132BB46763005B0773 /* TutorialLessonViewModel.swift in Sources */,
 				AEC99A0F2BB46732005B0773 /* TutorialLessonView.swift in Sources */,
 				AE332A9F2BBD902700EC6151 /* Router.swift in Sources */,
 				AE4493742BB4B6DB00B44CD3 /* TextSectionView.swift in Sources */,
 				74D2A4862BB5B6660085224C /* RobotController.swift in Sources */,
 				AEC99A112BB46753005B0773 /* CardView.swift in Sources */,
-				03BA98F32BB1BAC8006AAC93 /* ImmersiveView.swift in Sources */,
+				03BA98F32BB1BAC8006AAC93 /* TutorialLessonImmersiveView.swift in Sources */,
 				74D2A4932BB5B8A00085224C /* EditRobot.swift in Sources */,
 				74D2A48B2BB5B6BC0085224C /* ContentViewModel.swift in Sources */,
 				74B70F5F2BBAD81E0036F9B9 /* RobotPhysicsModel.swift in Sources */,

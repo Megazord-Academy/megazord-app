@@ -3,7 +3,7 @@ import RealityKit
 import RealityKitContent
 import Combine
 
-struct ImmersiveView: View {
+struct TutorialLessonImmersiveView: View {
     @EnvironmentObject var robotController: RobotController
     @EnvironmentObject var sceneController: SceneController
     
@@ -67,6 +67,6 @@ struct ImmersiveView: View {
     }
 }
 
-#Preview(immersionStyle: .mixed) {
-    ImmersiveView()
-}
+//#Preview(immersionStyle: .mixed) {
+//    ImmersiveView()
+//}

@@ -19,19 +19,17 @@ class RobotController: ObservableObject{
     private var robot = Robot.chassis
     @Published var initialPosition: SIMD3<Float>?
     @Published var isRobotInInitialPosition = true
-    @Published var selectedWheelID = 0
-    @Published var selectedMotorID = 0
-
+    
+    /// String with the image name for the current robot that will be shown on the "My Robot" card in the lesson view
+    @Published var robotImage: String = "normalWheelsIllustration"
     
     /// Holds the current `RobotStatus`.
     @Published var robotStatus: RobotStatus = .off
     
-    
-        
+    @Published var selectedWheelID = 0
+    @Published var selectedMotorID = 0
         
         func decideRobotNewCase() {
-            
-            
             switch (selectedWheelID, selectedMotorID) {
             case(0,0):
                 robot = Robot.chassis

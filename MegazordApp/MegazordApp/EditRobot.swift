@@ -12,10 +12,6 @@ import RealityKitContent
 struct EditRobot: View {
     @EnvironmentObject var robotController: RobotController
     @EnvironmentObject var sceneController: SceneController
-    @EnvironmentObject var viewModel: TutorialLessonViewModel
-    
-    
-    
     
     var wheelList: [Assembly] = [
     Assembly(id: 0, imageName: "noWheels", Title: "No Wheels", description: "Looks like your car is missing wheels! Without wheels, your car won't be able to move."),
@@ -43,7 +39,7 @@ struct EditRobot: View {
                                 Button {
                                     robotController.selectedWheelID = wheel.id
                                     robotController.decideRobotNewCase()
-                                    viewModel.showRobotImmersive = false
+                                    sceneController.showRobotImmersive = false
 
                                 } label: {
                                     VStack(spacing:8){
@@ -80,9 +76,7 @@ struct EditRobot: View {
                             
                         }
                     }
-                       
-                        
-                    
+
                     Spacer()
                 }
                 .padding()
@@ -99,7 +93,7 @@ struct EditRobot: View {
                                         
                                         robotController.selectedMotorID = motor.id
                                         robotController.decideRobotNewCase()
-                                        viewModel.showRobotImmersive = false
+                                        sceneController.showRobotImmersive = false
 
 
                                             } label: {

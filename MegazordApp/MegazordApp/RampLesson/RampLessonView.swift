@@ -1,20 +1,18 @@
 //
-//  LessonView.swift
+//  RampLessonView.swift
 //  MegazordApp
 //
-//  Created by Raphael Ferezin Kitahara on 27/03/24.
+//  Created by Raphael Ferezin Kitahara on 04/04/24.
 //
 
 import SwiftUI
-import RealityKit
-import RealityKitContent
 
-struct TutorialLessonView: View {
+struct RampLessonView: View {
     /// Auxiliary variable for dismissing the current immersive space (if it is open).
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
     
     /// The lesson name, passed onto the navigation title.
-    let lessonName: String = "Tutorial Lesson"
+    let lessonName: String = "Friction"
     
     /// Determines if the lesson complete sheet is shown (true) or not (false).
     @State var showLessonCompleteSheet: Bool = false
@@ -39,7 +37,7 @@ struct TutorialLessonView: View {
     
     /// Variable that holds the app's instance of the `SceneController` class.
     @EnvironmentObject var sceneController: SceneController
-
+    
     
     var body: some View {
         HStack(alignment: .top, spacing: 16) {
@@ -47,13 +45,11 @@ struct TutorialLessonView: View {
             CardView(color: "colorGreen", icon: "bookmark", title: "Description") {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 24) {
-                        TextSectionView(description: "Welcome to the Engineering Lab! In this lesson, you'll dive into the world of engineering by building and testing your very own car model.", icon: "magnifyingglass", title: "Introduction")
+                        TextSectionView(description: "Let's begin to experiment some basic engineering concepts! In this lesson, we will be exploring the force of friction of an inclined plane.", icon: "magnifyingglass", title: "Introduction")
                         
-                        TextSectionView(description: "To understand the basic principles of engineering and mechanics by assembling a simple car model and testing its functionality within a simulator.", icon: "target", title: "Objectives")
+                        TextSectionView(description: "To understand the basic interactions with ground friction by climbing an inclined plane and testing different robot builds within a ramp playground.", icon: "target", title: "Objectives")
                         
-                        TextSectionView(description: "Start by clicking on Edit to enter Robot Assembly mode, where you’ll be able to customize your car.", icon: "wrench.adjustable.fill", title: "Tip")
-                        
-                        TextSectionView(description: "Once in the Robot Assembly, you'll see all of the elements you can add to your car. Select them and see how they affect your creation.", icon: "circle.dotted.circle", title: "Tip")
+                        TextSectionView(description: "Once in the Robot Assembly, search for the wheel's ideal shapes and materials. It may allow you to climb up an inclined plane.", icon: "circle.dotted.circle", title: "Tip")
                     }
                     .padding()
                 }
@@ -103,7 +99,7 @@ struct TutorialLessonView: View {
                                 .padding(.horizontal, 24)
                                 .padding(.top, 24)
                                 .padding(.bottom, 16)
-
+                                
                                 // view
                                 EditRobot()
                             }
@@ -121,13 +117,13 @@ struct TutorialLessonView: View {
                             
                             // opening robot immersive space
                             switch await openImmersiveSpace(id: "EditRobotImmersive") {
-                            case .opened:
-                                robotController.robotStatus = .idle
-                            case .error, .userCancelled:
-                                fallthrough
-                            @unknown default:
-                                sceneController.showRobotImmersive = false
-                                robotController.robotStatus = .off
+                                case .opened:
+                                    robotController.robotStatus = .idle
+                                case .error, .userCancelled:
+                                    fallthrough
+                                @unknown default:
+                                    sceneController.showRobotImmersive = false
+                                    robotController.robotStatus = .off
                             }
                         } else {
                             await dismissImmersiveSpace()
@@ -205,15 +201,13 @@ struct TutorialLessonView: View {
                                         if sceneController.simulatorStatus == .open {
                                             sceneController.simulatorStatus = .running
                                             robotController.robotStatus = .moving
-                                            sceneController.simulationCount += 1
                                             
                                             Task {
                                                 do {
-                                                    let currentSimulation = sceneController.simulationCount
-                                                    
+                                                    // waiting 5 seconds
                                                     try await Task.sleep(nanoseconds: 5000000000)
                                                     
-                                                    if !sceneController.levelCompleted && sceneController.simulatorStatus == .running && currentSimulation == sceneController.simulationCount {
+                                                    if !sceneController.levelCompleted && sceneController.simulatorStatus == .running {
                                                         // showing sheet
                                                         showLessonFailedSheet = true
                                                         
@@ -231,11 +225,12 @@ struct TutorialLessonView: View {
                                                 
                                             }
                                             
-                                        // deu stop
+                                            // deu stop
                                         } else {
                                             robotController.robotStatus = .idle
                                             sceneController.simulatorStatus = .open
                                             robotController.isRobotInInitialPosition = false
+                                            
                                         }
                                         
                                     } label: {
@@ -279,14 +274,14 @@ struct TutorialLessonView: View {
                     .onChange(of: sceneController.simulatorStatus) { oldValue, newValue in
                         Task {
                             if newValue == .open && oldValue != .running {
-                                switch await openImmersiveSpace(id: "ImmersiveSpace") {
-                                case .opened:
-                                    robotController.robotStatus = .idle
-                                case .error, .userCancelled:
-                                    fallthrough
-                                @unknown default:
-                                    sceneController.simulatorStatus = .closed
-                                    robotController.robotStatus = .off
+                                switch await openImmersiveSpace(id: "RampLesson") {
+                                    case .opened:
+                                        robotController.robotStatus = .idle
+                                    case .error, .userCancelled:
+                                        fallthrough
+                                    @unknown default:
+                                        sceneController.simulatorStatus = .closed
+                                        robotController.robotStatus = .off
                                 }
                             } else if newValue == .closed {
                                 await dismissImmersiveSpace()
@@ -307,10 +302,6 @@ struct TutorialLessonView: View {
     }
 }
 
-
-
-//#Preview(windowStyle: .automatic) {
-//    NavigationStack {
-//        LessonView()
-//    }
-//}
+#Preview {
+    RampLessonView()
+}
