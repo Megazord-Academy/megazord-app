@@ -12,6 +12,7 @@ import RealityKitContent
 struct ContentView: View {
     /// Router for managing navigation paths
     @EnvironmentObject var router: Router
+    @EnvironmentObject var sceneController: SceneController
     
     var body: some View {
         NavigationStack(path: $router.path) {
@@ -39,6 +40,10 @@ struct ContentView: View {
                 
                 Spacer()
                 
+            }.onAppear{
+                if sceneController.simulatorStatus != .closed {
+                    sceneController.simulatorStatus = .closed
+                }
             }
             .navigationDestination(for: String.self) { value in
                 switch value {

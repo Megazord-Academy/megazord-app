@@ -31,14 +31,14 @@ struct MegazordAppApp: App {
         
         /// Tutorial lesson immersive space
         ImmersiveSpace(id: "ImmersiveSpace") {
-            TutorialLessonImmersiveView()
+            SimulatorView(immersiveName: "Immersive")
                 .environmentObject(robotController)
                 .environmentObject(sceneController)
         }
         
         /// Second lesson immersive space
         ImmersiveSpace(id: "RampLesson") {
-            RampLessonImmersive()
+            SimulatorView(immersiveName: "mundoRampa")
                 .environmentObject(robotController)
                 .environmentObject(sceneController)
         }

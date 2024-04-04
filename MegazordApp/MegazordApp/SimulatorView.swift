@@ -3,9 +3,10 @@ import RealityKit
 import RealityKitContent
 import Combine
 
-struct TutorialLessonImmersiveView: View {
+struct SimulatorView: View {
     @EnvironmentObject var robotController: RobotController
     @EnvironmentObject var sceneController: SceneController
+    var immersiveName: String
     
     func handleSceneEventsUpdate(event: SceneEvents.Update) {
         
@@ -49,16 +50,16 @@ struct TutorialLessonImmersiveView: View {
                 }
             }
             
-            if let scene = try? await Entity(named: "Immersive", in: realityKitContentBundle) {
+            if let scene = try? await Entity(named: immersiveName, in: realityKitContentBundle) {
                 sceneController.decideRobot(scene: scene, robotController: robotController)
 
                 if let robot = scene.findEntity(named: robotController.robotModelName()) as? HasPhysicsBody {
                     let robotPhysics = robotController.applyPhysics()
                     robot.physicsBody?.massProperties.mass = robotPhysics.mass
                     robot.physicsBody?.linearDamping = 2
-                    if robotController.initialPosition == nil{
+//                    if robotController.initialPosition == nil{
                         robotController.initialPosition = robot.position
-                    }
+//                    }
                 }
                 
                 content.add(scene)
