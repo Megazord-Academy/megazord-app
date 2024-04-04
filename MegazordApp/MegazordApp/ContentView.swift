@@ -10,16 +10,9 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
-    @State private var lastButtonTapped = ButtonTapped.edit
-    @State var firstInteractionOnScreen = true
+    /// Router for managing navigation paths
     @EnvironmentObject var router: Router
-    @EnvironmentObject var sceneController: SceneController
-    @StateObject var viewModel = TutorialLessonViewModel(lessonName: "Tutorial Lesson", simulatorCardText: "You need to launch the simulator in order to test your robot.")
-
-    @Environment(\.openImmersiveSpace) var openImmersiveSpace
-    @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
-    @Environment(\.openWindow) private var openWindow
-
+    
     var body: some View {
         NavigationStack(path: $router.path) {
             VStack(spacing: 64) {
@@ -40,14 +33,20 @@ struct ContentView: View {
                     Text("Tutorial Lesson")
                 }
                 
+                NavigationLink(value: "RampLesson") {
+                    Text("Friction")
+                }
+                
                 Spacer()
                 
             }
             .navigationDestination(for: String.self) { value in
                 switch value {
                     case "TutorialLesson":
-                        LessonView()
-                            .environmentObject(viewModel)
+                        TutorialLessonView()
+                        
+                    case "RampLesson":
+                        RampLessonView()
                         
                     default:
                         Text("Oh no! 404")

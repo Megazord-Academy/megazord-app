@@ -12,29 +12,31 @@ struct MegazordAppApp: App {
     @ObservedObject var robotController = RobotController()
     @StateObject var router = Router()
     @ObservedObject var sceneController = SceneController()
-    @ObservedObject var viewModel = TutorialLessonViewModel(lessonName: "Tutorial Lesson", simulatorCardText: "You need to launch the simulator in order to test your robot.")
 
     var body: some Scene {
+        /// The app's main window
         WindowGroup {
             ContentView()
                 .environmentObject(robotController)
                 .environmentObject(router)
                 .environmentObject(sceneController)
-                
-        }
-
-        ImmersiveSpace(id: "ImmersiveSpace") {
-            ImmersiveView()
-                .environmentObject(robotController)
-                .environmentObject(sceneController)
         }
         
+        /// Robot editor immersive space
         ImmersiveSpace(id: "EditRobotImmersive") {
             EditRobotImmersive()
                 .environmentObject(robotController)
                 .environmentObject(sceneController)
         }
         
+        /// Tutorial lesson immersive space
+        ImmersiveSpace(id: "ImmersiveSpace") {
+            TutorialLessonImmersiveView()
+                .environmentObject(robotController)
+                .environmentObject(sceneController)
+        }
+        
+        /// Second lesson immersive space
         ImmersiveSpace(id: "RampLesson") {
             RampLessonImmersive()
                 .environmentObject(robotController)

@@ -21,6 +21,7 @@ class SceneController: ObservableObject{
     @Published var firstLessonIsShown = false
     
     @Published var showEditRobotImmersive = false
+    @Published var showRobotImmersive: Bool = false
     @Published var editRobotImmersiveIsShown = false
     
     /// Holds the status of the simulator.

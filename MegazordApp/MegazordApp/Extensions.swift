@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 extension Color {
+    /// Extension for hex color initialization support
     init(hex: String) {
         if hex == "AccentColor" || hex == "MaximumYellow" || hex == "Green" || hex == "Tangerine" || hex == "SuperPink" || hex == "SkyBlue" || hex == "TartRed" || hex == "ArsenicGray" || hex == "LightGray" {
             self.init(hex)
