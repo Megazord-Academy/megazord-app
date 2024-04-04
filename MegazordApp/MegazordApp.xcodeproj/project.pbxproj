@@ -28,6 +28,16 @@
 		AE4493702BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE44936F2BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift */; };
 		AE4493742BB4B6DB00B44CD3 /* TextSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4493732BB4B6DB00B44CD3 /* TextSectionView.swift */; };
 		AE4493762BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4493752BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift */; };
+		AEAC90DE2BBECBD8006550C2 /* car_bigWheels_motor.usdz in Resources */ = {isa = PBXBuildFile; fileRef = AEAC90D42BBECBD8006550C2 /* car_bigWheels_motor.usdz */; };
+		AEAC90DF2BBECBD8006550C2 /* car_normalWheels.usdz in Resources */ = {isa = PBXBuildFile; fileRef = AEAC90D52BBECBD8006550C2 /* car_normalWheels.usdz */; };
+		AEAC90E02BBECBD8006550C2 /* car.usdz in Resources */ = {isa = PBXBuildFile; fileRef = AEAC90D62BBECBD8006550C2 /* car.usdz */; };
+		AEAC90E12BBECBD8006550C2 /* car_dualMotor.usdz in Resources */ = {isa = PBXBuildFile; fileRef = AEAC90D72BBECBD8006550C2 /* car_dualMotor.usdz */; };
+		AEAC90E22BBECBD8006550C2 /* car_bigWheels_dualMotor.usdz in Resources */ = {isa = PBXBuildFile; fileRef = AEAC90D82BBECBD8006550C2 /* car_bigWheels_dualMotor.usdz */; };
+		AEAC90E32BBECBD8006550C2 /* car_motor.usdz in Resources */ = {isa = PBXBuildFile; fileRef = AEAC90D92BBECBD8006550C2 /* car_motor.usdz */; };
+		AEAC90E42BBECBD8006550C2 /* car_normalWheels_motor.usdz in Resources */ = {isa = PBXBuildFile; fileRef = AEAC90DA2BBECBD8006550C2 /* car_normalWheels_motor.usdz */; };
+		AEAC90E62BBECBD8006550C2 /* car_normalWheels_dualMotor.usdz in Resources */ = {isa = PBXBuildFile; fileRef = AEAC90DC2BBECBD8006550C2 /* car_normalWheels_dualMotor.usdz */; };
+		AEAC90E72BBECBD8006550C2 /* car_bigWheels.usdz in Resources */ = {isa = PBXBuildFile; fileRef = AEAC90DD2BBECBD8006550C2 /* car_bigWheels.usdz */; };
+		AEAC90EB2BBED508006550C2 /* RobotSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAC90EA2BBED508006550C2 /* RobotSceneView.swift */; };
 		AEC99A0F2BB46732005B0773 /* TutorialLessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A0E2BB46732005B0773 /* TutorialLessonView.swift */; };
 		AEC99A112BB46753005B0773 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A102BB46753005B0773 /* CardView.swift */; };
 		AEC99A152BB46775005B0773 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC99A142BB46775005B0773 /* Extensions.swift */; };
@@ -68,6 +78,16 @@
 		AE44936F2BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonCompleteSheetView.swift; sourceTree = "<group>"; };
 		AE4493732BB4B6DB00B44CD3 /* TextSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSectionView.swift; sourceTree = "<group>"; };
 		AE4493752BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonFailedSheetView.swift; sourceTree = "<group>"; };
+		AEAC90D42BBECBD8006550C2 /* car_bigWheels_motor.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = car_bigWheels_motor.usdz; sourceTree = "<group>"; };
+		AEAC90D52BBECBD8006550C2 /* car_normalWheels.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = car_normalWheels.usdz; sourceTree = "<group>"; };
+		AEAC90D62BBECBD8006550C2 /* car.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = car.usdz; sourceTree = "<group>"; };
+		AEAC90D72BBECBD8006550C2 /* car_dualMotor.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = car_dualMotor.usdz; sourceTree = "<group>"; };
+		AEAC90D82BBECBD8006550C2 /* car_bigWheels_dualMotor.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = car_bigWheels_dualMotor.usdz; sourceTree = "<group>"; };
+		AEAC90D92BBECBD8006550C2 /* car_motor.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = car_motor.usdz; sourceTree = "<group>"; };
+		AEAC90DA2BBECBD8006550C2 /* car_normalWheels_motor.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = car_normalWheels_motor.usdz; sourceTree = "<group>"; };
+		AEAC90DC2BBECBD8006550C2 /* car_normalWheels_dualMotor.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = car_normalWheels_dualMotor.usdz; sourceTree = "<group>"; };
+		AEAC90DD2BBECBD8006550C2 /* car_bigWheels.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = car_bigWheels.usdz; sourceTree = "<group>"; };
+		AEAC90EA2BBED508006550C2 /* RobotSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotSceneView.swift; sourceTree = "<group>"; };
 		AEC99A0E2BB46732005B0773 /* TutorialLessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonView.swift; sourceTree = "<group>"; };
 		AEC99A102BB46753005B0773 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		AEC99A142BB46775005B0773 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -122,7 +142,9 @@
 				74D2A48E2BB5B7660085224C /* EditRobotImmsersive.swift */,
 				AEC99A142BB46775005B0773 /* Extensions.swift */,
 				03BA98EE2BB1BAC8006AAC93 /* MegazordAppApp.swift */,
+				AEAC90EA2BBED508006550C2 /* RobotSceneView.swift */,
 				AE332AA22BBEC3BD00EC6151 /* RampLesson */,
+				AEAC90D32BBECB7F006550C2 /* RobotModels */,
 				AE4493712BB4B69400B44CD3 /* TutorialLesson */,
 				03BA98F42BB1BAC9006AAC93 /* Assets.xcassets */,
 				03BA98F92BB1BAC9006AAC93 /* Info.plist */,
@@ -203,6 +225,22 @@
 				AE4493732BB4B6DB00B44CD3 /* TextSectionView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		AEAC90D32BBECB7F006550C2 /* RobotModels */ = {
+			isa = PBXGroup;
+			children = (
+				AEAC90D82BBECBD8006550C2 /* car_bigWheels_dualMotor.usdz */,
+				AEAC90D42BBECBD8006550C2 /* car_bigWheels_motor.usdz */,
+				AEAC90DD2BBECBD8006550C2 /* car_bigWheels.usdz */,
+				AEAC90D72BBECBD8006550C2 /* car_dualMotor.usdz */,
+				AEAC90D92BBECBD8006550C2 /* car_motor.usdz */,
+				AEAC90DC2BBECBD8006550C2 /* car_normalWheels_dualMotor.usdz */,
+				AEAC90DA2BBECBD8006550C2 /* car_normalWheels_motor.usdz */,
+				AEAC90D52BBECBD8006550C2 /* car_normalWheels.usdz */,
+				AEAC90D62BBECBD8006550C2 /* car.usdz */,
+			);
+			path = RobotModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,8 +327,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEAC90E22BBECBD8006550C2 /* car_bigWheels_dualMotor.usdz in Resources */,
+				AEAC90E62BBECBD8006550C2 /* car_normalWheels_dualMotor.usdz in Resources */,
+				AEAC90E72BBECBD8006550C2 /* car_bigWheels.usdz in Resources */,
 				03BA98F82BB1BAC9006AAC93 /* Preview Assets.xcassets in Resources */,
+				AEAC90DF2BBECBD8006550C2 /* car_normalWheels.usdz in Resources */,
+				AEAC90DE2BBECBD8006550C2 /* car_bigWheels_motor.usdz in Resources */,
 				03BA98F52BB1BAC9006AAC93 /* Assets.xcassets in Resources */,
+				AEAC90E12BBECBD8006550C2 /* car_dualMotor.usdz in Resources */,
+				AEAC90E32BBECBD8006550C2 /* car_motor.usdz in Resources */,
+				AEAC90E02BBECBD8006550C2 /* car.usdz in Resources */,
+				AEAC90E42BBECBD8006550C2 /* car_normalWheels_motor.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +360,7 @@
 				AE332AA42BBEC3D800EC6151 /* RampLessonView.swift in Sources */,
 				03BA98F12BB1BAC8006AAC93 /* ContentView.swift in Sources */,
 				74D2A4842BB5B64C0085224C /* SceneController.swift in Sources */,
+				AEAC90EB2BBED508006550C2 /* RobotSceneView.swift in Sources */,
 				74D2A4912BB5B7770085224C /* RampLessonImmersive.swift in Sources */,
 				74D2A48F2BB5B7660085224C /* EditRobotImmsersive.swift in Sources */,
 				03C63B622BB2F831008D6AB8 /* MundoRampa.swift in Sources */,
