@@ -95,6 +95,7 @@ struct TutorialLessonView: View {
                                     Button {
                                         showRobotEditorSheet = false
                                         sceneController.showRobotImmersive = false
+                                        
                                     } label: {
                                         Image(systemName: "xmark")
                                     }

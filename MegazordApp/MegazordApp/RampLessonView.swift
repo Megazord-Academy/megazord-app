@@ -201,13 +201,15 @@ struct RampLessonView: View {
                                         if sceneController.simulatorStatus == .open {
                                             sceneController.simulatorStatus = .running
                                             robotController.robotStatus = .moving
+                                            sceneController.simulationCount += 1
                                             
                                             Task {
                                                 do {
+                                                    let currentSimulation = sceneController.simulationCount
                                                     // waiting 5 seconds
-                                                    try await Task.sleep(nanoseconds: 5000000000)
+                                                    try await Task.sleep(nanoseconds: 10000000000)
                                                     
-                                                    if !sceneController.levelCompleted && sceneController.simulatorStatus == .running {
+                                                    if !sceneController.levelCompleted && sceneController.simulatorStatus == .running && currentSimulation == sceneController.simulationCount {
                                                         // showing sheet
                                                         showLessonFailedSheet = true
                                                         

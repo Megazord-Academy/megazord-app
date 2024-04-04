@@ -32,7 +32,9 @@ struct TutorialLessonCompleteSheetView: View {
             VStack(spacing: 16) {
                 Button {
                     sheetVisibility = false
+                    sceneController.levelCompleted = false
                     router.resetPath()
+                    
                 } label: {
                     Text("Go Back to Lesson Selection")
                 }
@@ -43,6 +45,7 @@ struct TutorialLessonCompleteSheetView: View {
                     robotController.robotStatus = .idle
                     sceneController.simulatorStatus = .open
                     robotController.isRobotInInitialPosition = false
+                    sceneController.levelCompleted = false
                     
                 } label: {
                     Text("Keep Exploring")
