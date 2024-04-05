@@ -18,12 +18,14 @@ struct SimulatorView: View {
             
             if let initialPosition = robotController.initialPosition{
                 if !robotController.isRobotInInitialPosition && robotController.robotStatus == .idle {
+                    robot.stopAllAnimations()
                     robot.clearForcesAndTorques()
                     robot.physicsBody?.isTranslationLocked = (x: true, y: false, z: true)
                     robot.position = initialPosition
                     robotController.isRobotInInitialPosition = true
                 } else if robotController.robotStatus == .moving {
                     robot.physicsBody?.isTranslationLocked = (x: false, y: false, z: true)
+                    applyRobotWheelsRotationAnimation(robot: robot)
                 }
             }
         }
@@ -37,7 +39,13 @@ struct SimulatorView: View {
 
     }
     
-    
+    func applyRobotWheelsRotationAnimation(robot: Entity) {
+        for i in [1,3,4,5,6,7,8,9,10,12] {
+            if let entity = robot.findEntity(named: "Cylinder_0\(String(format: "%02d", i))") {
+                entity.applyRotateAnimation(angle: -.pi, axis: [0,1,0], speed: 0.5)
+            }
+        }
+    }
     
     var body: some View {
         RealityView { content in
@@ -57,9 +65,7 @@ struct SimulatorView: View {
                     let robotPhysics = robotController.applyPhysics()
                     robot.physicsBody?.massProperties.mass = robotPhysics.mass
                     robot.physicsBody?.linearDamping = 2
-//                    if robotController.initialPosition == nil{
-                        robotController.initialPosition = robot.position
-//                    }
+                    robotController.initialPosition = robot.position
                 }
                 
                 content.add(scene)
