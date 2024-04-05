@@ -285,6 +285,9 @@ struct TutorialLessonView: View {
                             // level was just completed
                             if oldValue == false && newValue == true {
                                 showLessonCompleteSheet = true
+                                robotController.robotStatus = .idle
+                                sceneController.simulatorStatus = .open
+                                robotController.isRobotInInitialPosition = false
                             }
                         })
                         .onChange(of: sceneController.simulatorStatus) { oldValue, newValue in
