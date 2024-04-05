@@ -16,31 +16,8 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack(path: $router.path) {
-            VStack(spacing: 64) {
-                Spacer()
-                
-                HStack(spacing: 16) {
-                    Image("prototypeIcon")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 54)
-                    
-                    Text("Hoove")
-                        .font(.extraLargeTitle)
-                        .fontWeight(.bold)
-                }
-                
-                NavigationLink(value: "TutorialLesson") {
-                    Text("Tutorial Lesson")
-                }
-                
-                NavigationLink(value: "RampLesson") {
-                    Text("Friction")
-                }
-                
-                Spacer()
-                
-            }.onAppear{
+            LessonSelectionView()
+            .onAppear{
                 if sceneController.simulatorStatus != .closed {
                     sceneController.simulatorStatus = .closed
                 }

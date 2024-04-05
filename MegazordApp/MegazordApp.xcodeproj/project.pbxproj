@@ -26,6 +26,7 @@
 		AE4493702BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE44936F2BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift */; };
 		AE4493742BB4B6DB00B44CD3 /* TextSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4493732BB4B6DB00B44CD3 /* TextSectionView.swift */; };
 		AE4493762BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4493752BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift */; };
+		AE60C3242BC026C1004F62BF /* LessonSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE60C3232BC026C1004F62BF /* LessonSelectionView.swift */; };
 		AEAC90DE2BBECBD8006550C2 /* car_bigWheels_motor.usdz in Resources */ = {isa = PBXBuildFile; fileRef = AEAC90D42BBECBD8006550C2 /* car_bigWheels_motor.usdz */; };
 		AEAC90DF2BBECBD8006550C2 /* car_normalWheels.usdz in Resources */ = {isa = PBXBuildFile; fileRef = AEAC90D52BBECBD8006550C2 /* car_normalWheels.usdz */; };
 		AEAC90E02BBECBD8006550C2 /* car.usdz in Resources */ = {isa = PBXBuildFile; fileRef = AEAC90D62BBECBD8006550C2 /* car.usdz */; };
@@ -74,6 +75,7 @@
 		AE44936F2BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonCompleteSheetView.swift; sourceTree = "<group>"; };
 		AE4493732BB4B6DB00B44CD3 /* TextSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSectionView.swift; sourceTree = "<group>"; };
 		AE4493752BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonFailedSheetView.swift; sourceTree = "<group>"; };
+		AE60C3232BC026C1004F62BF /* LessonSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonSelectionView.swift; sourceTree = "<group>"; };
 		AEAC90D42BBECBD8006550C2 /* car_bigWheels_motor.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = car_bigWheels_motor.usdz; sourceTree = "<group>"; };
 		AEAC90D52BBECBD8006550C2 /* car_normalWheels.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = car_normalWheels.usdz; sourceTree = "<group>"; };
 		AEAC90D62BBECBD8006550C2 /* car.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = car.usdz; sourceTree = "<group>"; };
@@ -134,13 +136,13 @@
 				74D2A4822BB5B63C0085224C /* Controller */,
 				AE4493722BB4B6B700B44CD3 /* Components */,
 				03BA98F02BB1BAC8006AAC93 /* ContentView.swift */,
+				AE60C3232BC026C1004F62BF /* LessonSelectionView.swift */,
 				74D2A4922BB5B8A00085224C /* EditRobot.swift */,
 				74D2A48E2BB5B7660085224C /* EditRobotImmsersive.swift */,
 				AEC99A142BB46775005B0773 /* Extensions.swift */,
 				03BA98EE2BB1BAC8006AAC93 /* MegazordAppApp.swift */,
 				AE332AA32BBEC3D800EC6151 /* RampLessonView.swift */,
 				AEAC90EA2BBED508006550C2 /* RobotSceneView.swift */,
-				AE332AA22BBEC3BD00EC6151 /* RampLesson */,
 				AEAC90D32BBECB7F006550C2 /* RobotModels */,
 				AE4493712BB4B69400B44CD3 /* TutorialLesson */,
 				03BA98F42BB1BAC9006AAC93 /* Assets.xcassets */,
@@ -355,6 +357,7 @@
 				03BA98EF2BB1BAC8006AAC93 /* MegazordAppApp.swift in Sources */,
 				AEC99A0F2BB46732005B0773 /* TutorialLessonView.swift in Sources */,
 				AE332A9F2BBD902700EC6151 /* Router.swift in Sources */,
+				AE60C3242BC026C1004F62BF /* LessonSelectionView.swift in Sources */,
 				AE4493742BB4B6DB00B44CD3 /* TextSectionView.swift in Sources */,
 				74D2A4862BB5B6660085224C /* RobotController.swift in Sources */,
 				AEC99A112BB46753005B0773 /* CardView.swift in Sources */,
