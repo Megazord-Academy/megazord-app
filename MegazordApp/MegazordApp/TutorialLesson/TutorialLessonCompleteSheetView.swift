@@ -35,6 +35,7 @@ struct TutorialLessonCompleteSheetView: View {
                     sceneController.levelCompleted = false
                     router.resetPath()
                     
+                    
                 } label: {
                     Text("Go Back to Lesson Selection")
                 }
