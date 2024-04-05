@@ -27,6 +27,7 @@
 		AE4493742BB4B6DB00B44CD3 /* TextSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4493732BB4B6DB00B44CD3 /* TextSectionView.swift */; };
 		AE4493762BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4493752BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift */; };
 		AE60C3242BC026C1004F62BF /* LessonSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE60C3232BC026C1004F62BF /* LessonSelectionView.swift */; };
+		AE861E352BC02D0400CF45B6 /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE861E342BC02D0400CF45B6 /* SwiftDataManager.swift */; };
 		AEAC90DE2BBECBD8006550C2 /* car_bigWheels_motor.usdz in Resources */ = {isa = PBXBuildFile; fileRef = AEAC90D42BBECBD8006550C2 /* car_bigWheels_motor.usdz */; };
 		AEAC90DF2BBECBD8006550C2 /* car_normalWheels.usdz in Resources */ = {isa = PBXBuildFile; fileRef = AEAC90D52BBECBD8006550C2 /* car_normalWheels.usdz */; };
 		AEAC90E02BBECBD8006550C2 /* car.usdz in Resources */ = {isa = PBXBuildFile; fileRef = AEAC90D62BBECBD8006550C2 /* car.usdz */; };
@@ -76,6 +77,7 @@
 		AE4493732BB4B6DB00B44CD3 /* TextSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSectionView.swift; sourceTree = "<group>"; };
 		AE4493752BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonFailedSheetView.swift; sourceTree = "<group>"; };
 		AE60C3232BC026C1004F62BF /* LessonSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonSelectionView.swift; sourceTree = "<group>"; };
+		AE861E342BC02D0400CF45B6 /* SwiftDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
 		AEAC90D42BBECBD8006550C2 /* car_bigWheels_motor.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = car_bigWheels_motor.usdz; sourceTree = "<group>"; };
 		AEAC90D52BBECBD8006550C2 /* car_normalWheels.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = car_normalWheels.usdz; sourceTree = "<group>"; };
 		AEAC90D62BBECBD8006550C2 /* car.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = car.usdz; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				03BA98EE2BB1BAC8006AAC93 /* MegazordAppApp.swift */,
 				AE332AA32BBEC3D800EC6151 /* RampLessonView.swift */,
 				AEAC90EA2BBED508006550C2 /* RobotSceneView.swift */,
+				AE861E342BC02D0400CF45B6 /* SwiftDataManager.swift */,
 				AEAC90D32BBECB7F006550C2 /* RobotModels */,
 				AE4493712BB4B69400B44CD3 /* TutorialLesson */,
 				03BA98F42BB1BAC9006AAC93 /* Assets.xcassets */,
@@ -359,6 +362,7 @@
 				AE332A9F2BBD902700EC6151 /* Router.swift in Sources */,
 				AE60C3242BC026C1004F62BF /* LessonSelectionView.swift in Sources */,
 				AE4493742BB4B6DB00B44CD3 /* TextSectionView.swift in Sources */,
+				AE861E352BC02D0400CF45B6 /* SwiftDataManager.swift in Sources */,
 				74D2A4862BB5B6660085224C /* RobotController.swift in Sources */,
 				AEC99A112BB46753005B0773 /* CardView.swift in Sources */,
 				74D2A4932BB5B8A00085224C /* EditRobot.swift in Sources */,

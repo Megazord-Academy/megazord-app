@@ -5,13 +5,16 @@
 //  Created by Caio Gomes Piteli on 25/03/24.
 //
  
+import SwiftData
 import SwiftUI
 import RealityKit
 import RealityKitContent
 
 struct EditRobot: View {
+    @Environment(\.modelContext) var modelContext
     @EnvironmentObject var robotController: RobotController
     @EnvironmentObject var sceneController: SceneController
+    @Query var savedRobot: [SDRobot]
     
     var wheelList: [Assembly] = [
     Assembly(id: 0, imageName: "noWheels", Title: "No Wheels", description: "Looks like your car is missing wheels! Without wheels, your car won't be able to move."),
@@ -38,6 +41,14 @@ struct EditRobot: View {
                                 
                                 Button {
                                     robotController.selectedWheelID = wheel.id
+                                    
+                                    // saving to swift data
+                                    if let robot = savedRobot.first {
+                                        robot.selectedWheelID = wheel.id
+                                    } else {
+                                        let newRobot = SDRobot(selectedWheelID: wheel.id)
+                                        modelContext.insert(newRobot)
+                                    }
                                     robotController.decideRobotNewCase()
                                     sceneController.showRobotImmersive = false
 
@@ -62,9 +73,9 @@ struct EditRobot: View {
 //                                            .padding(12)
                                 }
                                 .overlay(
-                                                            RoundedRectangle(cornerRadius: 10)
-                                                                .stroke(robotController.selectedWheelID == wheel.id ? Color.white : Color.clear, lineWidth: 3) // Stroke (borda) condicional
-                                                        )
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(robotController.selectedWheelID == wheel.id ? Color.white : Color.clear, lineWidth: 3) // Stroke (borda) condicional
+                                )
                                 
                                 .buttonBorderShape(.roundedRectangle(radius: 12))
                                 
@@ -92,6 +103,15 @@ struct EditRobot: View {
                                     Button {
                                         
                                         robotController.selectedMotorID = motor.id
+                                        
+                                        // saving to swift data
+                                        if let robot = savedRobot.first {
+                                            robot.selectedMotorID = motor.id
+                                        } else {
+                                            let newRobot = SDRobot(selectedMotorID: motor.id)
+                                            modelContext.insert(newRobot)
+                                        }
+                                        
                                         robotController.decideRobotNewCase()
                                         sceneController.showRobotImmersive = false
 

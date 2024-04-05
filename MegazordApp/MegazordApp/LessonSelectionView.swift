@@ -13,10 +13,14 @@ struct LessonSelectionView: View {
             NavigationLink(value: "TutorialLesson") {
                 CardView(color: "colorGreen", icon: "bookmark", title: "First Steps") {
                     VStack {
-                        Image("car_motor")
+                        Spacer()
+                        
+                        Image("tutorialLessonImage")
                             .resizable()
                             .scaledToFit()
                             .padding(64)
+                        
+                        Spacer()
                         
                         Text("Learn how to assemble your first robotics masterpiece! Explore the main components of it and have fun hovering over the playgrounds.")
                         
@@ -41,10 +45,14 @@ struct LessonSelectionView: View {
             NavigationLink(value: "RampLesson") {
                 CardView(color: "colorGreen", icon: "bookmark", title: "Friction Ramp") {
                     VStack(spacing: 16) {
+                        Spacer()
+                        
                         Image("car_motor")
                             .resizable()
                             .scaledToFit()
                             .padding(64)
+                        
+                        Spacer()
                         
                         Text("Create creative solutions to overcome an inclined plane! Feel free to play with the wheel's size and motor's torque.")
                         
