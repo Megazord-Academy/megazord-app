@@ -5,6 +5,7 @@
 //  Created by Bruno Dias on 25/03/24.
 //
 
+import SwiftData
 import SwiftUI
 import RealityKit
 import RealityKitContent
@@ -12,38 +13,23 @@ import RealityKitContent
 struct ContentView: View {
     /// Router for managing navigation paths
     @EnvironmentObject var router: Router
+    @EnvironmentObject var robotController: RobotController
     @EnvironmentObject var sceneController: SceneController
+    @Query var savedRobot: [SDRobot]
     
     var body: some View {
         NavigationStack(path: $router.path) {
-            VStack(spacing: 64) {
-                Spacer()
-                
-                HStack(spacing: 16) {
-                    Image("prototypeIcon")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 54)
-                    
-                    Text("Hoove")
-                        .font(.extraLargeTitle)
-                        .fontWeight(.bold)
-                }
-                
-                NavigationLink(value: "TutorialLesson") {
-                    Text("Tutorial Lesson")
-                }
-                
-                NavigationLink(value: "RampLesson") {
-                    Text("Friction")
-                }
-                
-                Spacer()
-                
-            }.onAppear{
+            LessonSelectionView()
+            .onAppear{
                 if sceneController.simulatorStatus != .closed {
                     sceneController.simulatorStatus = .closed
                 }
+                
+                if let robot = savedRobot.first {
+                    robotController.selectedMotorID = robot.selectedMotorID
+                    robotController.selectedWheelID = robot.selectedWheelID
+                }
+                
             }
             .navigationDestination(for: String.self) { value in
                 switch value {
