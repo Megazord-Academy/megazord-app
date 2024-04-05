@@ -14,6 +14,7 @@
 		03BA98F82BB1BAC9006AAC93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BA98F72BB1BAC9006AAC93 /* Preview Assets.xcassets */; };
 		03BA99032BB1BAC9006AAC93 /* MegazordAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */; };
 		03C1B4112BBED04800DD3B39 /* SimulatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1B4102BBED04800DD3B39 /* SimulatorView.swift */; };
+		1EA3C8E52BC033510086BE01 /* Entity+ApplyRotateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA3C8E42BC033510086BE01 /* Entity+ApplyRotateAnimation.swift */; };
 		74B70F5F2BBAD81E0036F9B9 /* RobotPhysicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B70F5E2BBAD81E0036F9B9 /* RobotPhysicsModel.swift */; };
 		74D2A4842BB5B64C0085224C /* SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2A4832BB5B64C0085224C /* SceneController.swift */; };
 		74D2A4862BB5B6660085224C /* RobotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2A4852BB5B6660085224C /* RobotController.swift */; };
@@ -64,6 +65,7 @@
 		03BA98FE2BB1BAC9006AAC93 /* MegazordAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MegazordAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegazordAppTests.swift; sourceTree = "<group>"; };
 		03C1B4102BBED04800DD3B39 /* SimulatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorView.swift; sourceTree = "<group>"; };
+		1EA3C8E42BC033510086BE01 /* Entity+ApplyRotateAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+ApplyRotateAnimation.swift"; sourceTree = "<group>"; };
 		74B70F5E2BBAD81E0036F9B9 /* RobotPhysicsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotPhysicsModel.swift; sourceTree = "<group>"; };
 		74D2A4832BB5B64C0085224C /* SceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneController.swift; sourceTree = "<group>"; };
 		74D2A4852BB5B6660085224C /* RobotController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				03BA98F92BB1BAC9006AAC93 /* Info.plist */,
 				03BA98F62BB1BAC9006AAC93 /* Preview Content */,
 				03C1B4102BBED04800DD3B39 /* SimulatorView.swift */,
+				1EA3C8E42BC033510086BE01 /* Entity+ApplyRotateAnimation.swift */,
 			);
 			path = MegazordApp;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				03BA98EF2BB1BAC8006AAC93 /* MegazordAppApp.swift in Sources */,
 				AEC99A0F2BB46732005B0773 /* TutorialLessonView.swift in Sources */,
 				AE332A9F2BBD902700EC6151 /* Router.swift in Sources */,
+				1EA3C8E52BC033510086BE01 /* Entity+ApplyRotateAnimation.swift in Sources */,
 				AE60C3242BC026C1004F62BF /* LessonSelectionView.swift in Sources */,
 				AE4493742BB4B6DB00B44CD3 /* TextSectionView.swift in Sources */,
 				AE861E352BC02D0400CF45B6 /* SwiftDataManager.swift in Sources */,
