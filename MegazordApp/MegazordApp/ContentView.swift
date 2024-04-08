@@ -28,6 +28,7 @@ struct ContentView: View {
                 if let robot = savedRobot.first {
                     robotController.selectedMotorID = robot.selectedMotorID
                     robotController.selectedWheelID = robot.selectedWheelID
+                    robotController.decideRobotNewCase()
                 }
                 
             }

@@ -47,9 +47,10 @@ struct LessonSelectionView: View {
                     VStack(spacing: 16) {
                         Spacer()
                         
-                        Image("car_motor")
+                        Image("rampLessonImage")
                             .resizable()
                             .scaledToFit()
+                            .frame(width: 240)
                             .padding(64)
                         
                         Spacer()
