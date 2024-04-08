@@ -14,6 +14,7 @@
 		03BA98F82BB1BAC9006AAC93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BA98F72BB1BAC9006AAC93 /* Preview Assets.xcassets */; };
 		03BA99032BB1BAC9006AAC93 /* MegazordAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */; };
 		03C1B4112BBED04800DD3B39 /* SimulatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1B4102BBED04800DD3B39 /* SimulatorView.swift */; };
+		1EA3C8E52BC033510086BE01 /* Entity+ApplyRotateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA3C8E42BC033510086BE01 /* Entity+ApplyRotateAnimation.swift */; };
 		74B70F5F2BBAD81E0036F9B9 /* RobotPhysicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B70F5E2BBAD81E0036F9B9 /* RobotPhysicsModel.swift */; };
 		74D2A4842BB5B64C0085224C /* SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2A4832BB5B64C0085224C /* SceneController.swift */; };
 		74D2A4862BB5B6660085224C /* RobotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D2A4852BB5B6660085224C /* RobotController.swift */; };
@@ -26,6 +27,8 @@
 		AE4493702BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE44936F2BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift */; };
 		AE4493742BB4B6DB00B44CD3 /* TextSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4493732BB4B6DB00B44CD3 /* TextSectionView.swift */; };
 		AE4493762BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4493752BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift */; };
+		AE60C3242BC026C1004F62BF /* LessonSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE60C3232BC026C1004F62BF /* LessonSelectionView.swift */; };
+		AE861E352BC02D0400CF45B6 /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE861E342BC02D0400CF45B6 /* SwiftDataManager.swift */; };
 		AEAC90DE2BBECBD8006550C2 /* car_bigWheels_motor.usdz in Resources */ = {isa = PBXBuildFile; fileRef = AEAC90D42BBECBD8006550C2 /* car_bigWheels_motor.usdz */; };
 		AEAC90DF2BBECBD8006550C2 /* car_normalWheels.usdz in Resources */ = {isa = PBXBuildFile; fileRef = AEAC90D52BBECBD8006550C2 /* car_normalWheels.usdz */; };
 		AEAC90E02BBECBD8006550C2 /* car.usdz in Resources */ = {isa = PBXBuildFile; fileRef = AEAC90D62BBECBD8006550C2 /* car.usdz */; };
@@ -62,6 +65,7 @@
 		03BA98FE2BB1BAC9006AAC93 /* MegazordAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MegazordAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03BA99022BB1BAC9006AAC93 /* MegazordAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegazordAppTests.swift; sourceTree = "<group>"; };
 		03C1B4102BBED04800DD3B39 /* SimulatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorView.swift; sourceTree = "<group>"; };
+		1EA3C8E42BC033510086BE01 /* Entity+ApplyRotateAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+ApplyRotateAnimation.swift"; sourceTree = "<group>"; };
 		74B70F5E2BBAD81E0036F9B9 /* RobotPhysicsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotPhysicsModel.swift; sourceTree = "<group>"; };
 		74D2A4832BB5B64C0085224C /* SceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneController.swift; sourceTree = "<group>"; };
 		74D2A4852BB5B6660085224C /* RobotController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotController.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 		AE44936F2BB4B60A00B44CD3 /* TutorialLessonCompleteSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonCompleteSheetView.swift; sourceTree = "<group>"; };
 		AE4493732BB4B6DB00B44CD3 /* TextSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSectionView.swift; sourceTree = "<group>"; };
 		AE4493752BB4BC3A00B44CD3 /* TutorialLessonFailedSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLessonFailedSheetView.swift; sourceTree = "<group>"; };
+		AE60C3232BC026C1004F62BF /* LessonSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonSelectionView.swift; sourceTree = "<group>"; };
+		AE861E342BC02D0400CF45B6 /* SwiftDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
 		AEAC90D42BBECBD8006550C2 /* car_bigWheels_motor.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = car_bigWheels_motor.usdz; sourceTree = "<group>"; };
 		AEAC90D52BBECBD8006550C2 /* car_normalWheels.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = car_normalWheels.usdz; sourceTree = "<group>"; };
 		AEAC90D62BBECBD8006550C2 /* car.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = car.usdz; sourceTree = "<group>"; };
@@ -134,19 +140,21 @@
 				74D2A4822BB5B63C0085224C /* Controller */,
 				AE4493722BB4B6B700B44CD3 /* Components */,
 				03BA98F02BB1BAC8006AAC93 /* ContentView.swift */,
+				AE60C3232BC026C1004F62BF /* LessonSelectionView.swift */,
 				74D2A4922BB5B8A00085224C /* EditRobot.swift */,
 				74D2A48E2BB5B7660085224C /* EditRobotImmsersive.swift */,
 				AEC99A142BB46775005B0773 /* Extensions.swift */,
 				03BA98EE2BB1BAC8006AAC93 /* MegazordAppApp.swift */,
 				AE332AA32BBEC3D800EC6151 /* RampLessonView.swift */,
 				AEAC90EA2BBED508006550C2 /* RobotSceneView.swift */,
-				AE332AA22BBEC3BD00EC6151 /* RampLesson */,
+				AE861E342BC02D0400CF45B6 /* SwiftDataManager.swift */,
 				AEAC90D32BBECB7F006550C2 /* RobotModels */,
 				AE4493712BB4B69400B44CD3 /* TutorialLesson */,
 				03BA98F42BB1BAC9006AAC93 /* Assets.xcassets */,
 				03BA98F92BB1BAC9006AAC93 /* Info.plist */,
 				03BA98F62BB1BAC9006AAC93 /* Preview Content */,
 				03C1B4102BBED04800DD3B39 /* SimulatorView.swift */,
+				1EA3C8E42BC033510086BE01 /* Entity+ApplyRotateAnimation.swift */,
 			);
 			path = MegazordApp;
 			sourceTree = "<group>";
@@ -355,7 +363,10 @@
 				03BA98EF2BB1BAC8006AAC93 /* MegazordAppApp.swift in Sources */,
 				AEC99A0F2BB46732005B0773 /* TutorialLessonView.swift in Sources */,
 				AE332A9F2BBD902700EC6151 /* Router.swift in Sources */,
+				1EA3C8E52BC033510086BE01 /* Entity+ApplyRotateAnimation.swift in Sources */,
+				AE60C3242BC026C1004F62BF /* LessonSelectionView.swift in Sources */,
 				AE4493742BB4B6DB00B44CD3 /* TextSectionView.swift in Sources */,
+				AE861E352BC02D0400CF45B6 /* SwiftDataManager.swift in Sources */,
 				74D2A4862BB5B6660085224C /* RobotController.swift in Sources */,
 				AEC99A112BB46753005B0773 /* CardView.swift in Sources */,
 				74D2A4932BB5B8A00085224C /* EditRobot.swift in Sources */,

@@ -5,6 +5,7 @@
 //  Created by Bruno Dias on 25/03/24.
 //
 
+import SwiftData
 import SwiftUI
 
 @main
@@ -21,6 +22,7 @@ struct MegazordAppApp: App {
                 .environmentObject(router)
                 .environmentObject(sceneController)
         }
+        .modelContainer(for: [SDLevelProgression.self, SDRobot.self])
         
         /// Robot editor immersive space
         ImmersiveSpace(id: "EditRobotImmersive") {

@@ -49,7 +49,7 @@ struct TutorialLessonView: View {
                 CardView(color: "colorGreen", icon: "bookmark", title: "Description") {
                     ScrollView {
                         VStack(alignment: .leading, spacing: 24) {
-                            TextSectionView(description: "Welcome to the Engineering Lab! In this lesson, you'll dive into the world of engineering by building and testing your very own car model.", icon: "magnifyingglass", title: "Introduction")
+                            TextSectionView(description: "In this lesson, you'll dive into the world of engineering by building and testing your very own car model.", icon: "magnifyingglass", title: "Introduction")
                             
                             TextSectionView(description: "To understand the basic principles of engineering and mechanics by assembling a simple car model and testing its functionality within a simulator.", icon: "target", title: "Objectives")
                             
@@ -68,12 +68,6 @@ struct TutorialLessonView: View {
                         VStack(alignment: .leading) {
                             HStack {
                                 Spacer()
-                                
-                                
-//                                RobotSceneView()
-//                                    .frame(height: geo.size.height / 3)
-//                                SceneView(scene: SCNScene(named: "\(robotController.robotImage).usdz"), options: [.autoenablesDefaultLighting, .allowsCameraControl])
-//                                    .frame(height: geo.size.height / 3)
                                 
                                 Image(robotController.robotImage)
                                     .resizable()
@@ -285,6 +279,9 @@ struct TutorialLessonView: View {
                             // level was just completed
                             if oldValue == false && newValue == true {
                                 showLessonCompleteSheet = true
+                                robotController.robotStatus = .idle
+                                sceneController.simulatorStatus = .open
+                                robotController.isRobotInInitialPosition = false
                             }
                         })
                         .onChange(of: sceneController.simulatorStatus) { oldValue, newValue in

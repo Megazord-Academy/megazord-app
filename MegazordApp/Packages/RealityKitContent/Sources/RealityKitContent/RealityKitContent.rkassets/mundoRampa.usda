@@ -10,7 +10,7 @@
 
 def Xform "Root"
 {
-    reorder nameChildren = ["finalLine", "Cube_1", "car_normalWheels_motor", "planeWorld", "normalRamp", "Cube"]
+    reorder nameChildren = ["finalLine", "Cube_1", "car_normalWheels_motor", "car", "car_normalWheels", "tutorialLevelGround", "Cube_5", "Cube_004", "Cube_6", "Cube_7", "_1A52DE77_9671_49A8_B070_CC4317AFEC31", "planeWorld", "normalRamp", "car_bigWheels_dualMotor", "car_bigWheels_motor", "car_bigWheels", "car_dualMotor", "car_motor", "car_normalWheels_dualMotor", "Cube"]
     def Cube "finalLine" (
         active = true
         prepend apiSchemas = ["MaterialBindingAPI"]
@@ -20,7 +20,7 @@ def Xform "Root"
         double size = 0.2
         quatf xformOp:orient = (1, 0, 0, 0)
         float3 xformOp:scale = (0.2, 1, 6)
-        float3 xformOp:translate = (1.6696166, 0.3300019, -2.3627243)
+        float3 xformOp:translate = (1.5716076, 0.33000347, -2.3627243)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Material "DefaultMaterial"
@@ -87,10 +87,12 @@ def Xform "Root"
         }
     )
     {
-        rel material:binding = </Root/Cube_1/DefaultMaterial>
+        rel material:binding = </Root/tutorialLevelGround/Materials/ground> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
         double size = 0.2
         quatf xformOp:orient = (1, 0, 0, 0)
-        float3 xformOp:scale = (5, 0.15, 5.6)
+        float3 xformOp:scale = (5, 0.15, 7)
         float3 xformOp:translate = (1.1308404, 0.27, -2.36)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
@@ -250,10 +252,12 @@ def Xform "Root"
         prepend apiSchemas = ["MaterialBindingAPI"]
     )
     {
-        rel material:binding = </Root/Cube/DefaultMaterial>
+        rel material:binding = </Root/tutorialLevelGround/Materials/ground> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
         double size = 0.2
         quatf xformOp:orient = (1, 0, 0, 0)
-        float3 xformOp:scale = (0.4, 0.15, 5.6)
+        float3 xformOp:scale = (0.4, 0.15, 7)
         float3 xformOp:translate = (0.6066458, 0.27000514, -2.36)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
@@ -279,10 +283,12 @@ def Xform "Root"
         }
     )
     {
-        rel material:binding = </Root/normalRamp/DefaultMaterial>
+        rel material:binding = </Root/tutorialLevelGround/Materials/ground> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
         double size = 0.2
         quatf xformOp:orient = (0.976296, 0, 0, 0.21643959)
-        float3 xformOp:scale = (5.15, 0.15, 5.6)
+        float3 xformOp:scale = (5.15, 0.15, 7)
         float3 xformOp:translate = (0.10748729, 0.054122552, -2.362042)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
@@ -357,7 +363,7 @@ def Xform "Root"
         customData = {
             float3 rotationEulerHint = (0, 1.5707963, 0)
         }
-        prepend references = @car-bigWheels-dualMotor.usdz@
+        references = @car-bigWheels-dualMotor.usdz@
     )
     {
         quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
@@ -414,7 +420,7 @@ def Xform "Root"
         customData = {
             float3 rotationEulerHint = (0, 1.5707963, 0)
         }
-        prepend references = @car-bigWheels-motor.usdz@
+        references = @car-bigWheels-motor.usdz@
     )
     {
         quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
@@ -471,7 +477,7 @@ def Xform "Root"
         customData = {
             float3 rotationEulerHint = (0, 1.5707963, 0)
         }
-        prepend references = @car-bigWheels.usdz@
+        references = @car-bigWheels.usdz@
     )
     {
         quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
@@ -528,7 +534,7 @@ def Xform "Root"
         customData = {
             float3 rotationEulerHint = (0, 1.5707963, 0)
         }
-        prepend references = @car-dualMotor.usdz@
+        references = @car-dualMotor.usdz@
     )
     {
         quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
@@ -585,7 +591,7 @@ def Xform "Root"
         customData = {
             float3 rotationEulerHint = (0, 1.5707963, 0)
         }
-        prepend references = @car-motor.usdz@
+        references = @car-motor.usdz@
     )
     {
         quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
@@ -642,7 +648,7 @@ def Xform "Root"
         customData = {
             float3 rotationEulerHint = (0, 1.5707963, 0)
         }
-        prepend references = @car-normalWheels-dualMotor.usdz@
+        references = @car-normalWheels-dualMotor.usdz@
     )
     {
         quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
@@ -699,7 +705,7 @@ def Xform "Root"
         customData = {
             float3 rotationEulerHint = (0, 1.5707963, 0)
         }
-        prepend references = @car-normalWheels-motor.usdz@
+        references = @car-normalWheels-motor.usdz@
     )
     {
         quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
@@ -753,7 +759,7 @@ def Xform "Root"
         customData = {
             float3 rotationEulerHint = (0, 1.5707963, 0)
         }
-        prepend references = @car.usdz@
+        references = @car.usdz@
     )
     {
         quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
@@ -807,7 +813,7 @@ def Xform "Root"
         customData = {
             float3 rotationEulerHint = (0, 1.5707963, 0)
         }
-        prepend references = @car-normalWheels.usdz@
+        references = @car-normalWheels.usdz@
     )
     {
         quatf xformOp:orient = (0.70710677, 0, 0.70710677, 0)
@@ -853,6 +859,305 @@ def Xform "Root"
         def RealityKitComponent "MotionState"
         {
             uniform token info:id = "RealityKit.MotionState"
+        }
+    }
+
+    def "tutorialLevelGround" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 1.5707963, 0)
+        }
+        references = @tutorialLevelGround.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.7051675, 0, 0.70904076, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0.09001607, -0.05546641, -2.3188179)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Geom"
+        {
+            over "Cube_020" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (0.5791232585906982, 0.35995522141456604, 1.2085682153701782)
+            }
+
+            over "Cube_004" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (-0.5751768350601196, 0.35995522141456604, 1.2085680961608887)
+            }
+
+            over "Cube_005" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (-0.38605189323425293, 0.35995522141456604, 1.3985705375671387)
+            }
+
+            over "Cube_006" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (-0.5768717527389526, 0.35995522141456604, 1.3985702991485596)
+            }
+
+            over "Cube_007" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (-0.3821777105331421, 0.35995522141456604, 1.2101799249649048)
+            }
+
+            over "Cube_009" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (-0.0016739368438720703, 0.35995522141456604, 1.2101795673370361)
+            }
+
+            over "Cube_010" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (-0.19636845588684082, 0.35995522141456604, 1.3985705375671387)
+            }
+
+            over "Cube_011" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (-0.005548238754272461, 0.35995522141456604, 1.3985705375671387)
+            }
+
+            over "Cube_012" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (-0.19467401504516602, 0.35995522141456604, 1.2085685729980469)
+            }
+
+            over "Cube_013" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (0.18964409828186035, 0.35995522141456604, 1.2085684537887573)
+            }
+
+            over "Cube_014" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (0.3787691593170166, 0.35995522141456604, 1.3985704183578491)
+            }
+
+            over "Cube_015" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (0.18794941902160645, 0.35995522141456604, 1.3985704183578491)
+            }
+
+            over "Cube_016" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (0.3826432228088379, 0.35995522141456604, 1.2101799249649048)
+            }
+
+            over "Cube_018" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (0.5774283409118652, 0.35995522141456604, 1.3985702991485596)
+            }
+
+            over "Cube_001"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (0.83031136, 0.096676886, 1.6144118)
+                double3 xformOp:translate = (0, -0.04806677997112274, 0.042430903762578964)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+        }
+
+        over "Materials"
+        {
+            over "blackTile"
+            {
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+                token outputs:surface.connect = </Root/tutorialLevelGround/Materials/blackTile/surfaceShader.outputs:surface>
+                float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (0, 109.5)
+                float2 ui:nodegraph:realitykit:subgraphOutputs:size = (182, 99)
+
+                over "surfaceShader"
+                {
+                    color3f inputs:diffuseColor = (0.023168882, 0.023168882, 0.023168882)
+                    float inputs:opacityThreshold
+                }
+            }
+
+            over "whiteTile"
+            {
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+                token outputs:surface.connect = </Root/tutorialLevelGround/Materials/whiteTile/surfaceShader.outputs:surface>
+
+                over "surfaceShader"
+                {
+                    color3f inputs:diffuseColor = (1, 1, 1) (
+                        colorSpace = "srgb_texture"
+                    )
+                    color3f inputs:emissiveColor = (1, 1, 1) (
+                        colorSpace = "srgb_texture"
+                    )
+                    float inputs:metallic = 0
+                    normal3f inputs:normal = (1, 1, 1)
+                    float inputs:opacity = 1
+                    float inputs:roughness = 1
+                }
+            }
+
+            over "ground"
+            {
+                token outputs:surface.connect = </Root/tutorialLevelGround/Materials/ground/surfaceShader.outputs:surface>
+            }
+        }
+    }
+
+    def Cube "Cube_2" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Root/tutorialLevelGround/Materials/ground> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (5.5, 2, 7)
+        float3 xformOp:translate = (1.0781199, 0.063042216, -2.3692276)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "DefaultMaterial"
+        {
+            prepend token outputs:surface.connect = </Root/Cube_2/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+            def Shader "DefaultSurfaceShader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (1, 1, 1)
+                float inputs:roughness = 0.75
+                token outputs:surface
+            }
+        }
+    }
+
+    def Cube "Cube_3" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        customData = {
+            float3 rotationEulerHint = (0, 0, 0.43778482)
+        }
+    )
+    {
+        rel material:binding = </Root/tutorialLevelGround/Materials/ground> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+        quatf xformOp:orient = (0.97613853, 0, 0, 0.21714859)
+        float3 xformOp:scale = (3, 1, 7)
+        float3 xformOp:translate = (0.3324337, 0.045510337, -2.367544)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "DefaultMaterial"
+        {
+            prepend token outputs:surface.connect = </Root/Cube_3/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+            def Shader "DefaultSurfaceShader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (1, 1, 1)
+                float inputs:roughness = 0.75
+                token outputs:surface
+            }
+        }
+    }
+
+    def Cube "Cube_4" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        customData = {
+            float3 rotationEulerHint = (2.1493927e-8, -3.3223657e-7, -0.0009800957)
+        }
+    )
+    {
+        rel material:binding = </Root/tutorialLevelGround/Materials/ground> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+        quatf xformOp:orient = (0.9999999, 1.06655555e-8, -1.6612353e-7, -0.00049004785)
+        float3 xformOp:scale = (3.0000002, 1, 6.9999995)
+        float3 xformOp:translate = (0.5880645, -0.040531337, -2.3675487)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "DefaultMaterial"
+        {
+            token outputs:surface.connect = </Root/Cube_4/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+            def Shader "DefaultSurfaceShader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (1, 1, 1)
+                float inputs:roughness = 0.75
+                token outputs:surface
+            }
         }
     }
 }

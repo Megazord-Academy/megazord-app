@@ -39,7 +39,8 @@
     "objectMetadataList" : [
       [
         "397D1B20-8233-40CA-837A-897FFA3E985C",
-        "Root"
+        "Root",
+        "planeWorld"
       ],
       {
         "isExpanded" : true,
@@ -56,44 +57,7 @@
       },
       [
         "397D1B20-8233-40CA-837A-897FFA3E985C",
-        "Root",
-        "planeWorld"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "397D1B20-8233-40CA-837A-897FFA3E985C",
-        "Root",
-        "Cube_1"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "397D1B20-8233-40CA-837A-897FFA3E985C",
-        "Root",
-        "car_normalWheels_motor"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "397D1B20-8233-40CA-837A-897FFA3E985C",
-        "Root",
-        "normalRamp"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "397D1B20-8233-40CA-837A-897FFA3E985C",
-        "Root",
-        "finalLine"
+        "Root"
       ],
       {
         "isExpanded" : true,
@@ -117,34 +81,16 @@
     "objectMetadataList" : [
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
+        "Root",
+        "planeWorld"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "AF09ED6F-1707-48FD-8720-65B998362C09",
-        "Root",
-        "GridMaterial"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "AF09ED6F-1707-48FD-8720-65B998362C09",
-        "Root",
-        "Sphere_Right"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "AF09ED6F-1707-48FD-8720-65B998362C09",
-        "Root",
-        "Sphere_Left"
       ],
       {
         "isExpanded" : true,
@@ -162,7 +108,16 @@
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root",
-        "planeWorld"
+        "Sphere_Left"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AF09ED6F-1707-48FD-8720-65B998362C09",
+        "Root",
+        "Sphere_Right"
       ],
       {
         "isExpanded" : true,
@@ -174,8 +129,7 @@
     "objectMetadataList" : [
       [
         "CB766F92-EE55-4A63-9401-E7B8C009764D",
-        "Root",
-        "GridMaterial"
+        "Root"
       ],
       {
         "isExpanded" : true,
@@ -183,7 +137,8 @@
       },
       [
         "CB766F92-EE55-4A63-9401-E7B8C009764D",
-        "Root"
+        "Root",
+        "GridMaterial"
       ],
       {
         "isExpanded" : true,
@@ -200,9 +155,7 @@
     "objectMetadataList" : [
       [
         "D66134B1-3681-4A8E-AFE5-29F257229F3B",
-        "Root",
-        "GridMaterial",
-        "GridMaterial"
+        "Root"
       ],
       {
         "isExpanded" : true,
@@ -210,7 +163,9 @@
       },
       [
         "D66134B1-3681-4A8E-AFE5-29F257229F3B",
-        "Root"
+        "Root",
+        "GridMaterial",
+        "GridMaterial"
       ],
       {
         "isExpanded" : true,
