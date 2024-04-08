@@ -298,6 +298,12 @@ def Xform "Root"
                 }
             }
         }
+
+        def RealityKitComponent "HierarchicalFade"
+        {
+            uniform token info:id = "RealityKit.HierarchicalFade"
+            float opacity = 0
+        }
     }
 
     def "car" (
@@ -808,6 +814,200 @@ def Xform "Root"
         def RealityKitComponent "MotionState"
         {
             uniform token info:id = "RealityKit.MotionState"
+        }
+    }
+
+    def "tutorialLevelGround" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 1.5707963, 0)
+        }
+        prepend references = @tutorialLevelGround.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.7051675, 0, 0.70904076, 0)
+        float3 xformOp:scale = (0.9, 0.9, 0.9)
+        float3 xformOp:translate = (0.14654985, 0.50131565, -2.116635)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Geom"
+        {
+            over "Cube_020" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (0.5791201591491699, -0.056200385093688965, 1.204576849937439)
+            }
+
+            over "Cube_004" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (-0.575179934501648, -0.056200385093688965, 1.2045767307281494)
+            }
+
+            over "Cube_005" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (-0.3860548734664917, -0.056200385093688965, 1.3945791721343994)
+            }
+
+            over "Cube_006" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (-0.5768747329711914, -0.056200385093688965, 1.3945788145065308)
+            }
+
+            over "Cube_007" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (-0.38218069076538086, -0.056200385093688965, 1.2061883211135864)
+            }
+
+            over "Cube_009" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (-0.0016770362854003906, -0.056200385093688965, 1.2061882019042969)
+            }
+
+            over "Cube_010" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (-0.1963714361190796, -0.056200385093688965, 1.3945790529251099)
+            }
+
+            over "Cube_011" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (-0.005551338195800781, -0.056200385093688965, 1.3945790529251099)
+            }
+
+            over "Cube_012" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (-0.19467687606811523, -0.056200385093688965, 1.2045769691467285)
+            }
+
+            over "Cube_013" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (0.18964099884033203, -0.056200385093688965, 1.2045769691467285)
+            }
+
+            over "Cube_014" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (0.3787662982940674, -0.056200385093688965, 1.3945789337158203)
+            }
+
+            over "Cube_015" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (0.18794655799865723, -0.056200385093688965, 1.3945790529251099)
+            }
+
+            over "Cube_016" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (0.38264012336730957, -0.056200385093688965, 1.206188440322876)
+            }
+
+            over "Cube_018" (
+                customData = {
+                    float3 rotationEulerHint = (-3.1367953, 1.9428424e-7, -0.0000070518945)
+                }
+            )
+            {
+                quatf xformOp:orient = (0.002398683, -0.9999971, 0.00000352617, 8.86842e-8)
+                double3 xformOp:translate = (0.5774252414703369, -0.056200385093688965, 1.3945788145065308)
+            }
+        }
+
+        over "Materials"
+        {
+            over "blackTile"
+            {
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+                float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (0, 109.5)
+                float2 ui:nodegraph:realitykit:subgraphOutputs:size = (182, 99)
+
+                over "surfaceShader"
+                {
+                    color3f inputs:diffuseColor = (0.023168882, 0.023168882, 0.023168882)
+                    float inputs:opacityThreshold
+                }
+            }
+
+            over "whiteTile"
+            {
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+
+                over "surfaceShader"
+                {
+                    color3f inputs:diffuseColor = (1, 1, 1) (
+                        colorSpace = "srgb_texture"
+                    )
+                    color3f inputs:emissiveColor = (1, 1, 1) (
+                        colorSpace = "srgb_texture"
+                    )
+                    float inputs:metallic = 0
+                    normal3f inputs:normal = (1, 1, 1)
+                    float inputs:opacity = 1
+                    float inputs:roughness = 1
+                }
+            }
         }
     }
 }

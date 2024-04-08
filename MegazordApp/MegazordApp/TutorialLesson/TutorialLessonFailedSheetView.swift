@@ -18,12 +18,17 @@ struct TutorialLessonFailedSheetView: View {
                 .font(.title)
                 .fontWeight(.bold)
             
+            Image("wand")
+                .resizable()
+                .scaledToFit()
+                .frame(height: 60)
+            
             Text("Looks like there's room for improvement! Don't worry, engineering is all about learning from mistakes. Try adjusting the placement of the components and testing again. You're on the right track!")
                 .multilineTextAlignment(.center)
                 .lineLimit(3...10)
-                .frame(maxWidth: 600)
+                .frame(maxWidth: 440)
             
-            VStack(spacing: 16) {
+            VStack(spacing: 12) {
                 Button {
                     sheetVisibility = false
                     
@@ -39,11 +44,13 @@ struct TutorialLessonFailedSheetView: View {
                     
                 } label: {
                     Text("Back to Lesson Selection")
+                        .padding(12)
                 }
                 .buttonBorderShape(.roundedRectangle)
+                .buttonStyle(.plain)
             }
             
         }
-        .padding(24)
+        .padding(36)
     }
 }

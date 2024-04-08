@@ -19,17 +19,22 @@ struct TutorialLessonCompleteSheetView: View {
                 .font(.title)
                 .fontWeight(.bold)
             
+            Image("checkmark")
+                .resizable()
+                .scaledToFit()
+                .frame(height: 100)
+            
             Text("You've successfully built and tested your own car model. Keep exploring the world of engineering and discovering the endless possibilities it offers.")
                 .multilineTextAlignment(.center)
                 .lineLimit(3...10)
-                .frame(maxWidth: 600)
+                .frame(maxWidth: 480)
             
             Text("You can now continue crafting in the next lessons!")
                 .multilineTextAlignment(.center)
                 .lineLimit(3...10)
-                .frame(maxWidth: 600)
+                .frame(maxWidth: 480)
             
-            VStack(spacing: 16) {
+            VStack(spacing: 12) {
                 Button {
                     sheetVisibility = false
                     sceneController.levelCompleted = false
@@ -49,11 +54,13 @@ struct TutorialLessonCompleteSheetView: View {
                     
                 } label: {
                     Text("Keep Exploring")
+                        .padding(12)
                 }
                 .buttonBorderShape(.roundedRectangle)
+                .buttonStyle(.plain)
             }
             
         }
-        .padding(24)
+        .padding(36)
     }
 }
